@@ -1,0 +1,174 @@
+@charset "UTF-8";
+
+@font-face {
+  font-family: 'Material Icons';
+  font-style: normal;
+  font-weight: 400;
+  src: url(https://example.com/MaterialIcons-Regular.eot); /* For IE6-8 */
+  src: local('Material Icons'),
+    local('MaterialIcons-Regular'),
+    url(https://example.com/MaterialIcons-Regular.woff2) format('woff2'),
+    url(https://example.com/MaterialIcons-Regular.woff) format('woff'),
+    url(https://example.com/MaterialIcons-Regular.ttf) format('truetype');
+}
+
+[data-icon]:before {
+    font-family: "Material Symbols Outlined" !important;
+    content: attr(data-icon);
+    font-style: normal !important;
+    font-weight: normal !important;
+    font-variant: normal !important;
+    text-transform: none !important;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+[class^="icon-"]:before,
+[class*=" icon-"]:before {
+    font-family: "Material Symbols Outlined" !important;
+    font-style: normal !important;
+    font-weight: normal !important;
+    font-variant: normal !important;
+    text-transform: none !important;
+    vertical-align: middle;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.ec {
+    display: inline-block;
+    font: normal normal normal 14px/1 Material Symbols Outlined;
+    font-size: inherit;
+    text-rendering: auto;
+    vertical-align: middle;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.ec-menu:before {
+  content: "\e5d2";
+}
+
+.ec-list-view-medium:before {
+  content: "\62";
+}
+.ec-transport:before {
+  content: "\e558";
+}
+.ec-add-to-cart:before {
+  
+  content: "\e854";
+}
+.ec-arrow-right-categproes:before {
+  content: "\e5cc";
+}
+.ec-comment:before {
+  content: "\66";
+}
+.ec-compare:before {
+    font-family: "Material Symbols Outlined";
+  content: "\e915";
+}
+.ec-customers:before {
+  content: "\e311";
+}
+.ec-dollar:before {
+  content: "\69";
+}
+.ec-favorites:before {
+  content: "\e87d";
+}
+.ec-grid-view:before {
+  content: "\6b";
+}
+.ec-list-view:before {
+  content: "\6c";
+}
+.ec-blog-likes:before {
+  content: "\6d";
+}
+.ec-phone:before {
+  content: "\6e";
+}
+.ec-returning:before {
+  content: "\6f";
+}
+.ec-search:before {
+  content: "\e8b6";
+}
+.ec-shopping-bag:before {
+content: "\e8cc";
+}
+.ec-support:before {
+  content: "\72";
+}
+.ec-tag:before {
+  content: "\73";
+}
+.ec-thing-arrow-right:before {
+  content: "\74";
+}
+.ec-user:before {
+  content: "\e7fd";
+}
+.ec-category-icon:before {
+  content: "\76";
+}
+.ec-mail:before {
+  content: "\77";
+}
+.ec-map-pointer:before {
+  content: "\78";
+}
+.ec-newsletter:before {
+  content: "\79";
+}
+.ec-close-remove:before {
+  content: "\e5e1";
+}
+.ec-payment:before {
+  content: "\41";
+}
+.ec-arrow-down-search:before {
+  content: "\42";
+}
+.ec-list-view-small:before {
+  content: "\43";
+}
+.ec-cameras:before {
+  content: "\44";
+}
+.ec-drone:before {
+  content: "\45";
+}
+.ec-gamepad:before {
+  content: "\46";
+}
+.ec-headphones:before {
+  content: "\47";
+}
+.ec-laptop:before {
+  content: "\48";
+}
+.ec-printer:before {
+  content: "\49";
+}
+.ec-smartphones:before {
+  content: "\4a";
+}
+.ec-smartwatch:before {
+  content: "\4b";
+}
+.ec-speaker:before {
+  content: "\4c";
+}
+.ec-tvs:before {
+  content: "\4d";
+}
+.ec-call:before {
+  content: "\e325";
+}
+.ec-fire::before{
+  content: "\ef55";
+}

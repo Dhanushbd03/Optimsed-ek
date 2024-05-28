@@ -1,0 +1,217 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="utf-8" />
+    <!-- Favicon icon -->
+    <link rel="shortcut icon" href="assets/images/logo/logo.png" />
+    <!-- Favicon icon end  -->
+    <!-- google font  -->
+    <link
+      href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i&display=swap"
+      rel="stylesheet"
+    />
+    <!-- google font end  -->
+    <!-- Font Awesome -->
+    <script
+      src="https://kit.fontawesome.com/77b2f8c3f6.js"
+      crossorigin="anonymous"
+    ></script>
+    <!-- Font Awesome end -->
+    <!-- google icons  -->
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0"
+    />
+    <link rel="stylesheet" href="assets/css/google-icons.css" />
+    <!-- google icons end  -->
+    <!-- Tailwind CSS -->
+    <link rel="stylesheet" href="assets/css/tailwind.css" />
+    <!-- Tailwind CSS end -->
+
+    <title>Optimised</title>
+    <link rel="stylesheet" href="assets/css/tailwind.css" />
+  </head>
+  <body >
+    <!-- header -->
+    <header>
+      <!-- topbar -->
+      <div
+        class="ek-hidden ek-flex-col ek-justify-between ek-bg-gray-100 ek-px-4 ek-py-2 lg:ek-flex lg:ek-flex-row lg:ek-px-10"
+      >
+        <div class="ek-mb-2 ek-flex ek-justify-start md:ek-mb-0">
+          <span class="ek-flex ek-items-center">
+            <span>Customer Support :</span
+            ><i class="ec ec-call ek-text-base"></i> +91 8892882988 |
+            Support@Electronickart.com
+          </span>
+        </div>
+        <div class="ek-flex ek-items-center ek-gap-1">
+          <span
+            ><a
+              href="#accounts"
+              class="ek-flex ek-items-center ek-text-gray-600"
+              ><i class="ec ec-transport mr-1 ek-text-xl"></i> Track your
+              order</a
+            > </span
+          >|
+
+          <span
+            ><a id="" role="button" class="ek-flex ek-items-center ek-gap-1">
+              <i class="ec ec-user text-xl"></i> Register
+              <span class="text-gray-50">or</span>
+              Sign in
+            </a></span
+          >
+        </div>
+      </div>
+      <!-- topbar end -->
+      <!-- navbar -->
+      <nav class="ek-shadow-md">
+        <div
+          class="ek-flex ek-items-center ek-justify-between ek-gap-10 ek-bg-white ek-px-4 lg:ek-px-20 lg:ek-py-4"
+        >
+          <!-- right side navbar  -->
+          <div class="ek-flex ek-items-center ek-p-2 ek-gap-10">
+            <!-- Logo -->
+            <img
+              src="assets/images/logo/logo.png"
+              alt="Electronickart Logo"
+              class="ek-order-1 ek-mr-2 ek-h-8"
+            />
+            <!-- Logo end -->
+            <!-- Menu icon  -->
+            <button class="ek-block ek-text-gray-600 lg:ek-order-1">
+              <i
+                class="ec ec-menu ek-p-2 ek-text-2xl ek-text-primary hover:ek-text-secondary"
+              ></i>
+            </button>
+            <!-- Menu icon end -->
+          </div>
+          <!-- right side navbar end  -->
+
+          <!-- center navbar  -->
+          <div class="ek-hidden ek-grow md:ek-flex">
+            <div
+              class="ek-flex ek-w-full ek-items-center ek-overflow-hidden ek-rounded-lg ek-border-2 ek-border-primary ek-bg-primary "
+              id="searchdiv"
+            >
+              <select
+                class="no-scrollbar ek-h-full ek-max-w-40  ek-bg-white ek-px-4 ek-py-1 ek-outline-none"
+                id="searchcategory"
+              >
+                <option value="one" selected>All Categories</option>
+                <option value="shop-by-brands" class="">Shop by Brands</option>
+                <option value="new-arrivals">New Arrivals</option>
+                <option value="smartelex">SmartElex</option>
+                <option value="electronics-components">
+                  Electronics Components
+                </option>
+                <option value="diy-learning-robot-kits">
+                  DIY Learning and Robot Kits
+                </option>
+                <option value="drone-parts">Drone Parts</option>
+                <option value="electric-vehicle-parts">
+                  Electric Vehicle Parts
+                </option>
+                <option value="laser-engraver-cnc-machines">
+                  Laser Engraver and CNC Machines
+                </option>
+                <option value="3d-printers-parts">3D Printers and Parts</option>
+                <option value="batteries-chargers-accessories">
+                  Batteries, Chargers and Accessories
+                </option>
+                <option value="motors-drivers-actuators">
+                  Motors, Drivers, Actuators
+                </option>
+                <option value="development-board">Development Board</option>
+                <option value="raspberry-pi">Raspberry Pi</option>
+                <option value="official-arduino-boards">
+                  Official Arduino Boards
+                </option>
+                <option value="display-modules">Display Modules</option>
+                <option value="sensors-modules">Sensors Modules</option>
+                <option value="cameras">Cameras</option>
+                <option value="iot-wireless">IoT and Wireless</option>
+                <option value="electronic-modules">Electronic Modules</option>
+                <option value="wires-cables">Wires and Cables</option>
+                <option value="mechanical-parts-tools">
+                  Mechanical Parts and Workbench Tools
+                </option>
+                <option value="services">Services</option>
+                <option value="refurbished-partial-workin">
+                  Refurbished & Partial Working
+                </option>
+              </select>
+              <input
+                type="text"
+                placeholder="Search for Products"
+                class="ek-flex-grow ek-border-none ek-px-4 ek-py-2 ek-outline-none"
+                id="searchinput"
+              />
+              <button
+                class="ek-h-full ek-cursor-pointer ek-border-none ek-border-primary ek-bg-primary ek-px-4"
+                id="searchbtn"
+              >
+                <i class="ec ec-search ek-text-2xl ek-text-white"></i>
+              </button>
+            </div>
+          </div>
+
+          <!-- center navbar end  -->
+          <!-- left side icons  -->
+          <div
+            class="ek-flex ek-items-center ek-justify-between ek-text-primary"
+          >
+            <div class="ek-relative md:ek-hidden">
+              <i
+                class="ec ec-search ek-p-2 ek-text-xl ek-text-primary hover:ek-text-secondary"
+              ></i>
+            </div>
+            <div class="ek-relative lg:ek-hidden">
+              <i
+                class="ec ec-user ek-p-2 ek-text-xl ek-text-primary hover:ek-text-secondary"
+              ></i>
+            </div>
+            <div class="ek-relative ek-text-primary hover:ek-text-secondary">
+              <i
+                class="ec ec-shopping-bag ek-p-2 ek-text-xl ek-text-primary hover:ek-text-secondary"
+              ></i>
+              <div
+                class="ek-absolute ek-bottom-2 ek-right-0 ek-flex ek-h-4 ek-w-4 ek-items-center ek-justify-center ek-rounded-full ek-bg-primary ek-p-1 ek-text-sm ek-text-white hover:ek-bg-secondary"
+              >
+                2
+              </div>
+            </div>
+            <span
+              class="ek-hidden ek-text-primary hover:ek-text-secondary lg:ek-flex"
+              >₹1785.00</span
+            >
+          </div>
+          <!-- left side icons end -->
+        </div>
+        <!-- category navbar  -->
+        <div class="ek-hidden ek-px-24  lg:ek-flex">
+          <ul class="ek-flex ek-text-primary ">
+            <li class=" ek-bg-primary ek-px-10 ek-pr-20 ek-py-3 ek-text-white hover:ek-bg-secondary ek-rounded-t-lg ek-font-bold">
+              <span class="fa fa-list-ul ek-text-white "></span>
+               All categories
+            </li>
+            <li class="ek-pl-16 ek-px-4 ek-py-3 ek-text-secondary hover:ek-text-primary ek-font-bold"><a href="#">Super Deals <i class="ec ec-fire"></i></a></li>
+            <li class="ek-px-4 ek-py-3 hover:ek-text-secondary ek-font-bold"><a href="#">Featured Brands</a></li>
+            <li class="ek-px-4 ek-py-3 hover:ek-text-secondary ek-font-bold"><a href="#">Trending Styles</a></li>
+            <li class="ek-px-4 ek-py-3 hover:ek-text-secondary ek-font-bold"><a href="#">Gift cards</a></li>
+          </ul>
+        </div>
+      <!-- category navbar end --> 
+      </nav>
+      <!-- navbar end -->
+    </header>
+
+    <!-- header end -->
+  </body>
+  <!-- Javascript Styles -->
+  <script src="assets/javascript/styles.js"></script>
+  <!-- Javascript styles end  -->
+</html>
