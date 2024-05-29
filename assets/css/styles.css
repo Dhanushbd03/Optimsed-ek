@@ -1,0 +1,28 @@
+/* Ensure the parent container doesn't overflow */
+#carouseldiv {
+    overflow: hidden;
+    position: relative;
+  }
+  
+  /* Ensure all slides have the same height and transitions */
+  .slide {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    transition: opacity 3s ease-in-out;
+    opacity: 0;
+    visibility: hidden;
+  }
+  
+  /* Active slide */
+  .slide.active {
+    opacity: 1;
+    visibility: visible;
+  }
+  
+  .carousel img {
+    height: 100%;
+    width: auto;
+    max-height: 300px; /* or another consistent height */
+  }
+  

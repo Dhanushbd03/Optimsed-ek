@@ -8,8 +8,10 @@
     <link rel="shortcut icon" href="assets/images/logo/logo.png" />
     <!-- Favicon icon end  -->
     <!-- google font  -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap"
       rel="stylesheet"
     />
     <!-- google font end  -->
@@ -29,22 +31,35 @@
     <!-- Tailwind CSS -->
     <link rel="stylesheet" href="assets/css/tailwind.css" />
     <!-- Tailwind CSS end -->
+    <!-- styles.css  -->
+    <link rel="stylesheet" href="assets/css/styles.css" />
+    <!-- styles.css end  -->
+    <!-- animate css  -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
+    <!-- animate css end  -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
 
     <title>Optimised</title>
     <link rel="stylesheet" href="assets/css/tailwind.css" />
   </head>
-  <body >
+  <body class="ek-font-sans">
     <!-- header -->
     <header>
       <!-- topbar -->
       <div
-        class="ek-hidden ek-flex-col ek-justify-between ek-bg-gray-100 ek-px-4 ek-py-2 lg:ek-flex lg:ek-flex-row lg:ek-px-10"
+        class="ek-hidden ek-flex-col ek-justify-between ek-bg-gray-100 ek-px-4 ek-py-2 ek-text-sm lg:ek-flex lg:ek-flex-row lg:ek-px-10"
       >
         <div class="ek-mb-2 ek-flex ek-justify-start md:ek-mb-0">
           <span class="ek-flex ek-items-center">
-            <span>Customer Support :</span
-            ><i class="ec ec-call ek-text-base"></i> +91 8892882988 |
-            Support@Electronickart.com
+            <span>Customer Support :&nbsp;</span
+            ><i class="ec ec-call ek-text-sm"></i> +91 8892882988 |
+            support@electronickart.com
           </span>
         </div>
         <div class="ek-flex ek-items-center ek-gap-1">
@@ -52,14 +67,14 @@
             ><a
               href="#accounts"
               class="ek-flex ek-items-center ek-text-gray-600"
-              ><i class="ec ec-transport mr-1 ek-text-xl"></i> Track your
+              ><i class="ec ec-transport mr-1 ek-text-xl"></i>&nbsp;Track your
               order</a
             > </span
           >|
 
           <span
             ><a id="" role="button" class="ek-flex ek-items-center ek-gap-1">
-              <i class="ec ec-user text-xl"></i> Register
+              <i class="ec ec-user ek-text-xl"></i> Register
               <span class="text-gray-50">or</span>
               Sign in
             </a></span
@@ -73,7 +88,7 @@
           class="ek-flex ek-items-center ek-justify-between ek-gap-10 ek-bg-white ek-px-4 lg:ek-px-20 lg:ek-py-4"
         >
           <!-- right side navbar  -->
-          <div class="ek-flex ek-items-center ek-p-2 ek-gap-10">
+          <div class="ek-flex ek-items-center ek-gap-10 ek-p-2">
             <!-- Logo -->
             <img
               src="assets/images/logo/logo.png"
@@ -94,11 +109,11 @@
           <!-- center navbar  -->
           <div class="ek-hidden ek-grow md:ek-flex">
             <div
-              class="ek-flex ek-w-full ek-items-center ek-overflow-hidden ek-rounded-lg ek-border-2 ek-border-primary ek-bg-primary "
+              class="ek-flex ek-w-full ek-items-center ek-overflow-hidden ek-rounded-lg ek-border-2 ek-border-primary ek-bg-primary"
               id="searchdiv"
             >
               <select
-                class="no-scrollbar ek-h-full ek-max-w-40  ek-bg-white ek-px-4 ek-py-1 ek-outline-none"
+                class="no-scrollbar ek-h-full ek-max-w-40 ek-bg-white ek-px-4 ek-py-1 ek-outline-none"
                 id="searchcategory"
               >
                 <option value="one" selected>All Categories</option>
@@ -192,24 +207,168 @@
           <!-- left side icons end -->
         </div>
         <!-- category navbar  -->
-        <div class="ek-hidden ek-px-24  lg:ek-flex">
-          <ul class="ek-flex ek-text-primary ">
-            <li class=" ek-bg-primary ek-px-10 ek-pr-20 ek-py-3 ek-text-white hover:ek-bg-secondary ek-rounded-t-lg ek-font-bold">
-              <span class="fa fa-list-ul ek-text-white "></span>
-               All categories
+        <div class="ek-hidden ek-px-24 lg:ek-flex">
+          <ul class="ek-flex ek-text-primary">
+            <li
+              class="ek-rounded-t-lg ek-bg-primary ek-px-10 ek-py-3 ek-pr-20 ek-font-bold ek-text-white hover:ek-bg-secondary"
+            >
+              <span class="fa fa-list-ul ek-text-white"></span>
+              All categories
             </li>
-            <li class="ek-pl-16 ek-px-4 ek-py-3 ek-text-secondary hover:ek-text-primary ek-font-bold"><a href="#">Super Deals <i class="ec ec-fire"></i></a></li>
-            <li class="ek-px-4 ek-py-3 hover:ek-text-secondary ek-font-bold"><a href="#">Featured Brands</a></li>
-            <li class="ek-px-4 ek-py-3 hover:ek-text-secondary ek-font-bold"><a href="#">Trending Styles</a></li>
-            <li class="ek-px-4 ek-py-3 hover:ek-text-secondary ek-font-bold"><a href="#">Gift cards</a></li>
+            <li
+              class="ek-px-4 ek-py-3 ek-pl-16 ek-font-bold ek-text-secondary hover:ek-text-primary"
+            >
+              <a href="#">Super Deals <i class="ec ec-fire"></i></a>
+            </li>
+            <li class="ek-px-4 ek-py-3 ek-font-bold hover:ek-text-secondary">
+              <a href="#">Featured Brands</a>
+            </li>
+            <li class="ek-px-4 ek-py-3 ek-font-bold hover:ek-text-secondary">
+              <a href="#">Trending Styles</a>
+            </li>
+            <li class="ek-px-4 ek-py-3 ek-font-bold hover:ek-text-secondary">
+              <a href="#">Gift cards</a>
+            </li>
           </ul>
         </div>
-      <!-- category navbar end --> 
+        <!-- category navbar end -->
       </nav>
       <!-- navbar end -->
     </header>
-
     <!-- header end -->
+    <!-- main content -->
+    <main>
+      <!-- slider  -->
+      <section
+        class="animate__animated animate__fadeIn animate__slow ek-flex ek-min-h-[90vh] ek-flex-col ek-items-center ek-justify-center ek-bg-cover sm:ek-min-h-[420px] sm:ek-flex-row"
+        style="background-image: url(assets/images/hero/img1.jpg)"
+        id="carouseldiv"
+      >
+        <!-- slide item 1  -->
+        <div
+          class="slide ek-absolute ek-flex ek-flex-col ek-items-center ek-bg-cover lg:ek-ml-40 sm:ek-flex-row sm:ek-justify-center lg:ek-gap-40"
+        >
+          <div class="sm:ek-p-14 ek-order-1 ek-flex ek-flex-col ek-p-5">
+            <h1 class="ek-text-5xl ek-font-normal">Raspberry Pi 4</h1>
+            <p class="ek-mt-2 ek-text-gray-600">
+              4GB RAM, 1.5GHz Quad-Core CPU
+            </p>
+            <p class="ek-mt-4 ek-text-sm ek-font-semibold">
+              FROM <br /><span class="ek-text-5xl ek-text-black">₹9000.00</span>
+            </p>
+            <button
+              class="ek-mt-6 ek-rounded-lg ek-bg-primary ek-px-4 ek-py-2 ek-text-white hover:ek-bg-secondary"
+            >
+              Start Buying
+            </button>
+          </div>
+          <div class="ek-flex ek-items-center ek-justify-center sm:ek-order-2">
+            <div
+              class="ek-flex ek-h-full ek-w-full ek-items-center ek-justify-center"
+            >
+              <img
+                src="assets/images/ekart/rpi-4-4gb416X420.png"
+                alt="Arduino Uno"
+                class=""
+              />
+            </div>
+          </div>
+        </div>
+        <!-- slide item 1 end  -->
+        <!-- slide item 2  -->
+        <div
+          class="slide  ek-absolute ek-flex ek-flex-col ek-items-center ek-bg-cover lg:ek-ml-40 sm:ek-flex-row sm:ek-justify-center lg:ek-gap-40"
+        >
+          <div class="-sm:ek-p-14 ek-order-1 ek-flex ek-flex-col ek-p-5">
+            <h1 class="ek-text-5xl ek-font-normal">Arduino Uno</h1>
+            <p class="ek-mt-2 ek-text-gray-600">
+              R3 development board with cable
+            </p>
+            <p class="ek-mt-4 ek-text-sm ek-font-semibold">
+              FROM <br /><span class="ek-text-5xl ek-text-black">₹680.00</span>
+            </p>
+            <button
+              class="ek-mt-6 ek-rounded-lg ek-bg-primary ek-px-4 ek-py-2 ek-text-white hover:ek-bg-secondary"
+            >
+              Start Buying
+            </button>
+          </div>
+          <div class="ek-flex ek-items-center ek-justify-center sm:ek-order-2">
+            <div
+              class="ek-flex ek-h-full ek-w-full ek-items-center ek-justify-center"
+            >
+              <img
+                src="assets/images/ekart/arduino-uno-r3-1.png"
+                alt="Arduino Uno"
+                class=""
+              />
+            </div>
+          </div>
+        </div>
+        <!-- slide item 2 end  -->
+        <!-- slide item 3  -->
+        <div
+          class="slide ek-absolute ek-flex ek-flex-col ek-items-center ek-bg-cover lg:ek-ml-40 sm:ek-flex-row sm:ek-justify-center lg:ek-gap-40"
+        >
+          <div class="-sm:ek-p-14 ek-order-1 ek-flex ek-flex-col ek-p-5">
+            <h1 class="ek-text-5xl ek-font-normal">CP2102 <br>USB to UART</h1>
+            <p class="ek-mt-2 ek-text-gray-600">Serial Converter Module</p>
+            <p class="ek-mt-4 ek-text-sm ek-font-semibold">
+              FROM <br /><span class="ek-text-5xl ek-text-black">₹4000.00</span>
+            </p>
+            <button
+              class="ek-mt-6 ek-rounded-lg ek-bg-primary ek-px-4 ek-py-2 ek-text-white hover:ek-bg-secondary"
+            >
+              Start Buying
+            </button>
+          </div>
+          <div class="ek-flex ek-items-center ek-justify-center sm:ek-order-2">
+            <div
+              class="ek-flex ek-h-full ek-w-full ek-items-center ek-justify-center"
+            >
+              <img
+                src="assets/images/ekart/ezgif.com-gif-maker-2022-02-22T034302.739.png"
+                alt="Arduino Uno"
+                class="ek-max-h-[420px]"
+              />
+            </div>
+          </div>
+        </div>
+        <!-- slide item 3 end  -->
+        <!-- slide item 4  -->
+        <div
+          class="slide ek-absolute ek-flex ek-flex-col ek-items-center ek-bg-cover lg:ek-ml-40 sm:ek-flex-row sm:ek-justify-center lg:ek-gap-40"
+        >
+          <div class="-sm:ek-p-14 ek-order-1 ek-flex ek-flex-col ek-p-5">
+            <h1 class="ek-text-5xl ek-font-normal">ir sensor</h1>
+            <p class="ek-mt-2 ek-text-gray-600">ir sensor module</p>
+            <p class="ek-mt-4 ek-text-sm ek-font-semibold">
+              FROM <br /><span class="ek-text-5xl ek-text-black">₹200.00</span>
+            </p>
+            <button
+              class="ek-mt-6 ek-rounded-lg ek-bg-primary ek-px-4 ek-py-2 ek-text-white hover:ek-bg-secondary"
+            >
+              Start Buying
+            </button>
+          </div>
+          <div class="ek-flex ek-items-center ek-justify-center sm:ek-order-2">
+            <div
+              class="ek-flex ek-h-full ek-w-full ek-items-center ek-justify-center"
+            >
+              <img
+                src="assets/images/ekart/ir.png"
+                alt="Arduino Uno"
+                class="ek-max-h-[420px]"
+              />
+            </div>
+          </div>
+        </div>
+        <!-- slide item 4 end  -->
+      </section>
+      <!-- slider end  -->
+    </main>
+
+    <!-- main content end -->
   </body>
   <!-- Javascript Styles -->
   <script src="assets/javascript/styles.js"></script>

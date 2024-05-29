@@ -8,6 +8,9 @@ module.exports = {
         primary: "#3D3F82",
         secondary: "#D5202E",
       },
+      fontFamily: {
+        sans: ['"Open Sans"', 'sans-serif'],
+      },
     },
   },
   plugins: [],
