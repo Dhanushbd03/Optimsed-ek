@@ -88,7 +88,7 @@
           class="ek-flex ek-items-center ek-justify-between ek-gap-10 ek-bg-white ek-px-4 lg:ek-px-20 lg:ek-py-4"
         >
           <!-- right side navbar  -->
-          <div class="ek-flex ek-items-center ek-gap-10 ek-p-2">
+          <div class="ek-flex ek-items-center ek-p-2 sm:ek-gap-10">
             <!-- Logo -->
             <img
               src="assets/images/logo/logo.png"
@@ -240,15 +240,15 @@
     <main>
       <!-- slider  -->
       <section
-        class="animate__animated animate__fadeIn animate__slow ek-flex ek-min-h-[90vh] ek-flex-col ek-items-center ek-justify-center ek-bg-cover sm:ek-min-h-[420px] sm:ek-flex-row"
+        class="animate__animated animate__fadeIn animate__slow ek-relative ek-flex ek-min-h-[600px] ek-flex-col ek-items-center ek-justify-center ek-bg-cover sm:ek-min-h-[420px] sm:ek-flex-row"
         style="background-image: url(assets/images/hero/img1.jpg)"
         id="carouseldiv"
       >
         <!-- slide item 1  -->
         <div
-          class="slide ek-absolute ek-flex ek-flex-col ek-items-center ek-bg-cover lg:ek-ml-40 sm:ek-flex-row sm:ek-justify-center lg:ek-gap-40"
+          class="slide ek-absolute ek-flex ek-flex-col ek-items-center ek-bg-cover sm:ek-flex-row sm:ek-justify-center lg:ek-ml-40 lg:ek-gap-40"
         >
-          <div class="sm:ek-p-14 ek-order-1 ek-flex ek-flex-col ek-p-5">
+          <div class="ek-order-1 ek-flex ek-flex-col ek-p-5 sm:ek-p-14">
             <h1 class="ek-text-5xl ek-font-normal">Raspberry Pi 4</h1>
             <p class="ek-mt-2 ek-text-gray-600">
               4GB RAM, 1.5GHz Quad-Core CPU
@@ -263,13 +263,11 @@
             </button>
           </div>
           <div class="ek-flex ek-items-center ek-justify-center sm:ek-order-2">
-            <div
-              class="ek-flex ek-h-full ek-w-full ek-items-center ek-justify-center"
-            >
+            <div class="ek-flex ek-items-center ek-justify-center">
               <img
                 src="assets/images/ekart/rpi-4-4gb416X420.png"
                 alt="Arduino Uno"
-                class=""
+                class="ek-max-h-[300px] sm:ek-max-h-[420px]"
               />
             </div>
           </div>
@@ -277,7 +275,7 @@
         <!-- slide item 1 end  -->
         <!-- slide item 2  -->
         <div
-          class="slide  ek-absolute ek-flex ek-flex-col ek-items-center ek-bg-cover lg:ek-ml-40 sm:ek-flex-row sm:ek-justify-center lg:ek-gap-40"
+          class="slide ek-absolute ek-flex ek-flex-col ek-items-center ek-bg-cover sm:ek-flex-row sm:ek-justify-center lg:ek-ml-40 lg:ek-gap-40"
         >
           <div class="-sm:ek-p-14 ek-order-1 ek-flex ek-flex-col ek-p-5">
             <h1 class="ek-text-5xl ek-font-normal">Arduino Uno</h1>
@@ -300,7 +298,7 @@
               <img
                 src="assets/images/ekart/arduino-uno-r3-1.png"
                 alt="Arduino Uno"
-                class=""
+                class="ek-max-h-[300px] sm:ek-max-h-[420px]"
               />
             </div>
           </div>
@@ -308,10 +306,10 @@
         <!-- slide item 2 end  -->
         <!-- slide item 3  -->
         <div
-          class="slide ek-absolute ek-flex ek-flex-col ek-items-center ek-bg-cover lg:ek-ml-40 sm:ek-flex-row sm:ek-justify-center lg:ek-gap-40"
+          class="slide ek-absolute ek-flex ek-flex-col ek-items-center ek-bg-cover sm:ek-flex-row sm:ek-justify-center lg:ek-ml-40 lg:ek-gap-40"
         >
           <div class="-sm:ek-p-14 ek-order-1 ek-flex ek-flex-col ek-p-5">
-            <h1 class="ek-text-5xl ek-font-normal">CP2102 <br>USB to UART</h1>
+            <h1 class="ek-text-5xl ek-font-normal">CP2102 <br />USB to UART</h1>
             <p class="ek-mt-2 ek-text-gray-600">Serial Converter Module</p>
             <p class="ek-mt-4 ek-text-sm ek-font-semibold">
               FROM <br /><span class="ek-text-5xl ek-text-black">₹4000.00</span>
@@ -329,7 +327,7 @@
               <img
                 src="assets/images/ekart/ezgif.com-gif-maker-2022-02-22T034302.739.png"
                 alt="Arduino Uno"
-                class="ek-max-h-[420px]"
+                class="ek-max-h-[300px] sm:ek-max-h-[420px]"
               />
             </div>
           </div>
@@ -337,7 +335,7 @@
         <!-- slide item 3 end  -->
         <!-- slide item 4  -->
         <div
-          class="slide ek-absolute ek-flex ek-flex-col ek-items-center ek-bg-cover lg:ek-ml-40 sm:ek-flex-row sm:ek-justify-center lg:ek-gap-40"
+          class="slide ek-absolute ek-flex ek-flex-col ek-items-center ek-bg-cover sm:ek-flex-row sm:ek-justify-center lg:ek-ml-40 lg:ek-gap-40"
         >
           <div class="-sm:ek-p-14 ek-order-1 ek-flex ek-flex-col ek-p-5">
             <h1 class="ek-text-5xl ek-font-normal">ir sensor</h1>
@@ -358,7 +356,7 @@
               <img
                 src="assets/images/ekart/ir.png"
                 alt="Arduino Uno"
-                class="ek-max-h-[420px]"
+                class="ek-max-h-[300px] sm:ek-max-h-[420px]"
               />
             </div>
           </div>
@@ -366,6 +364,542 @@
         <!-- slide item 4 end  -->
       </section>
       <!-- slider end  -->
+      <!-- category  -->
+      <section>
+        <div
+          class="ek-flex ek-flex-wrap ek-items-center ek-justify-evenly ek-gap-8 ek-p-4 md:ek-justify-center"
+        >
+          <!-- card 1 -->
+          <div
+            class="ek-flex ek-w-full ek-rounded-lg ek-bg-gray-100 ek-shadow-md hover:ek-shadow-black sm:ek-w-2/5 lg:ek-w-1/5"
+          >
+            <div class="ek-w-1/3 ek-p-2 lg:ek-w-2/5">
+              <img
+                src="assets/images/category/Development-boards-1.webp"
+                alt="Sensor Image"
+                class="ek-w-[200px] ek-rounded-lg md:ek-w-[150px]"
+              />
+            </div>
+            <div class="ek-my-auto ek-w-2/3 ek-p-2">
+              <h1 class="ek-break-words ek-text-base ek-font-bold">
+                Development Boards
+              </h1>
+              <button class="ek-py-2 ek-text-end">
+                <a
+                  href="#"
+                  class="group ek-mx-auto ek-flex ek-text-nowrap ek-text-sm"
+                >
+                  shop now
+                  <div
+                    class="ek-mx-1 ek-rounded-full ek-bg-primary hover:ek-bg-secondary ek-flex ek-items-center ek-justify-center"
+                  >
+                    <i class="ec ec-close-remove ek-p-1 ek-text-white" style="font-size:10px"></i>
+                  </div>
+                </a>
+              </button>
+            </div>
+          </div>
+          <!-- card 1 end  -->
+          <!-- card 2 -->
+          <div
+            class="ek-flex ek-w-full ek-rounded-lg ek-bg-gray-100 ek-shadow-md hover:ek-shadow-black sm:ek-w-2/5 lg:ek-w-1/5"
+          >
+            <div class="ek-w-1/3 ek-p-2 lg:ek-w-2/5">
+              <img
+                src="assets/images/category/Lithium-Ion-Battery-2.webp"
+                alt="Sensor Image"
+                class="ek-w-[200px] ek-rounded-lg md:ek-w-[150px]"
+              />
+            </div>
+            <div class="ek-my-auto ek-w-2/3 ek-p-2">
+              <h1 class="ek-break-words ek-text-base ek-font-bold">
+                Batteries | Chargers and Accessories
+              </h1>
+              <button class="ek-py-2 ek-text-end">
+                <a
+                  href="#"
+                  class="group ek-mx-auto ek-flex ek-text-nowrap ek-text-sm"
+                >
+                  shop now
+                  <div
+                    class="ek-mx-1 ek-rounded-full ek-bg-primary hover:ek-bg-secondary ek-flex ek-items-center ek-justify-center"
+                  >
+                    <i class="ec ec-close-remove ek-p-1 ek-text-white" style="font-size:10px"></i>
+                  </div>
+                </a>
+              </button>
+            </div>
+          </div>
+          <!-- card 2 end  -->
+
+          <!-- card 3 -->
+          <div
+            class="ek-flex ek-w-full ek-rounded-lg ek-bg-gray-100 ek-shadow-md hover:ek-shadow-black sm:ek-w-2/5 lg:ek-w-1/5"
+          >
+            <div class="ek-w-1/3 ek-p-2 lg:ek-w-2/5">
+              <img
+                src="assets/images/category/Drone-kits-3.webp"
+                alt="Drone Parts Image"
+                class="ek-w-[200px] ek-rounded-lg md:ek-w-[150px]"
+              />
+            </div>
+            <div class="ek-my-auto ek-w-2/3 ek-p-2">
+              <h1 class="ek-break-words ek-text-base ek-font-bold">
+                Drone Parts
+              </h1>
+              <button class="ek-py-2 ek-text-end">
+                <a
+                  href="#"
+                  class="group ek-mx-auto ek-flex ek-text-nowrap ek-text-sm"
+                >
+                  shop now
+                  <div
+                    class="ek-mx-1 ek-rounded-full ek-bg-primary hover:ek-bg-secondary ek-flex ek-items-center ek-justify-center"
+                  >
+                    <i class="ec ec-close-remove ek-p-1 ek-text-white" style="font-size:10px"></i>
+                  </div>
+                </a>
+              </button>
+            </div>
+          </div>
+          <!-- card 3 end  -->
+
+          <!-- card 4 -->
+          <div
+            class="ek-flex ek-w-full ek-rounded-lg ek-bg-gray-100 ek-shadow-md hover:ek-shadow-black sm:ek-w-2/5 lg:ek-w-1/5"
+          >
+            <div class="ek-w-1/3 ek-p-2 lg:ek-w-2/5">
+              <img
+                src="assets/images/category/Sensors-4.webp"
+                alt="Sensors Modules Image"
+                class="ek-w-[200px] ek-rounded-lg md:ek-w-[150px]"
+              />
+            </div>
+            <div class="ek-my-auto ek-w-2/3 ek-p-2">
+              <h1 class="ek-break-words ek-text-base ek-font-bold">
+                Sensors Modules
+              </h1>
+              <button class="ek-py-2 ek-text-end">
+                <a
+                  href="#"
+                  class="group ek-mx-auto ek-flex ek-text-nowrap ek-text-sm"
+                >
+                  shop now
+                  <div
+                    class="ek-mx-1 ek-rounded-full ek-bg-primary hover:ek-bg-secondary ek-flex ek-items-center ek-justify-center"
+                  >
+                    <i class="ec ec-close-remove ek-p-1 ek-text-white" style="font-size:10px"></i>
+                  </div>
+                </a>
+              </button>
+            </div>
+          </div>
+          <!-- card 4 end  -->
+
+          <!-- card 5 -->
+          <div
+            class="ek-flex ek-w-full ek-rounded-lg ek-bg-gray-100 ek-shadow-md hover:ek-shadow-black sm:ek-w-2/5 lg:ek-w-1/5"
+          >
+            <div class="ek-w-1/3 ek-p-2 lg:ek-w-2/5">
+              <img
+                src="assets/images/category/Motors-5.webp"
+                alt="Motors Drivers Image"
+                class="ek-w-[200px] ek-rounded-lg md:ek-w-[150px]"
+              />
+            </div>
+            <div class="ek-my-auto ek-w-2/3 ek-p-2">
+              <h1 class="ek-break-words ek-text-base ek-font-bold">
+                Motors | Drivers
+              </h1>
+              <button class="ek-py-2 ek-text-end">
+                <a
+                  href="#"
+                  class="group ek-mx-auto ek-flex ek-text-nowrap ek-text-sm"
+                >
+                  shop now
+                  <div
+                    class="ek-mx-1 ek-rounded-full ek-bg-primary hover:ek-bg-secondary ek-flex ek-items-center ek-justify-center"
+                  >
+                    <i class="ec ec-close-remove ek-p-1 ek-text-white" style="font-size:10px"></i>
+                  </div>
+                </a>
+              </button>
+            </div>
+          </div>
+          <!-- card 5 end  -->
+
+          <!-- card 6 -->
+          <div
+            class="ek-flex ek-w-full ek-rounded-lg ek-bg-gray-100 ek-shadow-md hover:ek-shadow-black sm:ek-w-2/5 lg:ek-w-1/5"
+          >
+            <div class="ek-w-1/3 ek-p-2 lg:ek-w-2/5">
+              <img
+                src="assets/images/category/IoT-Wireless-6.webp"
+                alt="IoT and Wireless Image"
+                class="ek-w-[200px] ek-rounded-lg md:ek-w-[150px]"
+              />
+            </div>
+            <div class="ek-my-auto ek-w-2/3 ek-p-2">
+              <h1 class="ek-break-words ek-text-base ek-font-bold">
+                IoT and Wireless
+              </h1>
+              <button class="ek-py-2 ek-text-end">
+                <a
+                  href="#"
+                  class="group ek-mx-auto ek-flex ek-text-nowrap ek-text-sm"
+                >
+                  shop now
+                  <div
+                    class="ek-mx-1 ek-rounded-full ek-bg-primary hover:ek-bg-secondary ek-flex ek-items-center ek-justify-center"
+                  >
+                    <i class="ec ec-close-remove ek-p-1 ek-text-white" style="font-size:10px"></i>
+                  </div>
+                </a>
+              </button>
+            </div>
+          </div>
+          <!-- card 6 end  -->
+
+          <!-- card 7 -->
+          <div
+            class="ek-flex ek-w-full ek-rounded-lg ek-bg-gray-100 ek-shadow-md hover:ek-shadow-black sm:ek-w-2/5 lg:ek-w-1/5"
+          >
+            <div class="ek-w-1/3 ek-p-2 lg:ek-w-2/5">
+              <img
+                src="assets/images/category/Electronic-Components-7.webp"
+                alt="Electronic Components Image"
+                class="ek-w-[200px] ek-rounded-lg md:ek-w-[150px]"
+              />
+            </div>
+            <div class="ek-my-auto ek-w-2/3 ek-p-2">
+              <h1 class="ek-break-words ek-text-base ek-font-bold">
+                Electronic Components
+              </h1>
+              <button class="ek-py-2 ek-text-end">
+                <a
+                  href="#"
+                  class="group ek-mx-auto ek-flex ek-text-nowrap ek-text-sm"
+                >
+                  shop now
+                  <div
+                    class="ek-mx-1 ek-rounded-full ek-bg-primary hover:ek-bg-secondary ek-flex ek-items-center ek-justify-center"
+                  >
+                    <i class="ec ec-close-remove ek-p-1 ek-text-white" style="font-size:10px"></i>
+                  </div>
+                </a>
+              </button>
+            </div>
+          </div>
+          <!-- card 7 end  -->
+
+          <!-- card 8 -->
+          <div
+            class="ek-flex ek-w-full ek-rounded-lg ek-bg-gray-100 ek-shadow-md hover:ek-shadow-black sm:ek-w-2/5 lg:ek-w-1/5"
+          >
+            <div class="ek-w-1/3 ek-p-2 lg:ek-w-2/5">
+              <img
+                src="assets/images/category/Electronic-Components-8.webp"
+                alt="Electronic Modules and Displays Image"
+                class="ek-w-[200px] ek-rounded-lg md:ek-w-[150px]"
+              />
+            </div>
+            <div class="ek-my-auto ek-w-2/3 ek-p-2">
+              <h1 class="ek-break-words ek-text-base ek-font-bold">
+                Electronic Modules and Displays
+              </h1>
+              <button class="ek-py-2 ek-text-end">
+                <a
+                  href="#"
+                  class="group ek-mx-auto ek-flex ek-text-nowrap ek-text-sm"
+                >
+                  shop now
+                  <div
+                    class="ek-mx-1 ek-rounded-full ek-bg-primary hover:ek-bg-secondary ek-flex ek-items-center ek-justify-center"
+                  >
+                    <i class="ec ec-close-remove ek-p-1 ek-text-white" style="font-size:10px"></i>
+                  </div>
+                </a>
+              </button>
+            </div>
+          </div>
+          <!-- card 8 end  -->
+
+          <!-- card 9 -->
+          <div
+            class="ek-flex ek-w-full ek-rounded-lg ek-bg-gray-100 ek-shadow-md hover:ek-shadow-black sm:ek-w-2/5 lg:ek-w-1/5"
+          >
+            <div class="ek-w-1/3 ek-p-2 lg:ek-w-2/5">
+              <img
+                src="assets/images/category/3D-Printer-Parts-9.webp"
+                alt="3D Printers and Parts Image"
+                class="ek-w-[200px] ek-rounded-lg md:ek-w-[150px]"
+              />
+            </div>
+            <div class="ek-my-auto ek-w-2/3 ek-p-2">
+              <h1 class="ek-break-words ek-text-base ek-font-bold">
+                3D Printers and Parts
+              </h1>
+              <button class="ek-py-2 ek-text-end">
+                <a
+                  href="#"
+                  class="group ek-mx-auto ek-flex ek-text-nowrap ek-text-sm"
+                >
+                  shop now
+                  <div
+                    class="ek-mx-1 ek-rounded-full ek-bg-primary hover:ek-bg-secondary ek-flex ek-items-center ek-justify-center"
+                  >
+                    <i class="ec ec-close-remove ek-p-1 ek-text-white" style="font-size:10px"></i>
+                  </div>
+                </a>
+              </button>
+            </div>
+          </div>
+          <!-- card 9 end  -->
+
+          <!-- card 10 -->
+          <div
+            class="ek-flex ek-w-full ek-rounded-lg ek-bg-gray-100 ek-shadow-md hover:ek-shadow-black sm:ek-w-2/5 lg:ek-w-1/5"
+          >
+            <div class="ek-w-1/3 ek-p-2 lg:ek-w-2/5">
+              <img
+                src="assets/images/category/Mechanical-Components-10.webp"
+                alt="Mechanical Parts Image"
+                class="ek-w-[200px] ek-rounded-lg md:ek-w-[150px]"
+              />
+            </div>
+            <div class="ek-my-auto ek-w-2/3 ek-p-2">
+              <h1 class="ek-break-words ek-text-sm ek-font-bold">
+                Mechanical Parts and Workbench Tools
+              </h1>
+              <button class="ek-py-2 ek-text-end">
+                <a
+                  href="#"
+                  class="group ek-mx-auto ek-flex ek-text-nowrap ek-text-sm"
+                >
+                  shop now
+                  <div
+                    class="ek-mx-1 ek-rounded-full ek-bg-primary hover:ek-bg-secondary ek-flex ek-items-center ek-justify-center"
+                  >
+                    <i class="ec ec-close-remove ek-p-1 ek-text-white" style="font-size:10px"></i>
+                  </div>
+                </a>
+              </button>
+            </div>
+          </div>
+          <!-- card 10 end  -->
+
+          <!-- card 11 -->
+          <div
+            class="ek-flex ek-w-full ek-rounded-lg ek-bg-gray-100 ek-shadow-md hover:ek-shadow-black sm:ek-w-2/5 lg:ek-w-1/5"
+          >
+            <div class="ek-w-1/3 ek-p-2 lg:ek-w-2/5">
+              <img
+                src="assets/images/category/E-Bikes-11.webp"
+                alt="Electric Vehicle Parts Image"
+                class="ek-w-[200px] ek-rounded-lg md:ek-w-[150px]"
+              />
+            </div>
+            <div class="ek-my-auto ek-w-2/3 ek-p-2">
+              <h1 class="ek-break-words ek-text-base ek-font-bold">
+                Electric Vehicle Parts
+              </h1>
+              <button class="ek-py-2 ek-text-end">
+                <a
+                  href="#"
+                  class="group ek-mx-auto ek-flex ek-text-nowrap ek-text-sm"
+                >
+                  shop now
+                  <div
+                    class="ek-mx-1 ek-rounded-full ek-bg-primary hover:ek-bg-secondary ek-flex ek-items-center ek-justify-center"
+                  >
+                    <i class="ec ec-close-remove ek-p-1 ek-text-white" style="font-size:10px"></i>
+                  </div>
+                </a>
+              </button>
+            </div>
+          </div>
+          <!-- card 11 end  -->
+
+          <!-- card 12 -->
+          <div
+            class="ek-flex ek-w-full ek-rounded-lg ek-bg-gray-100 ek-shadow-md hover:ek-shadow-black sm:ek-w-2/5 lg:ek-w-1/5"
+          >
+            <div class="ek-w-1/3 ek-p-2 lg:ek-w-2/5">
+              <img
+                src="assets/images/category/DIY-kits-2-12.webp"
+                alt="DIY Learning and Robot Kits Image"
+                class="ek-w-[200px] ek-rounded-lg md:ek-w-[150px]"
+              />
+            </div>
+            <div class="ek-my-auto ek-w-2/3 ek-p-2">
+              <h1 class="ek-break-words ek-text-base ek-font-bold">
+                DIY Learning and Robot Kits
+              </h1>
+              <button class="ek-py-2 ek-text-end">
+                <a
+                  href="#"
+                  class="group ek-mx-auto ek-flex ek-text-nowrap ek-text-sm"
+                >
+                  shop now
+                  <div
+                    class="ek-mx-1 ek-rounded-full ek-bg-primary hover:ek-bg-secondary ek-flex ek-items-center ek-justify-center"
+                  >
+                    <i class="ec ec-close-remove ek-p-1 ek-text-white" style="font-size:10px"></i>
+                  </div>
+                </a>
+              </button>
+            </div>
+          </div>
+          <!-- card 12 end  -->
+        </div>
+      </section>
+      <!-- category end  -->
+      <!-- featured products  -->
+      <section>
+        <div class="ek-flex ek-flex-col sm:ek-flex-row ek-items-center ek-justify-center ek-p-8">
+          <div class="">
+            <div
+              class="ek-relative ek-flex ek-w-96 ek-flex-col ek-rounded-xl ek-border-2 ek-border-primary ek-bg-white ek-text-gray-700 ek-shadow-md ek-shadow-gray-600 hover:ek-border-secondary hover:ek-shadow-lg"
+            >
+              <div class="ek-flex ek-justify-between ek-p-6 ek-pb-0">
+                <h1 class="font ek-text-xl ek-font-bold ek-text-secondary">
+                  Special <br />Offer
+                </h1>
+                <div
+                  class="ek-flex ek-size-24 ek-flex-col ek-items-center ek-justify-center ek-rounded-full ek-bg-primary ek-text-white"
+                >
+                  <p>Save</p>
+                  <p>₹1000</p>
+                </div>
+              </div>
+              <div
+                class="ek-relative ek-mx-4 ek-mt-4 ek-max-h-80 ek-overflow-hidden ek-rounded-xl ek-bg-white ek-bg-clip-border ek-text-gray-700"
+              >
+                <img
+                  src="assets/images/ekart/rpi-4-4gb416X420.png"
+                  alt="card-image"
+                  class="ek-h-full ek-w-full ek-object-cover"
+                />
+              </div>
+              <div class="ek-p-6 ek-pt-0">
+                <div
+                  class="ek-mb-2 ek-flex ek-flex-col ek-items-center ek-justify-between"
+                >
+                  <p
+                    class="text-blue-gray-900 ek-block ek-font-sans ek-text-base ek-font-bold ek-leading-relaxed ek-antialiased"
+                  >
+                    Raspberry Pi 4 Model-B with 4 GB RAM
+                  </p>
+                  <p
+                    class="text-blue-gray-900 ek-block ek-font-sans ek-text-base ek-font-medium ek-leading-relaxed ek-antialiased"
+                  >
+                    <span class="ek-line-through">₹9,500.00</span> ₹8,500.00
+                  </p>
+                </div>
+                <div
+                  class="ek-flex ek-justify-between ek-font-sans ek-text-sm ek-font-normal ek-leading-normal ek-text-gray-700 ek-antialiased ek-opacity-75"
+                >
+                  <p>Available: 6</p>
+                  <p>Already sold :28</p>
+                </div>
+                <div class="ek-pt-0">
+                  <div
+                    class="shadow-gray-900/10 hover:shadow-gray-900/20 focus:opacity-[0.85] active:opacity-[0.85] bg-blue-gray-900/10 text-blue-gray-900 ek-block ek-w-full ek-select-none ek-rounded-lg ek-px-6 ek-py-3 ek-text-center ek-align-middle ek-font-sans ek-text-xs ek-font-bold ek-uppercase ek-shadow-none ek-transition-all hover:ek-scale-105 hover:ek-shadow-none focus:ek-scale-105 focus:ek-shadow-none active:ek-scale-100 active:ek-shadow-none disabled:ek-pointer-events-none disabled:ek-opacity-50 disabled:ek-shadow-none"
+                    type="button"
+                  >
+                    <p>Hurry Up! Offer ends in:</p>
+                    <div
+                      class="count-down-main ek-flex ek-w-full ek-items-center ek-justify-center ek-gap-1.5"
+                    >
+                      <div class="timer">
+                        <div
+                          class="min-w-[80px] aspect-square ek-flex ek-flex-col ek-items-center ek-justify-center ek-gap-0 ek-rounded-xl ek-border ek-border-primary ek-px-1.5 ek-py-1.5"
+                        >
+                          <h3
+                            class="countdown-element days font-manrope ek-text-center ek-text-2xl ek-font-semibold ek-text-secondary"
+                          ></h3>
+                          <p
+                            class="font-inter ek-w-full ek-text-center ek-text-sm ek-font-normal ek-capitalize ek-text-secondary"
+                          >
+                            days
+                          </p>
+                        </div>
+                      </div>
+                      <h3
+                        class="font-manrope ek-text-2xl ek-font-semibold ek-text-secondary"
+                      >
+                        :
+                      </h3>
+                      <div class="timer">
+                        <div
+                          class="min-w-[80px] aspect-square ek-flex ek-flex-col ek-items-center ek-justify-center ek-gap-0 ek-rounded-xl ek-border ek-border-primary ek-px-1.5 ek-py-1.5"
+                        >
+                          <h3
+                            class="countdown-element hours font-manrope ek-text-center ek-text-2xl ek-font-semibold ek-text-secondary"
+                          ></h3>
+                          <p
+                            class="font-inter ek-w-full ek-text-center ek-text-sm ek-font-normal ek-capitalize ek-text-secondary"
+                          >
+                            Hour
+                          </p>
+                        </div>
+                      </div>
+                      <h3
+                        class="font-manrope ek-text-2xl ek-font-semibold ek-text-secondary"
+                      >
+                        :
+                      </h3>
+                      <div class="timer">
+                        <div
+                          class="min-w-[80px] aspect-square ek-flex ek-flex-col ek-items-center ek-justify-center ek-gap-0 ek-rounded-xl ek-border ek-border-primary ek-px-1.5 ek-py-1.5"
+                        >
+                          <h3
+                            class="countdown-element minutes font-manrope ek-text-center ek-text-2xl ek-font-semibold ek-text-secondary"
+                          ></h3>
+                          <p
+                            class="font-inter ek-w-full ek-text-center ek-text-sm ek-font-normal ek-capitalize ek-text-secondary"
+                          >
+                            Minutes
+                          </p>
+                        </div>
+                      </div>
+                      <h3
+                        class="font-manrope ek-text-2xl ek-font-semibold ek-text-secondary"
+                      >
+                        :
+                      </h3>
+                      <div class="timer">
+                        <div
+                          class="min-w-[80px] aspect-square ek-flex ek-flex-col ek-items-center ek-justify-center ek-gap-0 ek-rounded-xl ek-border ek-border-primary ek-px-1.5 ek-py-1.5"
+                        >
+                          <h3
+                            class="countdown-element seconds sec font-manrope ek-text-center ek-text-2xl ek-font-semibold ek-text-secondary"
+                          ></h3>
+                          <p
+                            class="font-inter ek-w-full ek-text-center ek-text-sm ek-font-normal ek-capitalize ek-text-secondary"
+                          >
+                            Seconds
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="ek-flex ek-grow ">
+            <ul class="ek-flex ek-justify-evenly ek-w-full ek-bg-black">
+              <li>Featured</li>
+              <li>On Sale</li>
+              <li>Top Rated</li>
+            </ul>
+            <div class="">
+              
+            </div>
+          </div>
+        </div>
+      </section>
     </main>
 
     <!-- main content end -->
