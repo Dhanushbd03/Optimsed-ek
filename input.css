@@ -2,32 +2,39 @@
 @tailwind components;
 @tailwind utilities;
 
-@layer utilities {
-  /* Hide scrollbar for Chrome, Safari and Opera */
-  /* Custom scrollbar for Chrome, Safari, Opera */
-  /* Custom scrollbar for Chrome, Safari, Opera */
-  .no-scrollbar::-webkit-scrollbar {
-    width: 5px;
-    height: 2px; /* Set the scrollbar track to 3px wide */
-  }
 
-  .no-scrollbar::-webkit-scrollbar-thumb {
-    background-color: #d5202e; /* Color of the draggable part of the scrollbar */
-    border-radius: 9999px;
-  }
+.scrollbar {
+  --sb-track-color: #ffffff;
+  --sb-thumb-color: #3d3f82;
+  --sb-size: 2px;
+  
+}
+.ltr{
+  direction: ltr;
+  --sb-thumb-color: #D5202E;
 
-  .no-scrollbar::-webkit-scrollbar-track {
-    background: #fff; /* Color of the scrollbar track */
-  }
+}
+.rtl{
+  direction: rtl;
+}
 
-  /* Custom scrollbar settings for Firefox */
-  .no-scrollbar {
-    scrollbar-width: thin; /* 'thin' since Firefox doesn't support px values for scrollbar width */
-    scrollbar-color: #3d3f82; /* first color for the thumb, second for the track */
-  }
+.scrollbar::-webkit-scrollbar {
+  width: var(--sb-size);
+}
 
-  /* Hide scrollbar for IE and Edge */
-  .no-scrollbar {
-    -ms-overflow-style: none; /* IE and Edge, hides scrollbar */
+.scrollbar::-webkit-scrollbar-track {
+  background: var(--sb-track-color);
+  
+}
+
+.scrollbar::-webkit-scrollbar-thumb {
+  background: var(--sb-thumb-color);
+  
+}
+
+@supports not selector(::-webkit-scrollbar) {
+  .scrollbar {
+      scrollbar-color: var(--sb-thumb-color)
+                     var(--sb-track-color);
   }
 }

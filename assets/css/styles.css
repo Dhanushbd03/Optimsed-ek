@@ -1,28 +1,66 @@
 /* Ensure the parent container doesn't overflow */
 #carouseldiv {
-    overflow: hidden;
-    position: relative;
-  }
-  
-  /* Ensure all slides have the same height and transitions */
-  .slide {
-    height: 100%;
-    width: 100%;
-    position: absolute;
-    transition: opacity 3s ease-in-out;
-    opacity: 0;
-    visibility: hidden;
-  }
-  
-  /* Active slide */
-  .slide.active {
-    opacity: 1;
-    visibility: visible;
-  }
-  
-  .carousel img {
-    height: 100%;
-    width: auto;
-    max-height: 300px; /* or another consistent height */
-  }
-  
+  overflow: hidden;
+  position: relative;
+}
+
+/* Ensure all slides have the same height and transitions */
+.slide {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  transition: opacity 3s ease-in-out;
+  opacity: 0;
+  visibility: hidden;
+}
+
+/* Active slide */
+.slide.active {
+  opacity: 1;
+  visibility: visible;
+}
+
+.carousel img {
+  height: 100%;
+  width: auto;
+  max-height: 300px; /* or another consistent height */
+}
+.box-shadow {
+  box-shadow:
+    rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
+    rgba(0, 0, 0, 0.3) 0px 30px 60px -30px,
+    rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+}
+
+/* category dropdown */
+.dropdown-content {
+  transition: max-height 0.5s ease;
+  max-height: 0;
+}
+
+.dropdown-content.show {
+  max-height: 420px;
+  opacity: 1;
+  visibility: visible;
+}
+
+/* category dropdown end */
+
+.no-scroll {
+  overflow: hidden;
+}
+
+/* sidebar  */
+
+#sidebardiv{
+  max-width: 0;
+  transition: max-width 0.3s ease;
+  overflow: hidden;
+
+}
+
+#sidebardiv.showsidebar{
+  max-width: 320px;
+  overflow: hidden;
+  padding: 16px 16px;
+}

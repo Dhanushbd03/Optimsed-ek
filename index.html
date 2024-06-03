@@ -64,9 +64,7 @@
         </div>
         <div class="ek-flex ek-items-center ek-gap-1">
           <span
-            ><a
-              href="#accounts"
-              class="ek-flex ek-items-center ek-text-gray-600"
+            ><a href="#accounts" class="ek-flex ek-items-center"
               ><i class="ec ec-transport mr-1 ek-text-xl"></i>&nbsp;Track your
               order</a
             > </span
@@ -75,7 +73,7 @@
           <span
             ><a id="" role="button" class="ek-flex ek-items-center ek-gap-1">
               <i class="ec ec-user ek-text-xl"></i> Register
-              <span class="text-gray-50">or</span>
+              <span class="ek-text-gray-500">or</span>
               Sign in
             </a></span
           >
@@ -97,7 +95,10 @@
             />
             <!-- Logo end -->
             <!-- Menu icon  -->
-            <button class="ek-block ek-text-gray-600 lg:ek-order-1">
+            <button
+              class="ek-block ek-text-gray-600 lg:ek-order-1"
+              id="sidebarbutton"
+            >
               <i
                 class="ec ec-menu ek-p-2 ek-text-2xl ek-text-primary hover:ek-text-secondary"
               ></i>
@@ -112,65 +113,178 @@
               class="ek-flex ek-w-full ek-items-center ek-overflow-hidden ek-rounded-lg ek-border-2 ek-border-primary ek-bg-primary"
               id="searchdiv"
             >
-              <select
-                class="no-scrollbar ek-h-full ek-max-w-40 ek-bg-white ek-px-4 ek-py-1 ek-outline-none"
-                id="searchcategory"
-              >
-                <option value="one" selected>All Categories</option>
-                <option value="shop-by-brands" class="">Shop by Brands</option>
-                <option value="new-arrivals">New Arrivals</option>
-                <option value="smartelex">SmartElex</option>
-                <option value="electronics-components">
-                  Electronics Components
-                </option>
-                <option value="diy-learning-robot-kits">
-                  DIY Learning and Robot Kits
-                </option>
-                <option value="drone-parts">Drone Parts</option>
-                <option value="electric-vehicle-parts">
-                  Electric Vehicle Parts
-                </option>
-                <option value="laser-engraver-cnc-machines">
-                  Laser Engraver and CNC Machines
-                </option>
-                <option value="3d-printers-parts">3D Printers and Parts</option>
-                <option value="batteries-chargers-accessories">
-                  Batteries, Chargers and Accessories
-                </option>
-                <option value="motors-drivers-actuators">
-                  Motors, Drivers, Actuators
-                </option>
-                <option value="development-board">Development Board</option>
-                <option value="raspberry-pi">Raspberry Pi</option>
-                <option value="official-arduino-boards">
-                  Official Arduino Boards
-                </option>
-                <option value="display-modules">Display Modules</option>
-                <option value="sensors-modules">Sensors Modules</option>
-                <option value="cameras">Cameras</option>
-                <option value="iot-wireless">IoT and Wireless</option>
-                <option value="electronic-modules">Electronic Modules</option>
-                <option value="wires-cables">Wires and Cables</option>
-                <option value="mechanical-parts-tools">
-                  Mechanical Parts and Workbench Tools
-                </option>
-                <option value="services">Services</option>
-                <option value="refurbished-partial-workin">
-                  Refurbished & Partial Working
-                </option>
-              </select>
+              <!-- select  -->
+              <div class="ek-h-full" id="select">
+                <button
+                  id="selectbtn"
+                  class="ek-line-clamp-1 ek-flex ek-max-w-44 ek-items-center ek-justify-between ek-text-nowrap ek-bg-white ek-p-2 ek-ring-1 ek-ring-gray-300"
+                >
+                  <span id="selected">All Categories</span>
+                  <i class="fas fa-chevron-down"></i>
+                </button>
+
+                <ul
+                  class="scrollbar ltr ek-absolute ek-z-50 ek-mt-1 ek-flex ek-hidden ek-max-h-[490px] ek-flex-col ek-overflow-y-scroll ek-bg-gray-50 ek-ring-1 ek-ring-gray-300"
+                  id="selectMenu"
+                >
+                  <li
+                    class="ek-cursor-pointer ek-select-none ek-p-2 hover:ek-bg-secondary hover:ek-text-white"
+                    data-language="All Categories"
+                  >
+                    All categories
+                  </li>
+                  <li
+                    class="ek-cursor-pointer ek-select-none ek-p-2 hover:ek-bg-secondary hover:ek-text-white"
+                    data-language="New Arrivals"
+                  >
+                    New Arrivals
+                  </li>
+                  <li
+                    class="ek-cursor-pointer ek-select-none ek-p-2 hover:ek-bg-secondary hover:ek-text-white"
+                    data-language="SmartElex"
+                  >
+                    SmartElex
+                  </li>
+                  <li
+                    class="ek-cursor-pointer ek-select-none ek-p-2 hover:ek-bg-secondary hover:ek-text-white"
+                    data-language="Electronic Components"
+                  >
+                    Electronic Components
+                  </li>
+                  <li
+                    class="ek-cursor-pointer ek-select-none ek-p-2 hover:ek-bg-secondary hover:ek-text-white"
+                    data-language="DIY Learning and Robot Kits"
+                  >
+                    DIY Learning and Robot Kits
+                  </li>
+                  <li
+                    class="ek-cursor-pointer ek-select-none ek-p-2 hover:ek-bg-secondary hover:ek-text-white"
+                    data-language="Drone Parts"
+                  >
+                    Drone Parts
+                  </li>
+                  <li
+                    class="ek-cursor-pointer ek-select-none ek-p-2 hover:ek-bg-secondary hover:ek-text-white"
+                    data-language="Electric Vehicle Parts"
+                  >
+                    Electric Vehicle Parts
+                  </li>
+                  <li
+                    class="ek-cursor-pointer ek-select-none ek-p-2 hover:ek-bg-secondary hover:ek-text-white"
+                    data-language="Laser Engraver and CNC Machines"
+                  >
+                    Laser Engraver and CNC Machines
+                  </li>
+                  <li
+                    class="ek-cursor-pointer ek-select-none ek-p-2 hover:ek-bg-secondary hover:ek-text-white"
+                    data-language="3D Printers and Parts"
+                  >
+                    3D Printers and Parts
+                  </li>
+                  <li
+                    class="ek-cursor-pointer ek-select-none ek-p-2 hover:ek-bg-secondary hover:ek-text-white"
+                    data-language="Batteries, Chargers and Accessories"
+                  >
+                    Batteries, Chargers and Accessories
+                  </li>
+                  <li
+                    class="ek-cursor-pointer ek-select-none ek-p-2 hover:ek-bg-secondary hover:ek-text-white"
+                    data-language="Motors, Drivers, Actuators"
+                  >
+                    Motors, Drivers, Actuators
+                  </li>
+                  <li
+                    class="ek-cursor-pointer ek-select-none ek-p-2 hover:ek-bg-secondary hover:ek-text-white"
+                    data-language="Development Board"
+                  >
+                    Development Board
+                  </li>
+                  <li
+                    class="ek-cursor-pointer ek-select-none ek-p-2 hover:ek-bg-secondary hover:ek-text-white"
+                    data-language="Raspberry Pi"
+                  >
+                    Raspberry Pi
+                  </li>
+                  <li
+                    class="ek-cursor-pointer ek-select-none ek-p-2 hover:ek-bg-secondary hover:ek-text-white"
+                    data-language="Official Arduino Boards"
+                  >
+                    Official Arduino Boards
+                  </li>
+                  <li
+                    class="ek-cursor-pointer ek-select-none ek-p-2 hover:ek-bg-secondary hover:ek-text-white"
+                    data-language="Display Modules"
+                  >
+                    Display Modules
+                  </li>
+                  <li
+                    class="ek-cursor-pointer ek-select-none ek-p-2 hover:ek-bg-secondary hover:ek-text-white"
+                    data-language="Sensors Modules"
+                  >
+                    Sensors Modules
+                  </li>
+                  <li
+                    class="ek-cursor-pointer ek-select-none ek-p-2 hover:ek-bg-secondary hover:ek-text-white"
+                    data-language="Cameras"
+                  >
+                    Cameras
+                  </li>
+                  <li
+                    class="ek-cursor-pointer ek-select-none ek-p-2 hover:ek-bg-secondary hover:ek-text-white"
+                    data-language="IoT and Wireless"
+                  >
+                    IoT and Wireless
+                  </li>
+                  <li
+                    class="ek-cursor-pointer ek-select-none ek-p-2 hover:ek-bg-secondary hover:ek-text-white"
+                    data-language="Electronic Modules"
+                  >
+                    Electronic Modules
+                  </li>
+                  <li
+                    class="ek-cursor-pointer ek-select-none ek-p-2 hover:ek-bg-secondary hover:ek-text-white"
+                    data-language="Wires and Cables"
+                  >
+                    Wires and Cables
+                  </li>
+                  <li
+                    class="ek-cursor-pointer ek-select-none ek-p-2 hover:ek-bg-secondary hover:ek-text-white"
+                    data-language="Mechanical Parts and Workbench Tools"
+                  >
+                    Mechanical Parts and Workbench Tools
+                  </li>
+                  <li
+                    class="ek-cursor-pointer ek-select-none ek-p-2 hover:ek-bg-secondary hover:ek-text-white"
+                    data-language="Services"
+                  >
+                    Services
+                  </li>
+                  <li
+                    class="ek-cursor-pointer ek-select-none ek-p-2 hover:ek-bg-secondary hover:ek-text-white"
+                    data-language="Refurbished & Partial Workin"
+                  >
+                    Refurbished & Partial Workin
+                  </li>
+                </ul>
+              </div>
+
+              <!-- select end  -->
+              <!-- input  -->
               <input
                 type="text"
                 placeholder="Search for Products"
                 class="ek-flex-grow ek-border-none ek-px-4 ek-py-2 ek-outline-none"
                 id="searchinput"
               />
+              <!-- input end  -->
+              <!-- button  -->
               <button
                 class="ek-h-full ek-cursor-pointer ek-border-none ek-border-primary ek-bg-primary ek-px-4"
                 id="searchbtn"
               >
                 <i class="ec ec-search ek-text-2xl ek-text-white"></i>
               </button>
+              <!-- button end  -->
             </div>
           </div>
 
@@ -209,11 +323,328 @@
         <!-- category navbar  -->
         <div class="ek-hidden ek-px-24 lg:ek-flex">
           <ul class="ek-flex ek-text-primary">
-            <li
-              class="ek-rounded-t-lg ek-bg-primary ek-px-10 ek-py-3 ek-pr-20 ek-font-bold ek-text-white hover:ek-bg-secondary"
-            >
-              <span class="fa fa-list-ul ek-text-white"></span>
-              All categories
+            <li>
+              <div class="ek-relative ek-inline-flex">
+                <button
+                  id="categorybtn"
+                  type="button"
+                  class="ek-shadow-xs ek-inline-flex ek-cursor-pointer ek-items-center ek-justify-center ek-gap-2 ek-rounded-t-lg ek-bg-primary ek-px-10 ek-py-3 ek-pr-20 ek-text-center ek-text-sm ek-font-bold ek-text-white ek-transition-all ek-duration-500 hover:ek-bg-secondary"
+                >
+                  <span class="fa fa-list-ul ek-text-white"></span>
+                  All Categories
+                </button>
+                <div
+                  id="categorydropdown"
+                  class="dropdown-content scrollbar rtl show ek-absolute ek-top-full ek-z-10 ek-w-full ek-overflow-y-scroll ek-bg-white ek-shadow-lg"
+                >
+                  <ul class="ek-py-2">
+                    <li class="ek-px-6">
+                      <a
+                        class="ek-block ek-border-b ek-border-b-gray-100 ek-py-1 ek-text-gray-900 hover:ek-bg-gray-100 hover:ek-font-medium"
+                        href=""
+                      >
+                        DIY Learning and Robot Kits
+                      </a>
+                    </li>
+                    <li class="ek-px-6">
+                      <a
+                        class="ek-block ek-border-b ek-border-b-gray-100 ek-py-1 ek-text-gray-900 hover:ek-bg-gray-100 hover:ek-font-medium"
+                        href=""
+                      >
+                        Drone Parts
+                      </a>
+                    </li>
+                    <li class="ek-px-6">
+                      <a
+                        class="ek-block ek-border-b ek-border-b-gray-100 ek-py-1 ek-text-gray-900 hover:ek-bg-gray-100 hover:ek-font-medium"
+                        href=""
+                      >
+                        Electric Vehicle Parts
+                      </a>
+                    </li>
+                    <li class="ek-px-6">
+                      <a
+                        class="ek-block ek-border-b ek-border-b-gray-100 ek-py-1 ek-text-gray-900 hover:ek-bg-gray-100 hover:ek-font-medium"
+                        href=""
+                      >
+                        Laser Engraver and CNC Machines
+                      </a>
+                    </li>
+                    <li class="ek-px-6">
+                      <a
+                        class="ek-block ek-border-b ek-border-b-gray-100 ek-py-1 ek-text-gray-900 hover:ek-bg-gray-100 hover:ek-font-medium"
+                        href=""
+                      >
+                        3D Printers and Parts
+                      </a>
+                    </li>
+                    <li class="ek-px-6">
+                      <a
+                        class="ek-block ek-border-b ek-border-b-gray-100 ek-py-1 ek-text-gray-900 hover:ek-bg-gray-100 hover:ek-font-medium"
+                        href=""
+                      >
+                        Batteries, Chargers and Accessories
+                      </a>
+                    </li>
+                    <li class="ek-px-6">
+                      <a
+                        class="ek-block ek-border-b ek-border-b-gray-100 ek-py-1 ek-text-gray-900 hover:ek-bg-gray-100 hover:ek-font-medium"
+                        href=""
+                      >
+                        Motors, Drivers, Actuators
+                      </a>
+                    </li>
+                    <li class="ek-px-6">
+                      <a
+                        class="ek-block ek-border-b ek-border-b-gray-100 ek-py-1 ek-text-gray-900 hover:ek-bg-gray-100 hover:ek-font-medium"
+                        href=""
+                      >
+                        Development Board
+                      </a>
+                    </li>
+                    <li class="ek-px-6">
+                      <a
+                        class="ek-block ek-border-b ek-border-b-gray-100 ek-py-1 ek-text-gray-900 hover:ek-bg-gray-100 hover:ek-font-medium"
+                        href=""
+                      >
+                        Raspberry Pi
+                      </a>
+                    </li>
+                    <li class="ek-px-6">
+                      <a
+                        class="ek-block ek-border-b ek-border-b-gray-100 ek-py-1 ek-text-gray-900 hover:ek-bg-gray-100 hover:ek-font-medium"
+                        href=""
+                      >
+                        Official Arduino Boards
+                      </a>
+                    </li>
+                    <li class="ek-px-6">
+                      <a
+                        class="ek-block ek-border-b ek-border-b-gray-100 ek-py-1 ek-text-gray-900 hover:ek-bg-gray-100 hover:ek-font-medium"
+                        href=""
+                      >
+                        Display Modules
+                      </a>
+                    </li>
+                    <li class="ek-px-6">
+                      <a
+                        class="ek-block ek-border-b ek-border-b-gray-100 ek-py-1 ek-text-gray-900 hover:ek-bg-gray-100 hover:ek-font-medium"
+                        href=""
+                      >
+                        Sensors Modules
+                      </a>
+                    </li>
+                    <li class="ek-px-6">
+                      <a
+                        class="ek-block ek-border-b ek-border-b-gray-100 ek-py-1 ek-text-gray-900 hover:ek-bg-gray-100 hover:ek-font-medium"
+                        href=""
+                      >
+                        Cameras
+                      </a>
+                    </li>
+                    <li class="ek-px-6">
+                      <a
+                        class="ek-block ek-border-b ek-border-b-gray-100 ek-py-1 ek-text-gray-900 hover:ek-bg-gray-100 hover:ek-font-medium"
+                        href=""
+                      >
+                        IoT and Wireless
+                      </a>
+                    </li>
+                    <li class="ek-px-6">
+                      <a
+                        class="ek-block ek-border-b ek-border-b-gray-100 ek-py-1 ek-text-gray-900 hover:ek-bg-gray-100 hover:ek-font-medium"
+                        href=""
+                      >
+                        Electronic Modules
+                      </a>
+                    </li>
+                    <li class="ek-px-6">
+                      <a
+                        class="ek-block ek-border-b ek-border-b-gray-100 ek-py-1 ek-text-gray-900 hover:ek-bg-gray-100 hover:ek-font-medium"
+                        href=""
+                      >
+                        Wires and Cables
+                      </a>
+                    </li>
+                    <li class="ek-px-6">
+                      <a
+                        class="ek-block ek-border-b ek-border-b-gray-100 ek-py-1 ek-text-gray-900 hover:ek-bg-gray-100 hover:ek-font-medium"
+                        href=""
+                      >
+                        Mechanical Parts and Workbench Tools
+                      </a>
+                    </li>
+                    <li class="ek-px-6">
+                      <a
+                        class="ek-block ek-border-b ek-border-b-gray-100 ek-py-1 ek-text-gray-900 hover:ek-bg-gray-100 hover:ek-font-medium"
+                        href=""
+                      >
+                        Services
+                      </a>
+                    </li>
+                    <li class="ek-px-6">
+                      <a
+                        class="ek-block ek-border-b ek-border-b-gray-100 ek-py-1 ek-text-gray-900 hover:ek-bg-gray-100 hover:ek-font-medium"
+                        href=""
+                      >
+                        Refurbished & Partial Working
+                      </a>
+                    </li>
+                    <li class="ek-px-6">
+                      <a
+                        class="ek-block ek-border-b ek-border-b-gray-100 ek-py-1 ek-text-gray-900 hover:ek-bg-gray-100 hover:ek-font-medium"
+                        href=""
+                      >
+                        DIY Learning and Robot Kits
+                      </a>
+                    </li>
+                    <li class="ek-px-6">
+                      <a
+                        class="ek-block ek-border-b ek-border-b-gray-100 ek-py-1 ek-text-gray-900 hover:ek-bg-gray-100 hover:ek-font-medium"
+                        href=""
+                      >
+                        Drone Parts
+                      </a>
+                    </li>
+                    <li class="ek-px-6">
+                      <a
+                        class="ek-block ek-border-b ek-border-b-gray-100 ek-py-1 ek-text-gray-900 hover:ek-bg-gray-100 hover:ek-font-medium"
+                        href=""
+                      >
+                        Electric Vehicle Parts
+                      </a>
+                    </li>
+                    <li class="ek-px-6">
+                      <a
+                        class="ek-block ek-border-b ek-border-b-gray-100 ek-py-1 ek-text-gray-900 hover:ek-bg-gray-100 hover:ek-font-medium"
+                        href=""
+                      >
+                        Laser Engraver and CNC Machines
+                      </a>
+                    </li>
+                    <li class="ek-px-6">
+                      <a
+                        class="ek-block ek-border-b ek-border-b-gray-100 ek-py-1 ek-text-gray-900 hover:ek-bg-gray-100 hover:ek-font-medium"
+                        href=""
+                      >
+                        3D Printers and Parts
+                      </a>
+                    </li>
+                    <li class="ek-px-6">
+                      <a
+                        class="ek-block ek-border-b ek-border-b-gray-100 ek-py-1 ek-text-gray-900 hover:ek-bg-gray-100 hover:ek-font-medium"
+                        href=""
+                      >
+                        Batteries, Chargers and Accessories
+                      </a>
+                    </li>
+                    <li class="ek-px-6">
+                      <a
+                        class="ek-block ek-border-b ek-border-b-gray-100 ek-py-1 ek-text-gray-900 hover:ek-bg-gray-100 hover:ek-font-medium"
+                        href=""
+                      >
+                        Motors, Drivers, Actuators
+                      </a>
+                    </li>
+                    <li class="ek-px-6">
+                      <a
+                        class="ek-block ek-border-b ek-border-b-gray-100 ek-py-1 ek-text-gray-900 hover:ek-bg-gray-100 hover:ek-font-medium"
+                        href=""
+                      >
+                        Development Board
+                      </a>
+                    </li>
+                    <li class="ek-px-6">
+                      <a
+                        class="ek-block ek-border-b ek-border-b-gray-100 ek-py-1 ek-text-gray-900 hover:ek-bg-gray-100 hover:ek-font-medium"
+                        href=""
+                      >
+                        Raspberry Pi
+                      </a>
+                    </li>
+                    <li class="ek-px-6">
+                      <a
+                        class="ek-block ek-border-b ek-border-b-gray-100 ek-py-1 ek-text-gray-900 hover:ek-bg-gray-100 hover:ek-font-medium"
+                        href=""
+                      >
+                        Official Arduino Boards
+                      </a>
+                    </li>
+                    <li class="ek-px-6">
+                      <a
+                        class="ek-block ek-border-b ek-border-b-gray-100 ek-py-1 ek-text-gray-900 hover:ek-bg-gray-100 hover:ek-font-medium"
+                        href=""
+                      >
+                        Display Modules
+                      </a>
+                    </li>
+                    <li class="ek-px-6">
+                      <a
+                        class="ek-block ek-border-b ek-border-b-gray-100 ek-py-1 ek-text-gray-900 hover:ek-bg-gray-100 hover:ek-font-medium"
+                        href=""
+                      >
+                        Sensors Modules
+                      </a>
+                    </li>
+                    <li class="ek-px-6">
+                      <a
+                        class="ek-block ek-border-b ek-border-b-gray-100 ek-py-1 ek-text-gray-900 hover:ek-bg-gray-100 hover:ek-font-medium"
+                        href=""
+                      >
+                        Cameras
+                      </a>
+                    </li>
+                    <li class="ek-px-6">
+                      <a
+                        class="ek-block ek-border-b ek-border-b-gray-100 ek-py-1 ek-text-gray-900 hover:ek-bg-gray-100 hover:ek-font-medium"
+                        href=""
+                      >
+                        IoT and Wireless
+                      </a>
+                    </li>
+                    <li class="ek-px-6">
+                      <a
+                        class="ek-block ek-border-b ek-border-b-gray-100 ek-py-1 ek-text-gray-900 hover:ek-bg-gray-100 hover:ek-font-medium"
+                        href=""
+                      >
+                        Electronic Modules
+                      </a>
+                    </li>
+                    <li class="ek-px-6">
+                      <a
+                        class="ek-block ek-border-b ek-border-b-gray-100 ek-py-1 ek-text-gray-900 hover:ek-bg-gray-100 hover:ek-font-medium"
+                        href=""
+                      >
+                        Wires and Cables
+                      </a>
+                    </li>
+                    <li class="ek-px-6">
+                      <a
+                        class="ek-block ek-border-b ek-border-b-gray-100 ek-py-1 ek-text-gray-900 hover:ek-bg-gray-100 hover:ek-font-medium"
+                        href=""
+                      >
+                        Mechanical Parts and Workbench Tools
+                      </a>
+                    </li>
+                    <li class="ek-px-6">
+                      <a
+                        class="ek-block ek-border-b ek-border-b-gray-100 ek-py-1 ek-text-gray-900 hover:ek-bg-gray-100 hover:ek-font-medium"
+                        href=""
+                      >
+                        Services
+                      </a>
+                    </li>
+                    <li class="ek-px-6">
+                      <a
+                        class="ek-block ek-border-b ek-border-b-gray-100 ek-py-1 ek-text-gray-900 hover:ek-bg-gray-100 hover:ek-font-medium"
+                        href=""
+                      >
+                        Refurbished & Partial Working
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
             </li>
             <li
               class="ek-px-4 ek-py-3 ek-pl-16 ek-font-bold ek-text-secondary hover:ek-text-primary"
@@ -235,12 +666,76 @@
       </nav>
       <!-- navbar end -->
     </header>
+
+    <!-- sidebar  -->
+    <aside
+      id="sidebardiv"
+      class="ek-fixed ek-top-0 ek-z-[9999] ek-min-h-screen ek-w-80 ek-bg-white"
+    >
+      <nav>
+        <div
+          class="ek-mb-5 ek-flex ek-items-center ek-justify-between"
+          id="sidebarclosebutton"
+        >
+          <img src="assets/images/logo/logo.png" alt="" class="" />
+          <div
+            class="ek-flex ek-size-6 ek-items-center ek-justify-center ek-rounded-full ek-bg-primary hover:ek-bg-secondary"
+          >
+            <i class="fas fa-chevron-left ek-text-xs ek-text-white"></i>
+          </div>
+        </div>
+        <ul class="ek-space-y-2">
+          <li class="sidebar-option">
+            <div
+              class="ek-flex ek-items-center ek-justify-between ek-p-2 hover:ek-bg-secondary"
+            >
+              <div class="ek-flex ek-items-center">
+                <span>Shop by Brands </span>
+              </div>
+              <i class="fas fa-chevron-down ek-rotate-180 ek-text-xs"></i>
+            </div>
+            <ul class="sidebar ek-ml-4 ek-hidden">
+              <li class="sidebar2">
+                <div
+                  class="ek-flex ek-items-center ek-p-2 hover:ek-bg-secondary hover:ek-text-white"
+                >
+                  <i
+                    class="fas fa-chevron-down ek-mr-2 ek-rotate-180 ek-text-xs"
+                  ></i>
+                  Appointment Management
+                </div>
+                <ul class="sidebar3 ek-ml-4 ek-hidden">
+                  <li>
+                    <a
+                      href="#"
+                      class="ek-flex ek-items-center ek-p-2 hover:ek-bg-secondary hover:ek-text-white"
+                    >
+                      3333333333333333333333
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      href="#"
+                      class="ek-flex ek-items-center ek-p-2 hover:ek-bg-secondary hover:ek-text-white"
+                    >
+                      333333333333333333333
+                    </a>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+    </aside>
+
+    <!-- sidebar end  -->
     <!-- header end -->
     <!-- main content -->
     <main>
       <!-- slider  -->
       <section
-        class="animate__animated animate__fadeIn animate__slow ek-relative ek-flex ek-min-h-[600px] ek-flex-col ek-items-center ek-justify-center ek-bg-cover sm:ek-min-h-[420px] sm:ek-flex-row"
+        class="animate__animated animate__fadeIn animate__slow ek-relative -ek-z-50 ek-flex ek-min-h-[600px] ek-flex-col ek-items-center ek-justify-center ek-bg-cover sm:ek-min-h-[420px] sm:ek-flex-row"
         style="background-image: url(assets/images/hero/img1.jpg)"
         id="carouseldiv"
       >
@@ -391,9 +886,12 @@
                 >
                   shop now
                   <div
-                    class="ek-mx-1 ek-rounded-full ek-bg-primary hover:ek-bg-secondary ek-flex ek-items-center ek-justify-center"
+                    class="ek-mx-1 ek-flex ek-items-center ek-justify-center ek-rounded-full ek-bg-primary hover:ek-bg-secondary"
                   >
-                    <i class="ec ec-close-remove ek-p-1 ek-text-white" style="font-size:10px"></i>
+                    <i
+                      class="ec ec-close-remove ek-p-1 ek-text-white"
+                      style="font-size: 10px"
+                    ></i>
                   </div>
                 </a>
               </button>
@@ -422,9 +920,12 @@
                 >
                   shop now
                   <div
-                    class="ek-mx-1 ek-rounded-full ek-bg-primary hover:ek-bg-secondary ek-flex ek-items-center ek-justify-center"
+                    class="ek-mx-1 ek-flex ek-items-center ek-justify-center ek-rounded-full ek-bg-primary hover:ek-bg-secondary"
                   >
-                    <i class="ec ec-close-remove ek-p-1 ek-text-white" style="font-size:10px"></i>
+                    <i
+                      class="ec ec-close-remove ek-p-1 ek-text-white"
+                      style="font-size: 10px"
+                    ></i>
                   </div>
                 </a>
               </button>
@@ -454,9 +955,12 @@
                 >
                   shop now
                   <div
-                    class="ek-mx-1 ek-rounded-full ek-bg-primary hover:ek-bg-secondary ek-flex ek-items-center ek-justify-center"
+                    class="ek-mx-1 ek-flex ek-items-center ek-justify-center ek-rounded-full ek-bg-primary hover:ek-bg-secondary"
                   >
-                    <i class="ec ec-close-remove ek-p-1 ek-text-white" style="font-size:10px"></i>
+                    <i
+                      class="ec ec-close-remove ek-p-1 ek-text-white"
+                      style="font-size: 10px"
+                    ></i>
                   </div>
                 </a>
               </button>
@@ -486,9 +990,12 @@
                 >
                   shop now
                   <div
-                    class="ek-mx-1 ek-rounded-full ek-bg-primary hover:ek-bg-secondary ek-flex ek-items-center ek-justify-center"
+                    class="ek-mx-1 ek-flex ek-items-center ek-justify-center ek-rounded-full ek-bg-primary hover:ek-bg-secondary"
                   >
-                    <i class="ec ec-close-remove ek-p-1 ek-text-white" style="font-size:10px"></i>
+                    <i
+                      class="ec ec-close-remove ek-p-1 ek-text-white"
+                      style="font-size: 10px"
+                    ></i>
                   </div>
                 </a>
               </button>
@@ -518,9 +1025,12 @@
                 >
                   shop now
                   <div
-                    class="ek-mx-1 ek-rounded-full ek-bg-primary hover:ek-bg-secondary ek-flex ek-items-center ek-justify-center"
+                    class="ek-mx-1 ek-flex ek-items-center ek-justify-center ek-rounded-full ek-bg-primary hover:ek-bg-secondary"
                   >
-                    <i class="ec ec-close-remove ek-p-1 ek-text-white" style="font-size:10px"></i>
+                    <i
+                      class="ec ec-close-remove ek-p-1 ek-text-white"
+                      style="font-size: 10px"
+                    ></i>
                   </div>
                 </a>
               </button>
@@ -550,9 +1060,12 @@
                 >
                   shop now
                   <div
-                    class="ek-mx-1 ek-rounded-full ek-bg-primary hover:ek-bg-secondary ek-flex ek-items-center ek-justify-center"
+                    class="ek-mx-1 ek-flex ek-items-center ek-justify-center ek-rounded-full ek-bg-primary hover:ek-bg-secondary"
                   >
-                    <i class="ec ec-close-remove ek-p-1 ek-text-white" style="font-size:10px"></i>
+                    <i
+                      class="ec ec-close-remove ek-p-1 ek-text-white"
+                      style="font-size: 10px"
+                    ></i>
                   </div>
                 </a>
               </button>
@@ -582,9 +1095,12 @@
                 >
                   shop now
                   <div
-                    class="ek-mx-1 ek-rounded-full ek-bg-primary hover:ek-bg-secondary ek-flex ek-items-center ek-justify-center"
+                    class="ek-mx-1 ek-flex ek-items-center ek-justify-center ek-rounded-full ek-bg-primary hover:ek-bg-secondary"
                   >
-                    <i class="ec ec-close-remove ek-p-1 ek-text-white" style="font-size:10px"></i>
+                    <i
+                      class="ec ec-close-remove ek-p-1 ek-text-white"
+                      style="font-size: 10px"
+                    ></i>
                   </div>
                 </a>
               </button>
@@ -614,9 +1130,12 @@
                 >
                   shop now
                   <div
-                    class="ek-mx-1 ek-rounded-full ek-bg-primary hover:ek-bg-secondary ek-flex ek-items-center ek-justify-center"
+                    class="ek-mx-1 ek-flex ek-items-center ek-justify-center ek-rounded-full ek-bg-primary hover:ek-bg-secondary"
                   >
-                    <i class="ec ec-close-remove ek-p-1 ek-text-white" style="font-size:10px"></i>
+                    <i
+                      class="ec ec-close-remove ek-p-1 ek-text-white"
+                      style="font-size: 10px"
+                    ></i>
                   </div>
                 </a>
               </button>
@@ -646,9 +1165,12 @@
                 >
                   shop now
                   <div
-                    class="ek-mx-1 ek-rounded-full ek-bg-primary hover:ek-bg-secondary ek-flex ek-items-center ek-justify-center"
+                    class="ek-mx-1 ek-flex ek-items-center ek-justify-center ek-rounded-full ek-bg-primary hover:ek-bg-secondary"
                   >
-                    <i class="ec ec-close-remove ek-p-1 ek-text-white" style="font-size:10px"></i>
+                    <i
+                      class="ec ec-close-remove ek-p-1 ek-text-white"
+                      style="font-size: 10px"
+                    ></i>
                   </div>
                 </a>
               </button>
@@ -678,9 +1200,12 @@
                 >
                   shop now
                   <div
-                    class="ek-mx-1 ek-rounded-full ek-bg-primary hover:ek-bg-secondary ek-flex ek-items-center ek-justify-center"
+                    class="ek-mx-1 ek-flex ek-items-center ek-justify-center ek-rounded-full ek-bg-primary hover:ek-bg-secondary"
                   >
-                    <i class="ec ec-close-remove ek-p-1 ek-text-white" style="font-size:10px"></i>
+                    <i
+                      class="ec ec-close-remove ek-p-1 ek-text-white"
+                      style="font-size: 10px"
+                    ></i>
                   </div>
                 </a>
               </button>
@@ -710,9 +1235,12 @@
                 >
                   shop now
                   <div
-                    class="ek-mx-1 ek-rounded-full ek-bg-primary hover:ek-bg-secondary ek-flex ek-items-center ek-justify-center"
+                    class="ek-mx-1 ek-flex ek-items-center ek-justify-center ek-rounded-full ek-bg-primary hover:ek-bg-secondary"
                   >
-                    <i class="ec ec-close-remove ek-p-1 ek-text-white" style="font-size:10px"></i>
+                    <i
+                      class="ec ec-close-remove ek-p-1 ek-text-white"
+                      style="font-size: 10px"
+                    ></i>
                   </div>
                 </a>
               </button>
@@ -742,9 +1270,12 @@
                 >
                   shop now
                   <div
-                    class="ek-mx-1 ek-rounded-full ek-bg-primary hover:ek-bg-secondary ek-flex ek-items-center ek-justify-center"
+                    class="ek-mx-1 ek-flex ek-items-center ek-justify-center ek-rounded-full ek-bg-primary hover:ek-bg-secondary"
                   >
-                    <i class="ec ec-close-remove ek-p-1 ek-text-white" style="font-size:10px"></i>
+                    <i
+                      class="ec ec-close-remove ek-p-1 ek-text-white"
+                      style="font-size: 10px"
+                    ></i>
                   </div>
                 </a>
               </button>
@@ -754,12 +1285,15 @@
         </div>
       </section>
       <!-- category end  -->
-      <!-- featured products  -->
+      <!-- products  -->
       <section>
-        <div class="ek-flex ek-flex-col sm:ek-flex-row ek-items-center ek-justify-center ek-p-8">
-          <div class="">
+        <div
+          class="ek-flex ek-flex-col ek-items-center ek-justify-center ek-gap-4 ek-py-4 sm:ek-flex-row"
+        >
+          <!-- special offer  -->
+          <div class="sm:ek-my-12 sm:ek-self-start sm:ek-pl-5 2xl:ek-my-0">
             <div
-              class="ek-relative ek-flex ek-w-96 ek-flex-col ek-rounded-xl ek-border-2 ek-border-primary ek-bg-white ek-text-gray-700 ek-shadow-md ek-shadow-gray-600 hover:ek-border-secondary hover:ek-shadow-lg"
+              class="ek-relative ek-flex ek-w-96 ek-flex-col ek-rounded-xl ek-border ek-border-primary ek-bg-white ek-text-gray-700 hover:ek-border-secondary hover:ek-shadow-lg sm:ek-w-80 lg:ek-w-96 tiny:ek-w-80"
             >
               <div class="ek-flex ek-justify-between ek-p-6 ek-pb-0">
                 <h1 class="font ek-text-xl ek-font-bold ek-text-secondary">
@@ -888,18 +1422,725 @@
               </div>
             </div>
           </div>
-          <div class="ek-flex ek-grow ">
-            <ul class="ek-flex ek-justify-evenly ek-w-full ek-bg-black">
-              <li>Featured</li>
-              <li>On Sale</li>
-              <li>Top Rated</li>
+          <!-- special offer end  -->
+
+          <!--  products list  -->
+          <div class="ek-flex ek-grow ek-flex-col sm:ek-self-start">
+            <ul
+              class="ek-flex ek-w-full ek-justify-center ek-gap-10 ek-text-xl ek-font-semibold sm:ek-gap-5"
+            >
+              <li class="ek-text-nowrap sm:ek-p-2" id="clickfeatured">
+                Featured
+              </li>
+              <li class="ek-text-nowrap sm:ek-p-2" id="clickonsale">On Sale</li>
+              <li class="ek-text-nowrap sm:ek-p-2" id="clicktoprated">
+                Top Rated
+              </li>
             </ul>
-            <div class="">
-              
+            <hr class="ek-border-1 ek-border-gray-100" />
+            <!-- Featured products  -->
+            <div
+              id="featured"
+              class="animate__animated animate__fadeInUp ek-relative ek-my-3 ek-flex ek-flex-wrap ek-justify-center ek-gap-0 ek-text-sm"
+            >
+              <!-- cards  -->
+              <div
+                class="lg:max-w-56 ek-min-w-48 ek-max-w-48 ek-border-x ek-border-gray-100 ek-p-5 ek-shadow-black hover:ek-shadow-2xl sm:ek-min-w-40 sm:ek-max-w-40 lg:ek-min-w-60 lg:ek-max-w-60 tiny:ek-min-w-44 tiny:ek-max-w-44"
+              >
+                <p class="ek-text-[10px] ek-text-gray-700">Motor Drivers</p>
+                <h5 class="ek-line-clamp-2 ek-font-semibold">
+                  12V DC Motor with Gearbox
+                </h5>
+                <img
+                  src="assets/images/products/shopping (4).webp"
+                  alt=""
+                  class="ek-min-h-36 ek-object-cover lg:ek-max-h-52 lg:ek-min-h-52 lg:ek-min-w-48 lg:ek-max-w-48"
+                />
+                <div class="ek-flex ek-justify-between">
+                  <p class="text ek-text-base ek-font-bold">₹1500.00</p>
+                  <div class="ek-rounded-full ek-bg-primary">
+                    <i class="ec ec-add-to-cart ek-p-1 ek-text-white"></i>
+                  </div>
+                </div>
+              </div>
+              <div
+                class="lg:max-w-56 ek-min-w-48 ek-max-w-48 ek-border-x ek-border-gray-100 ek-p-5 ek-shadow-black hover:ek-shadow-2xl sm:ek-min-w-40 sm:ek-max-w-40 lg:ek-min-w-60 lg:ek-max-w-60 tiny:ek-min-w-44 tiny:ek-max-w-44"
+              >
+                <p class="ek-text-[10px] ek-text-gray-700">Single Boards</p>
+                <h5 class="ek-line-clamp-2 ek-font-semibold">
+                  Raspberry Pi 4gb Ram
+                </h5>
+                <img
+                  src="assets/images/products/shopping (5).webp"
+                  alt=""
+                  class="ek-min-h-36 ek-object-cover lg:ek-max-h-52 lg:ek-min-h-52 lg:ek-min-w-48 lg:ek-max-w-48"
+                />
+                <div class="ek-flex ek-justify-between">
+                  <p class="text ek-text-base ek-font-bold">₹1500.00</p>
+                  <div class="ek-rounded-full ek-bg-primary">
+                    <i class="ec ec-add-to-cart ek-p-1 ek-text-white"></i>
+                  </div>
+                </div>
+              </div>
+              <div
+                class="lg:max-w-56 ek-min-w-48 ek-max-w-48 ek-border-x ek-border-gray-100 ek-p-5 ek-shadow-black hover:ek-shadow-2xl sm:ek-min-w-40 sm:ek-max-w-40 lg:ek-min-w-60 lg:ek-max-w-60 tiny:ek-min-w-44 tiny:ek-max-w-44"
+              >
+                <p class="ek-text-[10px] ek-text-gray-700">Motor Drivers</p>
+                <h5 class="ek-line-clamp-2 ek-font-semibold">
+                  12V DC Motor with Gearbox
+                </h5>
+                <img
+                  src="assets/images/products/shopping (6).webp"
+                  alt=""
+                  class="ek-min-h-36 ek-object-cover lg:ek-max-h-52 lg:ek-min-h-52 lg:ek-min-w-48 lg:ek-max-w-48"
+                />
+                <div class="ek-flex ek-justify-between">
+                  <p class="text ek-text-base ek-font-bold">₹1500.00</p>
+                  <div class="ek-rounded-full ek-bg-primary">
+                    <i class="ec ec-add-to-cart ek-p-1 ek-text-white"></i>
+                  </div>
+                </div>
+              </div>
+              <div
+                class="lg:max-w-56 ek-min-w-48 ek-max-w-48 ek-border-x ek-border-gray-100 ek-p-5 ek-shadow-black hover:ek-shadow-2xl sm:ek-min-w-40 sm:ek-max-w-40 lg:ek-min-w-60 lg:ek-max-w-60 tiny:ek-min-w-44 tiny:ek-max-w-44"
+              >
+                <p class="ek-text-[10px] ek-text-gray-700">Single Boards</p>
+                <h5 class="ek-line-clamp-2 ek-font-semibold">
+                  Raspberry Pi 4gb Ram
+                </h5>
+                <img
+                  src="assets/images/products/shopping (7).webp"
+                  alt=""
+                  class="ek-min-h-36 ek-object-cover lg:ek-max-h-52 lg:ek-min-h-52 lg:ek-min-w-48 lg:ek-max-w-48"
+                />
+                <div class="ek-flex ek-justify-between">
+                  <p class="text ek-text-base ek-font-bold">₹1500.00</p>
+                  <div class="ek-rounded-full ek-bg-primary">
+                    <i class="ec ec-add-to-cart ek-p-1 ek-text-white"></i>
+                  </div>
+                </div>
+              </div>
+              <div
+                class="lg:max-w-56 ek-min-w-48 ek-max-w-48 ek-border-x ek-border-gray-100 ek-p-5 ek-shadow-black hover:ek-shadow-2xl sm:ek-min-w-40 sm:ek-max-w-40 lg:ek-min-w-60 lg:ek-max-w-60 tiny:ek-min-w-44 tiny:ek-max-w-44"
+              >
+                <p class="ek-text-[10px] ek-text-gray-700">Motor Drivers</p>
+                <h5 class="ek-line-clamp-2 ek-font-semibold">
+                  12V DC Motor with Gearbox
+                </h5>
+                <img
+                  src="assets/images/products/shopping (1).webp"
+                  alt=""
+                  class="ek-min-h-36 ek-object-cover lg:ek-max-h-52 lg:ek-min-h-52 lg:ek-min-w-48 lg:ek-max-w-48"
+                />
+                <div class="ek-flex ek-justify-between">
+                  <p class="text ek-text-base ek-font-bold">₹1500.00</p>
+                  <div class="ek-rounded-full ek-bg-primary">
+                    <i class="ec ec-add-to-cart ek-p-1 ek-text-white"></i>
+                  </div>
+                </div>
+              </div>
+              <div
+                class="lg:max-w-56 ek-min-w-48 ek-max-w-48 ek-border-x ek-border-gray-100 ek-p-5 ek-shadow-black hover:ek-shadow-2xl sm:ek-min-w-40 sm:ek-max-w-40 lg:ek-min-w-60 lg:ek-max-w-60 tiny:ek-min-w-44 tiny:ek-max-w-44"
+              >
+                <p class="ek-text-[10px] ek-text-gray-700">Single Boards</p>
+                <h5 class="ek-line-clamp-2 ek-font-semibold">
+                  Raspberry Pi 4gb Ram
+                </h5>
+                <img
+                  src="assets/images/products/shopping.webp"
+                  alt=""
+                  class="ek-min-h-36 ek-object-cover lg:ek-max-h-52 lg:ek-min-h-52 lg:ek-min-w-48 lg:ek-max-w-48"
+                />
+                <div class="ek-flex ek-justify-between">
+                  <p class="text ek-text-base ek-font-bold">₹1500.00</p>
+                  <div class="ek-rounded-full ek-bg-primary">
+                    <i class="ec ec-add-to-cart ek-p-1 ek-text-white"></i>
+                  </div>
+                </div>
+              </div>
+              <div
+                class="lg:max-w-56 ek-min-w-48 ek-max-w-48 ek-border-x ek-border-gray-100 ek-p-5 ek-shadow-black hover:ek-shadow-2xl sm:ek-min-w-40 sm:ek-max-w-40 lg:ek-min-w-60 lg:ek-max-w-60 tiny:ek-min-w-44 tiny:ek-max-w-44"
+              >
+                <p class="ek-text-[10px] ek-text-gray-700">Motor Drivers</p>
+                <h5 class="ek-line-clamp-2 ek-font-semibold">
+                  12V DC Motor with Gearbox
+                </h5>
+                <img
+                  src="assets/images/products/shopping (3).webp"
+                  alt=""
+                  class="ek-min-h-36 ek-object-cover lg:ek-max-h-52 lg:ek-min-h-52 lg:ek-min-w-48 lg:ek-max-w-48"
+                />
+                <div class="ek-flex ek-justify-between">
+                  <p class="text ek-text-base ek-font-bold">₹1500.00</p>
+                  <div class="ek-rounded-full ek-bg-primary">
+                    <i class="ec ec-add-to-cart ek-p-1 ek-text-white"></i>
+                  </div>
+                </div>
+              </div>
+              <div
+                class="lg:max-w-56 ek-min-w-48 ek-max-w-48 ek-border-x ek-border-gray-100 ek-p-5 ek-shadow-black hover:ek-shadow-2xl sm:ek-min-w-40 sm:ek-max-w-40 lg:ek-min-w-60 lg:ek-max-w-60 tiny:ek-min-w-44 tiny:ek-max-w-44"
+              >
+                <p class="ek-text-[10px] ek-text-gray-700">Single Boards</p>
+                <h5 class="ek-line-clamp-2 ek-font-semibold">
+                  Raspberry Pi 4gb Ram
+                </h5>
+                <img
+                  src="assets/images/products/shopping (4).webp"
+                  alt=""
+                  class="ek-min-h-36 ek-object-cover lg:ek-max-h-52 lg:ek-min-h-52 lg:ek-min-w-48 lg:ek-max-w-48"
+                />
+                <div class="ek-flex ek-justify-between">
+                  <p class="text ek-text-base ek-font-bold">₹1500.00</p>
+                  <div class="ek-rounded-full ek-bg-primary">
+                    <i class="ec ec-add-to-cart ek-p-1 ek-text-white"></i>
+                  </div>
+                </div>
+              </div>
+              <!-- cards end -->
             </div>
+            <!-- Featured products end  -->
+            <!-- on Sale  -->
+            <div
+              id="onsale"
+              class="animate__animated animate__fadeInUp ek-relative ek-my-3 ek-flex ek-flex-wrap ek-justify-center ek-gap-0 ek-text-sm"
+            >
+              <!-- cards  -->
+              <div
+                class="lg:max-w-56 ek-min-w-48 ek-max-w-48 ek-border-x ek-border-gray-100 ek-p-5 ek-shadow-black hover:ek-shadow-2xl sm:ek-min-w-40 sm:ek-max-w-40 lg:ek-min-w-60 lg:ek-max-w-60 tiny:ek-min-w-44 tiny:ek-max-w-44"
+              >
+                <p class="ek-text-[10px] ek-text-gray-700">Motor Drivers</p>
+                <h5 class="ek-line-clamp-2 ek-font-semibold">
+                  12V DC Motor with Gearbox
+                </h5>
+                <img
+                  src="assets/images/products/shopping (1).webp"
+                  alt=""
+                  class="ek-min-h-36 ek-object-cover lg:ek-max-h-52 lg:ek-min-h-52 lg:ek-min-w-48 lg:ek-max-w-48"
+                />
+                <div class="ek-flex ek-justify-between">
+                  <p class="text ek-text-base ek-font-bold">₹1500.00</p>
+                  <div class="ek-rounded-full ek-bg-primary">
+                    <i class="ec ec-add-to-cart ek-p-1 ek-text-white"></i>
+                  </div>
+                </div>
+              </div>
+              <div
+                class="lg:max-w-56 ek-min-w-48 ek-max-w-48 ek-border-x ek-border-gray-100 ek-p-5 ek-shadow-black hover:ek-shadow-2xl sm:ek-min-w-40 sm:ek-max-w-40 lg:ek-min-w-60 lg:ek-max-w-60 tiny:ek-min-w-44 tiny:ek-max-w-44"
+              >
+                <p class="ek-text-[10px] ek-text-gray-700">Single Boards</p>
+                <h5 class="ek-line-clamp-2 ek-font-semibold">
+                  Raspberry Pi 4gb Ram
+                </h5>
+                <img
+                  src="assets/images/products/shopping.webp"
+                  alt=""
+                  class="ek-min-h-36 ek-object-cover lg:ek-max-h-52 lg:ek-min-h-52 lg:ek-min-w-48 lg:ek-max-w-48"
+                />
+                <div class="ek-flex ek-justify-between">
+                  <p class="text ek-text-base ek-font-bold">₹1500.00</p>
+                  <div class="ek-rounded-full ek-bg-primary">
+                    <i class="ec ec-add-to-cart ek-p-1 ek-text-white"></i>
+                  </div>
+                </div>
+              </div>
+              <div
+                class="lg:max-w-56 ek-min-w-48 ek-max-w-48 ek-border-x ek-border-gray-100 ek-p-5 ek-shadow-black hover:ek-shadow-2xl sm:ek-min-w-40 sm:ek-max-w-40 lg:ek-min-w-60 lg:ek-max-w-60 tiny:ek-min-w-44 tiny:ek-max-w-44"
+              >
+                <p class="ek-text-[10px] ek-text-gray-700">Motor Drivers</p>
+                <h5 class="ek-line-clamp-2 ek-font-semibold">
+                  12V DC Motor with Gearbox
+                </h5>
+                <img
+                  src="assets/images/products/shopping (7).webp"
+                  alt=""
+                  class="ek-min-h-36 ek-object-cover lg:ek-max-h-52 lg:ek-min-h-52 lg:ek-min-w-48 lg:ek-max-w-48"
+                />
+                <div class="ek-flex ek-justify-between">
+                  <p class="text ek-text-base ek-font-bold">₹1500.00</p>
+                  <div class="ek-rounded-full ek-bg-primary">
+                    <i class="ec ec-add-to-cart ek-p-1 ek-text-white"></i>
+                  </div>
+                </div>
+              </div>
+              <div
+                class="lg:max-w-56 ek-min-w-48 ek-max-w-48 ek-border-x ek-border-gray-100 ek-p-5 ek-shadow-black hover:ek-shadow-2xl sm:ek-min-w-40 sm:ek-max-w-40 lg:ek-min-w-60 lg:ek-max-w-60 tiny:ek-min-w-44 tiny:ek-max-w-44"
+              >
+                <p class="ek-text-[10px] ek-text-gray-700">Single Boards</p>
+                <h5 class="ek-line-clamp-2 ek-font-semibold">
+                  Raspberry Pi 4gb Ram
+                </h5>
+                <img
+                  src="assets/images/products/shopping (5).webp"
+                  alt=""
+                  class="ek-min-h-36 ek-object-cover lg:ek-max-h-52 lg:ek-min-h-52 lg:ek-min-w-48 lg:ek-max-w-48"
+                />
+                <div class="ek-flex ek-justify-between">
+                  <p class="text ek-text-base ek-font-bold">₹1500.00</p>
+                  <div class="ek-rounded-full ek-bg-primary">
+                    <i class="ec ec-add-to-cart ek-p-1 ek-text-white"></i>
+                  </div>
+                </div>
+              </div>
+              <div
+                class="lg:max-w-56 ek-min-w-48 ek-max-w-48 ek-border-x ek-border-gray-100 ek-p-5 ek-shadow-black hover:ek-shadow-2xl sm:ek-min-w-40 sm:ek-max-w-40 lg:ek-min-w-60 lg:ek-max-w-60 tiny:ek-min-w-44 tiny:ek-max-w-44"
+              >
+                <p class="ek-text-[10px] ek-text-gray-700">Motor Drivers</p>
+                <h5 class="ek-line-clamp-2 ek-font-semibold">
+                  12V DC Motor with Gearbox
+                </h5>
+                <img
+                  src="assets/images/products/shopping (3).webp"
+                  alt=""
+                  class="ek-min-h-36 ek-object-cover lg:ek-max-h-52 lg:ek-min-h-52 lg:ek-min-w-48 lg:ek-max-w-48"
+                />
+                <div class="ek-flex ek-justify-between">
+                  <p class="text ek-text-base ek-font-bold">₹1500.00</p>
+                  <div class="ek-rounded-full ek-bg-primary">
+                    <i class="ec ec-add-to-cart ek-p-1 ek-text-white"></i>
+                  </div>
+                </div>
+              </div>
+              <div
+                class="lg:max-w-56 ek-min-w-48 ek-max-w-48 ek-border-x ek-border-gray-100 ek-p-5 ek-shadow-black hover:ek-shadow-2xl sm:ek-min-w-40 sm:ek-max-w-40 lg:ek-min-w-60 lg:ek-max-w-60 tiny:ek-min-w-44 tiny:ek-max-w-44"
+              >
+                <p class="ek-text-[10px] ek-text-gray-700">Single Boards</p>
+                <h5 class="ek-line-clamp-2 ek-font-semibold">
+                  Raspberry Pi 4gb Ram
+                </h5>
+                <img
+                  src="assets/images/products/shopping (4).webp"
+                  alt=""
+                  class="ek-min-h-36 ek-object-cover lg:ek-max-h-52 lg:ek-min-h-52 lg:ek-min-w-48 lg:ek-max-w-48"
+                />
+                <div class="ek-flex ek-justify-between">
+                  <p class="text ek-text-base ek-font-bold">₹1500.00</p>
+                  <div class="ek-rounded-full ek-bg-primary">
+                    <i class="ec ec-add-to-cart ek-p-1 ek-text-white"></i>
+                  </div>
+                </div>
+              </div>
+              <div
+                class="lg:max-w-56 ek-min-w-48 ek-max-w-48 ek-border-x ek-border-gray-100 ek-p-5 ek-shadow-black hover:ek-shadow-2xl sm:ek-min-w-40 sm:ek-max-w-40 lg:ek-min-w-60 lg:ek-max-w-60 tiny:ek-min-w-44 tiny:ek-max-w-44"
+              >
+                <p class="ek-text-[10px] ek-text-gray-700">Motor Drivers</p>
+                <h5 class="ek-line-clamp-2 ek-font-semibold">
+                  12V DC Motor with Gearbox
+                </h5>
+                <img
+                  src="assets/images/products/shopping (5).webp"
+                  alt=""
+                  class="ek-min-h-36 ek-object-cover lg:ek-max-h-52 lg:ek-min-h-52 lg:ek-min-w-48 lg:ek-max-w-48"
+                />
+                <div class="ek-flex ek-justify-between">
+                  <p class="text ek-text-base ek-font-bold">₹1500.00</p>
+                  <div class="ek-rounded-full ek-bg-primary">
+                    <i class="ec ec-add-to-cart ek-p-1 ek-text-white"></i>
+                  </div>
+                </div>
+              </div>
+              <div
+                class="lg:max-w-56 ek-min-w-48 ek-max-w-48 ek-border-x ek-border-gray-100 ek-p-5 ek-shadow-black hover:ek-shadow-2xl sm:ek-min-w-40 sm:ek-max-w-40 lg:ek-min-w-60 lg:ek-max-w-60 tiny:ek-min-w-44 tiny:ek-max-w-44"
+              >
+                <p class="ek-text-[10px] ek-text-gray-700">Single Boards</p>
+                <h5 class="ek-line-clamp-2 ek-font-semibold">
+                  Raspberry Pi 4gb Ram
+                </h5>
+                <img
+                  src="assets/images/products/shopping (6).webp"
+                  alt=""
+                  class="ek-min-h-36 ek-object-cover lg:ek-max-h-52 lg:ek-min-h-52 lg:ek-min-w-48 lg:ek-max-w-48"
+                />
+                <div class="ek-flex ek-justify-between">
+                  <p class="text ek-text-base ek-font-bold">₹1500.00</p>
+                  <div class="ek-rounded-full ek-bg-primary">
+                    <i class="ec ec-add-to-cart ek-p-1 ek-text-white"></i>
+                  </div>
+                </div>
+              </div>
+              <!-- cards end -->
+            </div>
+            <!-- on Sale end  -->
+            <!-- Top Rated  -->
+            <div
+              id="toprated"
+              class="animate__animated animate__fadeInUp ek-relative ek-my-3 ek-flex ek-flex-wrap ek-justify-center ek-gap-0 ek-text-sm"
+            >
+              <!-- cards  -->
+              <div
+                class="lg:max-w-56 ek-min-w-48 ek-max-w-48 ek-border-x ek-border-gray-100 ek-p-5 ek-shadow-black hover:ek-shadow-2xl sm:ek-min-w-40 sm:ek-max-w-40 lg:ek-min-w-60 lg:ek-max-w-60 tiny:ek-min-w-44 tiny:ek-max-w-44"
+              >
+                <p class="ek-text-[10px] ek-text-gray-700">Motor Drivers</p>
+                <h5 class="ek-line-clamp-2 ek-font-semibold">
+                  12V DC Motor with Gearbox
+                </h5>
+                <img
+                  src="assets/images/products/shopping (3).webp"
+                  alt=""
+                  class="ek-min-h-36 ek-object-cover lg:ek-max-h-52 lg:ek-min-h-52 lg:ek-min-w-48 lg:ek-max-w-48"
+                />
+                <div class="ek-flex ek-justify-between">
+                  <p class="text ek-text-base ek-font-bold">₹1500.00</p>
+                  <div class="ek-rounded-full ek-bg-primary">
+                    <i class="ec ec-add-to-cart ek-p-1 ek-text-white"></i>
+                  </div>
+                </div>
+              </div>
+              <div
+                class="lg:max-w-56 ek-min-w-48 ek-max-w-48 ek-border-x ek-border-gray-100 ek-p-5 ek-shadow-black hover:ek-shadow-2xl sm:ek-min-w-40 sm:ek-max-w-40 lg:ek-min-w-60 lg:ek-max-w-60 tiny:ek-min-w-44 tiny:ek-max-w-44"
+              >
+                <p class="ek-text-[10px] ek-text-gray-700">Single Boards</p>
+                <h5 class="ek-line-clamp-2 ek-font-semibold">
+                  Raspberry Pi 4gb Ram
+                </h5>
+                <img
+                  src="assets/images/products/shopping (4).webp"
+                  alt=""
+                  class="ek-min-h-36 ek-object-cover lg:ek-max-h-52 lg:ek-min-h-52 lg:ek-min-w-48 lg:ek-max-w-48"
+                />
+                <div class="ek-flex ek-justify-between">
+                  <p class="text ek-text-base ek-font-bold">₹1500.00</p>
+                  <div class="ek-rounded-full ek-bg-primary">
+                    <i class="ec ec-add-to-cart ek-p-1 ek-text-white"></i>
+                  </div>
+                </div>
+              </div>
+              <div
+                class="lg:max-w-56 ek-min-w-48 ek-max-w-48 ek-border-x ek-border-gray-100 ek-p-5 ek-shadow-black hover:ek-shadow-2xl sm:ek-min-w-40 sm:ek-max-w-40 lg:ek-min-w-60 lg:ek-max-w-60 tiny:ek-min-w-44 tiny:ek-max-w-44"
+              >
+                <p class="ek-text-[10px] ek-text-gray-700">Motor Drivers</p>
+                <h5 class="ek-line-clamp-2 ek-font-semibold">
+                  12V DC Motor with Gearbox
+                </h5>
+                <img
+                  src="assets/images/products/shopping (5).webp"
+                  alt=""
+                  class="ek-min-h-36 ek-object-cover lg:ek-max-h-52 lg:ek-min-h-52 lg:ek-min-w-48 lg:ek-max-w-48"
+                />
+                <div class="ek-flex ek-justify-between">
+                  <p class="text ek-text-base ek-font-bold">₹1500.00</p>
+                  <div class="ek-rounded-full ek-bg-primary">
+                    <i class="ec ec-add-to-cart ek-p-1 ek-text-white"></i>
+                  </div>
+                </div>
+              </div>
+              <div
+                class="lg:max-w-56 ek-min-w-48 ek-max-w-48 ek-border-x ek-border-gray-100 ek-p-5 ek-shadow-black hover:ek-shadow-2xl sm:ek-min-w-40 sm:ek-max-w-40 lg:ek-min-w-60 lg:ek-max-w-60 tiny:ek-min-w-44 tiny:ek-max-w-44"
+              >
+                <p class="ek-text-[10px] ek-text-gray-700">Single Boards</p>
+                <h5 class="ek-line-clamp-2 ek-font-semibold">
+                  Raspberry Pi 4gb Ram
+                </h5>
+                <img
+                  src="assets/images/products/shopping (6).webp"
+                  alt=""
+                  class="ek-min-h-36 ek-object-cover lg:ek-max-h-52 lg:ek-min-h-52 lg:ek-min-w-48 lg:ek-max-w-48"
+                />
+                <div class="ek-flex ek-justify-between">
+                  <p class="text ek-text-base ek-font-bold">₹1500.00</p>
+                  <div class="ek-rounded-full ek-bg-primary">
+                    <i class="ec ec-add-to-cart ek-p-1 ek-text-white"></i>
+                  </div>
+                </div>
+              </div>
+              <div
+                class="lg:max-w-56 ek-min-w-48 ek-max-w-48 ek-border-x ek-border-gray-100 ek-p-5 ek-shadow-black hover:ek-shadow-2xl sm:ek-min-w-40 sm:ek-max-w-40 lg:ek-min-w-60 lg:ek-max-w-60 tiny:ek-min-w-44 tiny:ek-max-w-44"
+              >
+                <p class="ek-text-[10px] ek-text-gray-700">Motor Drivers</p>
+                <h5 class="ek-line-clamp-2 ek-font-semibold">
+                  12V DC Motor with Gearbox
+                </h5>
+                <img
+                  src="assets/images/products/shopping (1).webp"
+                  alt=""
+                  class="ek-min-h-36 ek-object-cover lg:ek-max-h-52 lg:ek-min-h-52 lg:ek-min-w-48 lg:ek-max-w-48"
+                />
+                <div class="ek-flex ek-justify-between">
+                  <p class="text ek-text-base ek-font-bold">₹1500.00</p>
+                  <div class="ek-rounded-full ek-bg-primary">
+                    <i class="ec ec-add-to-cart ek-p-1 ek-text-white"></i>
+                  </div>
+                </div>
+              </div>
+              <div
+                class="lg:max-w-56 ek-min-w-48 ek-max-w-48 ek-border-x ek-border-gray-100 ek-p-5 ek-shadow-black hover:ek-shadow-2xl sm:ek-min-w-40 sm:ek-max-w-40 lg:ek-min-w-60 lg:ek-max-w-60 tiny:ek-min-w-44 tiny:ek-max-w-44"
+              >
+                <p class="ek-text-[10px] ek-text-gray-700">Single Boards</p>
+                <h5 class="ek-line-clamp-2 ek-font-semibold">
+                  Raspberry Pi 4gb Ram
+                </h5>
+                <img
+                  src="assets/images/products/shopping.webp"
+                  alt=""
+                  class="ek-min-h-36 ek-object-cover lg:ek-max-h-52 lg:ek-min-h-52 lg:ek-min-w-48 lg:ek-max-w-48"
+                />
+                <div class="ek-flex ek-justify-between">
+                  <p class="text ek-text-base ek-font-bold">₹1500.00</p>
+                  <div class="ek-rounded-full ek-bg-primary">
+                    <i class="ec ec-add-to-cart ek-p-1 ek-text-white"></i>
+                  </div>
+                </div>
+              </div>
+              <div
+                class="lg:max-w-56 ek-min-w-48 ek-max-w-48 ek-border-x ek-border-gray-100 ek-p-5 ek-shadow-black hover:ek-shadow-2xl sm:ek-min-w-40 sm:ek-max-w-40 lg:ek-min-w-60 lg:ek-max-w-60 tiny:ek-min-w-44 tiny:ek-max-w-44"
+              >
+                <p class="ek-text-[10px] ek-text-gray-700">Motor Drivers</p>
+                <h5 class="ek-line-clamp-2 ek-font-semibold">
+                  12V DC Motor with Gearbox
+                </h5>
+                <img
+                  src="assets/images/products/shopping (7).webp"
+                  alt=""
+                  class="ek-min-h-36 ek-object-cover lg:ek-max-h-52 lg:ek-min-h-52 lg:ek-min-w-48 lg:ek-max-w-48"
+                />
+                <div class="ek-flex ek-justify-between">
+                  <p class="text ek-text-base ek-font-bold">₹1500.00</p>
+                  <div class="ek-rounded-full ek-bg-primary">
+                    <i class="ec ec-add-to-cart ek-p-1 ek-text-white"></i>
+                  </div>
+                </div>
+              </div>
+              <div
+                class="lg:max-w-56 ek-min-w-48 ek-max-w-48 ek-border-x ek-border-gray-100 ek-p-5 ek-shadow-black hover:ek-shadow-2xl sm:ek-min-w-40 sm:ek-max-w-40 lg:ek-min-w-60 lg:ek-max-w-60 tiny:ek-min-w-44 tiny:ek-max-w-44"
+              >
+                <p class="ek-text-[10px] ek-text-gray-700">Single Boards</p>
+                <h5 class="ek-line-clamp-2 ek-font-semibold">
+                  Raspberry Pi 4gb Ram
+                </h5>
+                <img
+                  src="assets/images/products/shopping (5).webp"
+                  alt=""
+                  class="ek-min-h-36 ek-object-cover lg:ek-max-h-52 lg:ek-min-h-52 lg:ek-min-w-48 lg:ek-max-w-48"
+                />
+                <div class="ek-flex ek-justify-between">
+                  <p class="text ek-text-base ek-font-bold">₹1500.00</p>
+                  <div class="ek-rounded-full ek-bg-primary">
+                    <i class="ec ec-add-to-cart ek-p-1 ek-text-white"></i>
+                  </div>
+                </div>
+              </div>
+              <!-- cards end -->
+            </div>
+
+            <!-- Top Rated end  -->
+
+            <!-- Products list end -->
           </div>
         </div>
       </section>
+      <!-- products end  -->
+
+      <!-- footer  -->
+      <footer class="box-shadow ek-bg-gray-100">
+        <!-- <div class="ek-bg-primary ek-h-5  ek-text-white">
+          
+        </div> -->
+        <div
+          class="ek-mx-auto ek-px-4 ek-py-8 sm:ek-px-6 md:ek-mx-10 md:ek-px-2 lg:ek-px-8"
+        >
+          <div
+            class="ek-flex ek-flex-col ek-gap-10 lg:ek-flex-row lg:ek-gap-16"
+          >
+            <div
+              class="ek-order-10 ek-mb-4 ek-flex ek-flex-col ek-px-8 sm:ek-mb-0 sm:ek-w-auto sm:ek-items-start lg:ek-order-none"
+            >
+              <img
+                src="assets/images/logo/logo.png"
+                alt="logo"
+                class=""
+                width="250"
+                height="200"
+                class=""
+              />
+              <div
+                class="ek-mt-2 ek-px-5 ek-text-sm ek-text-gray-600 sm:ek-text-left"
+              >
+                <span class="ek-font-bold">Contact info</span><br />
+                Door No:15-7-336/17, # 205, 2nd Floor,<br />
+                Abhiman Plaza Bunts Hostel Circle,<br />
+                Mangaluru - 575003 <br />Dakshina Kannada, Karnataka, India
+                <br />
+                Phone: +91 8892882988
+                <br />
+                Email: kakunjesoftware@gmail.com
+                <br />
+                Monday-Saturday
+              </div>
+
+              <div class="ek-mt-2 ek-flex ek-gap-4 ek-px-5">
+                <a href="#" class="ek-text-gray-500 hover:ek-text-gray-700">
+                  <i class="fa-brands fa-facebook"></i>
+                </a>
+                <a href="#" class="ek-text-gray-500 hover:ek-text-gray-700"
+                  ><i class="fa-brands fa-x-twitter"></i
+                ></a>
+                <a href="#" class="ek-text-gray-500 hover:ek-text-gray-700"
+                  ><i class="fa-brands fa-youtube"></i
+                ></a>
+                <a href="#" class="ek-text-gray-500 hover:ek-text-gray-700"
+                  ><i class="fa-brands fa-instagram"></i
+                ></a>
+                <a href="#" class="ek-text-gray-500 hover:ek-text-gray-700"></a>
+              </div>
+            </div>
+            <div
+              class="ek-flex ek-w-full ek-flex-col ek-gap-4 sm:ek-w-auto sm:ek-flex-row sm:ek-flex-wrap sm:ek-justify-center sm:ek-gap-3 sm:ek-space-y-0 md:ek-flex-nowrap lg:ek-ml-20"
+            >
+              <div
+                class="ek-mx-8 ek-flex ek-flex-col ek-space-y-2 ek-rounded-md ek-bg-gray-200 ek-p-4 ek-text-left sm:ek-mx-0 sm:ek-bg-gray-100"
+              >
+                <h4 class="toggler ek-font-semibold ek-text-gray-800">
+                  Information
+                  <button type="button" class="sm:ek-hidden">
+                    <i class="ec ec-down-arrow"></i>
+                  </button>
+                </h4>
+                <div
+                  class="dropdown ek-hidden ek-flex-col ek-transition-all ek-duration-300 ek-ease-in-out sm:ek-flex"
+                >
+                  <a href="#" class="ek-text-gray-600 hover:ek-text-gray-800"
+                    >Track Your Order</a
+                  >
+                  <a href="#" class="ek-text-gray-600 hover:ek-text-gray-800"
+                    >Videos</a
+                  >
+                  <a href="#" class="ek-text-gray-600 hover:ek-text-gray-800"
+                    >FAQ</a
+                  >
+                  <a href="#" class="ek-text-gray-600 hover:ek-text-gray-800"
+                    >Careers</a
+                  >
+                </div>
+              </div>
+              <div
+                class="ek-mx-8 ek-flex ek-flex-col ek-space-y-2 ek-rounded-md ek-bg-gray-200 ek-p-4 ek-text-left sm:ek-mx-0 sm:ek-bg-gray-100"
+              >
+                <h4 class="toggler ek-font-semibold ek-text-gray-800">
+                  My Account
+                  <button type="button" class="sm:ek-hidden">
+                    <i class="ec ec-down-arrow"></i>
+                  </button>
+                </h4>
+                <div
+                  class="dropdown ek-hidden ek-flex-col ek-transition-all ek-duration-300 ek-ease-in-out sm:ek-flex"
+                >
+                  <a href="#" class="ek-text-gray-600 hover:ek-text-gray-800"
+                    >Cart</a
+                  >
+                  <a href="#" class="ek-text-gray-600 hover:ek-text-gray-800"
+                    >Checkout</a
+                  >
+                  <a href="#" class="ek-text-gray-600 hover:ek-text-gray-800"
+                    >My Account</a
+                  >
+                  <a href="#" class="ek-text-gray-600 hover:ek-text-gray-800"
+                    >Payment Options</a
+                  >
+                </div>
+              </div>
+              <div
+                class="ek-mx-8 ek-flex ek-flex-col ek-space-y-2 ek-rounded-md ek-bg-gray-200 ek-p-4 ek-text-left sm:ek-mx-0 sm:ek-bg-gray-100"
+              >
+                <h4 class="toggler ek-font-semibold ek-text-gray-800">
+                  Services
+                  <button type="button" class="sm:ek-hidden">
+                    <i class="ec ec-down-arrow"></i>
+                  </button>
+                </h4>
+                <div
+                  class="dropdown ek-hidden ek-flex-col ek-transition-all ek-duration-300 ek-ease-in-out sm:ek-flex"
+                >
+                  <a href="#" class="ek-text-gray-600 hover:ek-text-gray-800"
+                    >About Us</a
+                  >
+                  <a href="#" class="ek-text-gray-600 hover:ek-text-gray-800"
+                    >Contact Us</a
+                  >
+                  <a href="#" class="ek-text-gray-600 hover:ek-text-gray-800"
+                    >ElectronicKart B2B</a
+                  >
+                </div>
+              </div>
+              <div
+                class="ek-mx-8 ek-flex ek-flex-col ek-space-y-2 ek-rounded-md ek-bg-gray-200 ek-p-4 ek-text-left sm:ek-mx-0 sm:ek-bg-gray-100"
+              >
+                <h4 class="toggler ek-font-semibold ek-text-gray-800">
+                  Policies
+                  <button type="button" class="sm:ek-hidden">
+                    <i class="ec ec-down-arrow"></i>
+                  </button>
+                </h4>
+                <div
+                  class="dropdown ek-hidden ek-flex-col ek-transition-all ek-duration-300 ek-ease-in-out sm:ek-flex"
+                >
+                  <a href="#" class="ek-text-gray-600 hover:ek-text-gray-800"
+                    >Investor Relations</a
+                  >
+                  <a href="#" class="ek-text-gray-600 hover:ek-text-gray-800"
+                    >MACFOS CSR</a
+                  >
+                  <a href="#" class="ek-text-gray-600 hover:ek-text-gray-800"
+                    >Privacy Policy</a
+                  >
+                  <a href="#" class="ek-text-gray-600 hover:ek-text-gray-800"
+                    >Terms of Service</a
+                  >
+                  <a href="#" class="ek-text-gray-600 hover:ek-text-gray-800"
+                    >Shipping & Refund</a
+                  >
+                  <a href="#" class="ek-text-gray-600 hover:ek-text-gray-800"
+                    >E-Waste Collection</a
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          class="ek-flex ek-items-center ek-justify-center ek-bg-gray-200 ek-px-4 ek-py-2 sm:ek-justify-between"
+        >
+          <p class="ek-text-gray-600">
+            © Electronickart - All rights Reserved
+          </p>
+          <div class="ek-hidden ek-gap-1 md:ek-flex">
+            <img
+              src="assets/images/100X60/img1.jpg"
+              alt=""
+              class=""
+              width="40"
+              height="20"
+            />
+            <img
+              src="assets/images/100X60/img2.jpg"
+              alt=""
+              class=""
+              width="40"
+              height="20"
+            />
+            <img
+              src="assets/images/100X60/img3.jpg"
+              alt=""
+              class=""
+              width="40"
+              height="20"
+            />
+            <img
+              src="assets/images/100X60/img4.jpg"
+              alt=""
+              class=""
+              width="40"
+              height="20"
+            />
+            <img
+              src="assets/images/100X60/img5.jpg"
+              alt=""
+              class=""
+              width="40"
+              height="20"
+            />
+          </div>
+        </div>
+      </footer>
+      <!-- footer end  -->
     </main>
 
     <!-- main content end -->
