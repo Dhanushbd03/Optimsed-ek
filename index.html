@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta charset="utf-8" />
     <!-- Favicon icon -->
-    <link rel="shortcut icon" href="assets/images/logo/logo.png" />
+    <link rel="shortcut icon" href="assets/images/logo/favicon.png" />
     <!-- Favicon icon end  -->
     <!-- google font  -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -45,10 +45,10 @@
       href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
     />
 
-    <title>Optimised</title>
+    <title>Electronickart</title>
     <link rel="stylesheet" href="assets/css/tailwind.css" />
   </head>
-  <body class="ek-font-sans">
+  <body class="scrollbar ek-font-sans">
     <!-- header -->
     <header>
       <!-- topbar -->
@@ -59,6 +59,7 @@
           <span class="ek-flex ek-items-center">
             <span>Customer Support :&nbsp;</span
             ><i class="ec ec-call ek-text-sm"></i> +91 8892882988 |
+            <i class="ec ec-email ek-text-base"></i>
             support@electronickart.com
           </span>
         </div>
@@ -83,20 +84,22 @@
       <!-- navbar -->
       <nav class="ek-shadow-md">
         <div
-          class="ek-flex ek-items-center ek-justify-between ek-gap-10 ek-bg-white ek-px-4 lg:ek-px-20 lg:ek-py-4"
+          class="ek-flex ek-items-center ek-justify-between ek-gap-0 ek-bg-white ek-px-4 lg:ek-px-10 lg:ek-py-4"
         >
           <!-- right side navbar  -->
-          <div class="ek-flex ek-items-center ek-p-2 sm:ek-gap-10">
+          <div class="ek-flex ek-items-center ek-p-2">
             <!-- Logo -->
-            <img
-              src="assets/images/logo/logo.png"
-              alt="Electronickart Logo"
-              class="ek-order-1 ek-mr-2 ek-h-8"
-            />
+            <a href="index.html" class="ek-order-1 ek-mr-2">
+              <img
+                src="assets/images/logo/logo.png"
+                alt="Electronickart Logo"
+                class="ek-h-8 ek-min-h-12 ek-min-w-40 md:ek-min-h-16 md:ek-min-w-52"
+              />
+            </a>
             <!-- Logo end -->
             <!-- Menu icon  -->
             <button
-              class="ek-block ek-text-gray-600 lg:ek-order-1"
+              class="ek-order-none ek-block ek-text-gray-600"
               id="sidebarbutton"
             >
               <i
@@ -117,10 +120,10 @@
               <div class="ek-h-full" id="select">
                 <button
                   id="selectbtn"
-                  class="ek-line-clamp-1 ek-flex ek-max-w-44 ek-items-center ek-justify-between ek-text-nowrap ek-bg-white ek-p-2 ek-ring-1 ek-ring-gray-300"
+                  class="ek-line-clamp-1 ek-flex ek-max-w-48 ek-items-center ek-justify-between ek-text-nowrap ek-bg-white ek-p-2 ek-ring-1 ek-ring-gray-300"
                 >
-                  <span id="selected">All Categories</span>
-                  <i class="fas fa-chevron-down"></i>
+                  <span id="selected">All Categories </span>
+                  &nbsp;<i class="fas fa-chevron-down ek-text-sm"></i>
                 </button>
 
                 <ul
@@ -128,139 +131,139 @@
                   id="selectMenu"
                 >
                   <li
-                    class="ek-cursor-pointer ek-select-none ek-p-2 hover:ek-bg-secondary hover:ek-text-white"
+                    class="ek-cursor-pointer ek-select-none ek-p-2 hover:ek-bg-primary hover:ek-text-white"
                     data-language="All Categories"
                   >
                     All categories
                   </li>
                   <li
-                    class="ek-cursor-pointer ek-select-none ek-p-2 hover:ek-bg-secondary hover:ek-text-white"
+                    class="ek-cursor-pointer ek-select-none ek-p-2 hover:ek-bg-primary hover:ek-text-white"
                     data-language="New Arrivals"
                   >
                     New Arrivals
                   </li>
                   <li
-                    class="ek-cursor-pointer ek-select-none ek-p-2 hover:ek-bg-secondary hover:ek-text-white"
+                    class="ek-cursor-pointer ek-select-none ek-p-2 hover:ek-bg-primary hover:ek-text-white"
                     data-language="SmartElex"
                   >
                     SmartElex
                   </li>
                   <li
-                    class="ek-cursor-pointer ek-select-none ek-p-2 hover:ek-bg-secondary hover:ek-text-white"
+                    class="ek-cursor-pointer ek-select-none ek-p-2 hover:ek-bg-primary hover:ek-text-white"
                     data-language="Electronic Components"
                   >
                     Electronic Components
                   </li>
                   <li
-                    class="ek-cursor-pointer ek-select-none ek-p-2 hover:ek-bg-secondary hover:ek-text-white"
+                    class="ek-cursor-pointer ek-select-none ek-p-2 hover:ek-bg-primary hover:ek-text-white"
                     data-language="DIY Learning and Robot Kits"
                   >
                     DIY Learning and Robot Kits
                   </li>
                   <li
-                    class="ek-cursor-pointer ek-select-none ek-p-2 hover:ek-bg-secondary hover:ek-text-white"
+                    class="ek-cursor-pointer ek-select-none ek-p-2 hover:ek-bg-primary hover:ek-text-white"
                     data-language="Drone Parts"
                   >
                     Drone Parts
                   </li>
                   <li
-                    class="ek-cursor-pointer ek-select-none ek-p-2 hover:ek-bg-secondary hover:ek-text-white"
+                    class="ek-cursor-pointer ek-select-none ek-p-2 hover:ek-bg-primary hover:ek-text-white"
                     data-language="Electric Vehicle Parts"
                   >
                     Electric Vehicle Parts
                   </li>
                   <li
-                    class="ek-cursor-pointer ek-select-none ek-p-2 hover:ek-bg-secondary hover:ek-text-white"
+                    class="ek-cursor-pointer ek-select-none ek-p-2 hover:ek-bg-primary hover:ek-text-white"
                     data-language="Laser Engraver and CNC Machines"
                   >
                     Laser Engraver and CNC Machines
                   </li>
                   <li
-                    class="ek-cursor-pointer ek-select-none ek-p-2 hover:ek-bg-secondary hover:ek-text-white"
+                    class="ek-cursor-pointer ek-select-none ek-p-2 hover:ek-bg-primary hover:ek-text-white"
                     data-language="3D Printers and Parts"
                   >
                     3D Printers and Parts
                   </li>
                   <li
-                    class="ek-cursor-pointer ek-select-none ek-p-2 hover:ek-bg-secondary hover:ek-text-white"
+                    class="ek-cursor-pointer ek-select-none ek-p-2 hover:ek-bg-primary hover:ek-text-white"
                     data-language="Batteries, Chargers and Accessories"
                   >
                     Batteries, Chargers and Accessories
                   </li>
                   <li
-                    class="ek-cursor-pointer ek-select-none ek-p-2 hover:ek-bg-secondary hover:ek-text-white"
+                    class="ek-cursor-pointer ek-select-none ek-p-2 hover:ek-bg-primary hover:ek-text-white"
                     data-language="Motors, Drivers, Actuators"
                   >
                     Motors, Drivers, Actuators
                   </li>
                   <li
-                    class="ek-cursor-pointer ek-select-none ek-p-2 hover:ek-bg-secondary hover:ek-text-white"
+                    class="ek-cursor-pointer ek-select-none ek-p-2 hover:ek-bg-primary hover:ek-text-white"
                     data-language="Development Board"
                   >
                     Development Board
                   </li>
                   <li
-                    class="ek-cursor-pointer ek-select-none ek-p-2 hover:ek-bg-secondary hover:ek-text-white"
+                    class="ek-cursor-pointer ek-select-none ek-p-2 hover:ek-bg-primary hover:ek-text-white"
                     data-language="Raspberry Pi"
                   >
                     Raspberry Pi
                   </li>
                   <li
-                    class="ek-cursor-pointer ek-select-none ek-p-2 hover:ek-bg-secondary hover:ek-text-white"
+                    class="ek-cursor-pointer ek-select-none ek-p-2 hover:ek-bg-primary hover:ek-text-white"
                     data-language="Official Arduino Boards"
                   >
                     Official Arduino Boards
                   </li>
                   <li
-                    class="ek-cursor-pointer ek-select-none ek-p-2 hover:ek-bg-secondary hover:ek-text-white"
+                    class="ek-cursor-pointer ek-select-none ek-p-2 hover:ek-bg-primary hover:ek-text-white"
                     data-language="Display Modules"
                   >
                     Display Modules
                   </li>
                   <li
-                    class="ek-cursor-pointer ek-select-none ek-p-2 hover:ek-bg-secondary hover:ek-text-white"
+                    class="ek-cursor-pointer ek-select-none ek-p-2 hover:ek-bg-primary hover:ek-text-white"
                     data-language="Sensors Modules"
                   >
                     Sensors Modules
                   </li>
                   <li
-                    class="ek-cursor-pointer ek-select-none ek-p-2 hover:ek-bg-secondary hover:ek-text-white"
+                    class="ek-cursor-pointer ek-select-none ek-p-2 hover:ek-bg-primary hover:ek-text-white"
                     data-language="Cameras"
                   >
                     Cameras
                   </li>
                   <li
-                    class="ek-cursor-pointer ek-select-none ek-p-2 hover:ek-bg-secondary hover:ek-text-white"
+                    class="ek-cursor-pointer ek-select-none ek-p-2 hover:ek-bg-primary hover:ek-text-white"
                     data-language="IoT and Wireless"
                   >
                     IoT and Wireless
                   </li>
                   <li
-                    class="ek-cursor-pointer ek-select-none ek-p-2 hover:ek-bg-secondary hover:ek-text-white"
+                    class="ek-cursor-pointer ek-select-none ek-p-2 hover:ek-bg-primary hover:ek-text-white"
                     data-language="Electronic Modules"
                   >
                     Electronic Modules
                   </li>
                   <li
-                    class="ek-cursor-pointer ek-select-none ek-p-2 hover:ek-bg-secondary hover:ek-text-white"
+                    class="ek-cursor-pointer ek-select-none ek-p-2 hover:ek-bg-primary hover:ek-text-white"
                     data-language="Wires and Cables"
                   >
                     Wires and Cables
                   </li>
                   <li
-                    class="ek-cursor-pointer ek-select-none ek-p-2 hover:ek-bg-secondary hover:ek-text-white"
+                    class="ek-cursor-pointer ek-select-none ek-p-2 hover:ek-bg-primary hover:ek-text-white"
                     data-language="Mechanical Parts and Workbench Tools"
                   >
                     Mechanical Parts and Workbench Tools
                   </li>
                   <li
-                    class="ek-cursor-pointer ek-select-none ek-p-2 hover:ek-bg-secondary hover:ek-text-white"
+                    class="ek-cursor-pointer ek-select-none ek-p-2 hover:ek-bg-primary hover:ek-text-white"
                     data-language="Services"
                   >
                     Services
                   </li>
                   <li
-                    class="ek-cursor-pointer ek-select-none ek-p-2 hover:ek-bg-secondary hover:ek-text-white"
+                    class="ek-cursor-pointer ek-select-none ek-p-2 hover:ek-bg-primary hover:ek-text-white"
                     data-language="Refurbished & Partial Workin"
                   >
                     Refurbished & Partial Workin
@@ -295,17 +298,17 @@
           >
             <div class="ek-relative md:ek-hidden">
               <i
-                class="ec ec-search ek-p-2 ek-text-xl ek-text-primary hover:ek-text-secondary"
+                class="ec ec-search ek-p-2 ek-text-2xl ek-text-primary hover:ek-text-secondary"
               ></i>
             </div>
             <div class="ek-relative lg:ek-hidden">
               <i
-                class="ec ec-user ek-p-2 ek-text-xl ek-text-primary hover:ek-text-secondary"
+                class="ec ec-user ek-p-2 ek-text-2xl ek-text-primary hover:ek-text-secondary"
               ></i>
             </div>
             <div class="ek-relative ek-text-primary hover:ek-text-secondary">
               <i
-                class="ec ec-shopping-bag ek-p-2 ek-text-xl ek-text-primary hover:ek-text-secondary"
+                class="ec ec-shopping-bag ek-p-2 ek-text-2xl ek-text-primary hover:ek-text-secondary"
               ></i>
               <div
                 class="ek-absolute ek-bottom-2 ek-right-0 ek-flex ek-h-4 ek-w-4 ek-items-center ek-justify-center ek-rounded-full ek-bg-primary ek-p-1 ek-text-sm ek-text-white hover:ek-bg-secondary"
@@ -314,7 +317,7 @@
               </div>
             </div>
             <span
-              class="ek-hidden ek-text-primary hover:ek-text-secondary lg:ek-flex"
+              class="ek-hidden ek-text-xl ek-font-semibold ek-text-primary hover:ek-text-secondary lg:ek-flex"
               >₹1785.00</span
             >
           </div>
@@ -323,12 +326,12 @@
         <!-- category navbar  -->
         <div class="ek-hidden ek-px-24 lg:ek-flex">
           <ul class="ek-flex ek-text-primary">
-            <li>
-              <div class="ek-relative ek-inline-flex">
+            <li class="">
+              <div class="ek-relative ek-inline-flex ek-h-full">
                 <button
                   id="categorybtn"
                   type="button"
-                  class="ek-shadow-xs ek-inline-flex ek-cursor-pointer ek-items-center ek-justify-center ek-gap-2 ek-rounded-t-lg ek-bg-primary ek-px-10 ek-py-3 ek-pr-20 ek-text-center ek-text-sm ek-font-bold ek-text-white ek-transition-all ek-duration-500 hover:ek-bg-secondary"
+                  class="ek-shadow-xs ek-inline-flex ek-h-full ek-cursor-pointer ek-items-center ek-justify-center ek-gap-2 ek-rounded-t-lg ek-bg-primary ek-px-10 ek-py-3 ek-pr-20 ek-text-center ek-text-sm ek-font-bold ek-text-white ek-transition-all ek-duration-500 hover:ek-bg-secondary"
                 >
                   <span class="fa fa-list-ul ek-text-white"></span>
                   All Categories
@@ -687,7 +690,7 @@
         <ul class="ek-space-y-2">
           <li class="sidebar-option">
             <div
-              class="ek-flex ek-items-center ek-justify-between ek-p-2 hover:ek-bg-secondary"
+              class="ek-flex ek-items-center ek-justify-between ek-p-2 hover:ek-bg-primary hover:ek-text-white"
             >
               <div class="ek-flex ek-items-center">
                 <span>Shop by Brands </span>
@@ -697,7 +700,7 @@
             <ul class="sidebar ek-ml-4 ek-hidden">
               <li class="sidebar2">
                 <div
-                  class="ek-flex ek-items-center ek-p-2 hover:ek-bg-secondary hover:ek-text-white"
+                  class="ek-flex ek-items-center ek-p-2 hover:ek-bg-primary hover:ek-text-white"
                 >
                   <i
                     class="fas fa-chevron-down ek-mr-2 ek-rotate-180 ek-text-xs"
@@ -708,7 +711,7 @@
                   <li>
                     <a
                       href="#"
-                      class="ek-flex ek-items-center ek-p-2 hover:ek-bg-secondary hover:ek-text-white"
+                      class="ek-flex ek-items-center ek-p-2 hover:ek-bg-primary hover:ek-text-white"
                     >
                       3333333333333333333333
                     </a>
@@ -716,7 +719,7 @@
                   <li>
                     <a
                       href="#"
-                      class="ek-flex ek-items-center ek-p-2 hover:ek-bg-secondary hover:ek-text-white"
+                      class="ek-flex ek-items-center ek-p-2 hover:ek-bg-primary hover:ek-text-white"
                     >
                       333333333333333333333
                     </a>
@@ -734,130 +737,138 @@
     <!-- main content -->
     <main>
       <!-- slider  -->
-      <section
-        class="animate__animated animate__fadeIn animate__slow ek-relative -ek-z-50 ek-flex ek-min-h-[600px] ek-flex-col ek-items-center ek-justify-center ek-bg-cover sm:ek-min-h-[420px] sm:ek-flex-row"
-        style="background-image: url(assets/images/hero/img1.jpg)"
-        id="carouseldiv"
-      >
-        <!-- slide item 1  -->
-        <div
-          class="slide ek-absolute ek-flex ek-flex-col ek-items-center ek-bg-cover sm:ek-flex-row sm:ek-justify-center lg:ek-ml-40 lg:ek-gap-40"
-        >
-          <div class="ek-order-1 ek-flex ek-flex-col ek-p-5 sm:ek-p-14">
-            <h1 class="ek-text-5xl ek-font-normal">Raspberry Pi 4</h1>
-            <p class="ek-mt-2 ek-text-gray-600">
-              4GB RAM, 1.5GHz Quad-Core CPU
-            </p>
-            <p class="ek-mt-4 ek-text-sm ek-font-semibold">
-              FROM <br /><span class="ek-text-5xl ek-text-black">₹9000.00</span>
-            </p>
-            <button
-              class="ek-mt-6 ek-rounded-lg ek-bg-primary ek-px-4 ek-py-2 ek-text-white hover:ek-bg-secondary"
-            >
-              Start Buying
-            </button>
-          </div>
-          <div class="ek-flex ek-items-center ek-justify-center sm:ek-order-2">
-            <div class="ek-flex ek-items-center ek-justify-center">
-              <img
-                src="assets/images/ekart/rpi-4-4gb416X420.png"
-                alt="Arduino Uno"
-                class="ek-max-h-[300px] sm:ek-max-h-[420px]"
-              />
+      <div class="slider ek-min-h-[600px]  ek-min-w-screen ek-relative ek-bg-cover sm:ek-min-h-[420px] ek-overflow-hidden"  style="background-image: url(assets/images/hero/img1.jpg)" >
+        <div class="list ek-absolute ek-w-max ek-h-full ek-top-0 ek-left-0 ek-flex ek-duration-1000">
+          <div class="item ek-flex ek-flex-col ek-items-center ek-bg-cover sm:ek-flex-row sm:ek-justify-center lg:ek-ml-40 lg:ek-gap-40">
+            <div class="ek-order-1 ek-flex ek-flex-col ek-p-5 sm:ek-p-14">
+              <h1 class="ek-text-5xl ek-font-normal">Raspberry Pi 4</h1>
+              <p class="ek-mt-2 ek-text-gray-600">
+                4GB RAM, 1.5GHz Quad-Core CPU
+              </p>
+              <p class="ek-mt-4 ek-text-sm ek-font-semibold">
+                FROM <br /><span class="ek-text-5xl ek-text-black"
+                  >₹9000.00</span
+                >
+              </p>
+              <a
+                href="product.html"
+                class="ek-mt-6 ek-max-w-32 ek-rounded-lg ek-bg-primary ek-px-4 ek-py-2 ek-text-white hover:ek-bg-secondary"
+              >
+                Start Buying
+              </a>
             </div>
-          </div>
-        </div>
-        <!-- slide item 1 end  -->
-        <!-- slide item 2  -->
-        <div
-          class="slide ek-absolute ek-flex ek-flex-col ek-items-center ek-bg-cover sm:ek-flex-row sm:ek-justify-center lg:ek-ml-40 lg:ek-gap-40"
-        >
-          <div class="-sm:ek-p-14 ek-order-1 ek-flex ek-flex-col ek-p-5">
-            <h1 class="ek-text-5xl ek-font-normal">Arduino Uno</h1>
-            <p class="ek-mt-2 ek-text-gray-600">
-              R3 development board with cable
-            </p>
-            <p class="ek-mt-4 ek-text-sm ek-font-semibold">
-              FROM <br /><span class="ek-text-5xl ek-text-black">₹680.00</span>
-            </p>
-            <button
-              class="ek-mt-6 ek-rounded-lg ek-bg-primary ek-px-4 ek-py-2 ek-text-white hover:ek-bg-secondary"
-            >
-              Start Buying
-            </button>
-          </div>
-          <div class="ek-flex ek-items-center ek-justify-center sm:ek-order-2">
             <div
-              class="ek-flex ek-h-full ek-w-full ek-items-center ek-justify-center"
+              class="ek-flex ek-items-center ek-justify-center sm:ek-order-2"
             >
-              <img
-                src="assets/images/ekart/arduino-uno-r3-1.png"
-                alt="Arduino Uno"
-                class="ek-max-h-[300px] sm:ek-max-h-[420px]"
-              />
+              <div class="ek-flex ek-items-center ek-justify-center">
+                <img
+                  src="assets/images/ekart/rpi-4-4gb416X420.png"
+                  alt="Arduino Uno"
+                  class="ek-max-h-[300px] sm:ek-max-h-[420px]"
+                />
+              </div>
             </div>
           </div>
-        </div>
-        <!-- slide item 2 end  -->
-        <!-- slide item 3  -->
-        <div
-          class="slide ek-absolute ek-flex ek-flex-col ek-items-center ek-bg-cover sm:ek-flex-row sm:ek-justify-center lg:ek-ml-40 lg:ek-gap-40"
-        >
-          <div class="-sm:ek-p-14 ek-order-1 ek-flex ek-flex-col ek-p-5">
-            <h1 class="ek-text-5xl ek-font-normal">CP2102 <br />USB to UART</h1>
-            <p class="ek-mt-2 ek-text-gray-600">Serial Converter Module</p>
-            <p class="ek-mt-4 ek-text-sm ek-font-semibold">
-              FROM <br /><span class="ek-text-5xl ek-text-black">₹4000.00</span>
-            </p>
-            <button
-              class="ek-mt-6 ek-rounded-lg ek-bg-primary ek-px-4 ek-py-2 ek-text-white hover:ek-bg-secondary"
-            >
-              Start Buying
-            </button>
-          </div>
-          <div class="ek-flex ek-items-center ek-justify-center sm:ek-order-2">
+          <div class="item ek-flex ek-flex-col ek-items-center ek-bg-cover sm:ek-flex-row sm:ek-justify-center lg:ek-ml-40 lg:ek-gap-40">
+            <div class="ek-order-1 ek-flex ek-flex-col ek-p-5 sm:ek-p-14">
+              <h1 class="ek-text-5xl ek-font-normal">Raspberry Pi 4</h1>
+              <p class="ek-mt-2 ek-text-gray-600">
+                4GB RAM, 1.5GHz Quad-Core CPU
+              </p>
+              <p class="ek-mt-4 ek-text-sm ek-font-semibold">
+                FROM <br /><span class="ek-text-5xl ek-text-black"
+                  >₹9000.00</span
+                >
+              </p>
+              <a
+                href="product.html"
+                class="ek-mt-6 ek-max-w-32 ek-rounded-lg ek-bg-primary ek-px-4 ek-py-2 ek-text-white hover:ek-bg-secondary"
+              >
+                Start Buying
+              </a>
+            </div>
             <div
-              class="ek-flex ek-h-full ek-w-full ek-items-center ek-justify-center"
+              class="ek-flex ek-items-center ek-justify-center sm:ek-order-2"
             >
-              <img
-                src="assets/images/ekart/ezgif.com-gif-maker-2022-02-22T034302.739.png"
-                alt="Arduino Uno"
-                class="ek-max-h-[300px] sm:ek-max-h-[420px]"
-              />
+              <div class="ek-flex ek-items-center ek-justify-center">
+                <img
+                  src="assets/images/ekart/rpi-4-4gb416X420.png"
+                  alt="Arduino Uno"
+                  class="ek-max-h-[300px] sm:ek-max-h-[420px]"
+                />
+              </div>
             </div>
           </div>
-        </div>
-        <!-- slide item 3 end  -->
-        <!-- slide item 4  -->
-        <div
-          class="slide ek-absolute ek-flex ek-flex-col ek-items-center ek-bg-cover sm:ek-flex-row sm:ek-justify-center lg:ek-ml-40 lg:ek-gap-40"
-        >
-          <div class="-sm:ek-p-14 ek-order-1 ek-flex ek-flex-col ek-p-5">
-            <h1 class="ek-text-5xl ek-font-normal">ir sensor</h1>
-            <p class="ek-mt-2 ek-text-gray-600">ir sensor module</p>
-            <p class="ek-mt-4 ek-text-sm ek-font-semibold">
-              FROM <br /><span class="ek-text-5xl ek-text-black">₹200.00</span>
-            </p>
-            <button
-              class="ek-mt-6 ek-rounded-lg ek-bg-primary ek-px-4 ek-py-2 ek-text-white hover:ek-bg-secondary"
-            >
-              Start Buying
-            </button>
-          </div>
-          <div class="ek-flex ek-items-center ek-justify-center sm:ek-order-2">
+          <div class="item ek-flex ek-flex-col ek-items-center ek-bg-cover sm:ek-flex-row sm:ek-justify-center lg:ek-ml-40 lg:ek-gap-40">
+            <div class="ek-order-1 ek-flex ek-flex-col ek-p-5 sm:ek-p-14">
+              <h1 class="ek-text-5xl ek-font-normal">Raspberry Pi 4</h1>
+              <p class="ek-mt-2 ek-text-gray-600">
+                4GB RAM, 1.5GHz Quad-Core CPU
+              </p>
+              <p class="ek-mt-4 ek-text-sm ek-font-semibold">
+                FROM <br /><span class="ek-text-5xl ek-text-black"
+                  >₹9000.00</span
+                >
+              </p>
+              <a
+                href="product.html"
+                class="ek-mt-6 ek-max-w-32 ek-rounded-lg ek-bg-primary ek-px-4 ek-py-2 ek-text-white hover:ek-bg-secondary"
+              >
+                Start Buying
+              </a>
+            </div>
             <div
-              class="ek-flex ek-h-full ek-w-full ek-items-center ek-justify-center"
+              class="ek-flex ek-items-center ek-justify-center sm:ek-order-2"
             >
-              <img
-                src="assets/images/ekart/ir.png"
-                alt="Arduino Uno"
-                class="ek-max-h-[300px] sm:ek-max-h-[420px]"
-              />
+              <div class="ek-flex ek-items-center ek-justify-center">
+                <img
+                  src="assets/images/ekart/rpi-4-4gb416X420.png"
+                  alt="Arduino Uno"
+                  class="ek-max-h-[300px] sm:ek-max-h-[420px]"
+                />
+              </div>
+            </div>
+          </div>
+          <div class="item ek-flex ek-flex-col ek-items-center ek-bg-cover sm:ek-flex-row sm:ek-justify-center lg:ek-ml-40 lg:ek-gap-40">
+            <div class="ek-order-1 ek-flex ek-flex-col ek-p-5 sm:ek-p-14">
+              <h1 class="ek-text-5xl ek-font-normal">Raspberry Pi 4</h1>
+              <p class="ek-mt-2 ek-text-gray-600">
+                4GB RAM, 1.5GHz Quad-Core CPU
+              </p>
+              <p class="ek-mt-4 ek-text-sm ek-font-semibold">
+                FROM <br /><span class="ek-text-5xl ek-text-black"
+                  >₹9000.00</span
+                >
+              </p>
+              <a
+                href="product.html"
+                class="ek-mt-6 ek-max-w-32 ek-rounded-lg ek-bg-primary ek-px-4 ek-py-2 ek-text-white hover:ek-bg-secondary"
+              >
+                Start Buying
+              </a>
+            </div>
+            <div
+              class="ek-flex ek-items-center ek-justify-center sm:ek-order-2"
+            >
+              <div class="ek-flex ek-items-center ek-justify-center">
+                <img
+                  src="assets/images/ekart/rpi-4-4gb416X420.png"
+                  alt="Arduino Uno"
+                  class="ek-max-h-[300px] sm:ek-max-h-[420px]"
+                />
+              </div>
             </div>
           </div>
         </div>
-        <!-- slide item 4 end  -->
-      </section>
+        
+        <ul class="dots">
+          <li class="active"></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+        </ul>
+      </div>
       <!-- slider end  -->
       <!-- category  -->
       <section>
@@ -910,7 +921,9 @@
               />
             </div>
             <div class="ek-my-auto ek-w-2/3 ek-p-2">
-              <h1 class="ek-break-words ek-text-base ek-font-bold">
+              <h1
+                class="ek-line-clamp-2 ek-break-words ek-text-base ek-font-bold"
+              >
                 Batteries | Chargers and Accessories
               </h1>
               <button class="ek-py-2 ek-text-end">
@@ -1120,7 +1133,9 @@
               />
             </div>
             <div class="ek-my-auto ek-w-2/3 ek-p-2">
-              <h1 class="ek-break-words ek-text-base ek-font-bold">
+              <h1
+                class="ek-line-clamp-2 ek-break-words ek-text-base ek-font-bold"
+              >
                 Electronic Modules and Displays
               </h1>
               <button class="ek-py-2 ek-text-end">
@@ -1190,7 +1205,9 @@
               />
             </div>
             <div class="ek-my-auto ek-w-2/3 ek-p-2">
-              <h1 class="ek-break-words ek-text-sm ek-font-bold">
+              <h1
+                class="ek-line-clamp-2 ek-break-words ek-text-sm ek-font-bold"
+              >
                 Mechanical Parts and Workbench Tools
               </h1>
               <button class="ek-py-2 ek-text-end">
@@ -1260,7 +1277,9 @@
               />
             </div>
             <div class="ek-my-auto ek-w-2/3 ek-p-2">
-              <h1 class="ek-break-words ek-text-base ek-font-bold">
+              <h1
+                class="ek-line-clamp-2 ek-break-words ek-text-base ek-font-bold"
+              >
                 DIY Learning and Robot Kits
               </h1>
               <button class="ek-py-2 ek-text-end">
@@ -1336,6 +1355,16 @@
                   <p>Available: 6</p>
                   <p>Already sold :28</p>
                 </div>
+                <div>
+                  <div
+                    class="ek-my-2 ek-h-5 ek-w-full ek-rounded-full ek-bg-gray-200"
+                  >
+                    <div
+                      class="ek-h-5 ek-rounded-full ek-bg-red-500"
+                      id="progressbar"
+                    ></div>
+                  </div>
+                </div>
                 <div class="ek-pt-0">
                   <div
                     class="shadow-gray-900/10 hover:shadow-gray-900/20 focus:opacity-[0.85] active:opacity-[0.85] bg-blue-gray-900/10 text-blue-gray-900 ek-block ek-w-full ek-select-none ek-rounded-lg ek-px-6 ek-py-3 ek-text-center ek-align-middle ek-font-sans ek-text-xs ek-font-bold ek-uppercase ek-shadow-none ek-transition-all hover:ek-scale-105 hover:ek-shadow-none focus:ek-scale-105 focus:ek-shadow-none active:ek-scale-100 active:ek-shadow-none disabled:ek-pointer-events-none disabled:ek-opacity-50 disabled:ek-shadow-none"
@@ -1347,70 +1376,70 @@
                     >
                       <div class="timer">
                         <div
-                          class="min-w-[80px] aspect-square ek-flex ek-flex-col ek-items-center ek-justify-center ek-gap-0 ek-rounded-xl ek-border ek-border-primary ek-px-1.5 ek-py-1.5"
+                          class="aspect-square ek-flex ek-min-w-16 ek-flex-col ek-items-center ek-justify-center ek-gap-0 ek-rounded-xl ek-border ek-bg-gray-200 ek-px-1.5 ek-py-1.5"
                         >
                           <h3
-                            class="countdown-element days font-manrope ek-text-center ek-text-2xl ek-font-semibold ek-text-secondary"
+                            class="countdown-element days font-manrope ek-text-center ek-text-2xl ek-font-semibold ek-text-black"
                           ></h3>
                           <p
-                            class="font-inter ek-w-full ek-text-center ek-text-sm ek-font-normal ek-capitalize ek-text-secondary"
+                            class="font-inter ek-w-full ek-text-center ek-text-sm ek-font-normal ek-capitalize ek-text-black"
                           >
                             days
                           </p>
                         </div>
                       </div>
                       <h3
-                        class="font-manrope ek-text-2xl ek-font-semibold ek-text-secondary"
+                        class="font-manrope ek-text-2xl ek-font-semibold ek-text-black"
                       >
                         :
                       </h3>
                       <div class="timer">
                         <div
-                          class="min-w-[80px] aspect-square ek-flex ek-flex-col ek-items-center ek-justify-center ek-gap-0 ek-rounded-xl ek-border ek-border-primary ek-px-1.5 ek-py-1.5"
+                          class="aspect-square ek-flex ek-min-w-16 ek-flex-col ek-items-center ek-justify-center ek-gap-0 ek-rounded-xl ek-border ek-bg-gray-200 ek-px-1.5 ek-py-1.5"
                         >
                           <h3
-                            class="countdown-element hours font-manrope ek-text-center ek-text-2xl ek-font-semibold ek-text-secondary"
+                            class="countdown-element hours font-manrope ek-text-center ek-text-2xl ek-font-semibold ek-text-black"
                           ></h3>
                           <p
-                            class="font-inter ek-w-full ek-text-center ek-text-sm ek-font-normal ek-capitalize ek-text-secondary"
+                            class="font-inter ek-w-full ek-text-center ek-text-sm ek-font-normal ek-capitalize ek-text-black"
                           >
                             Hour
                           </p>
                         </div>
                       </div>
                       <h3
-                        class="font-manrope ek-text-2xl ek-font-semibold ek-text-secondary"
+                        class="font-manrope ek-text-2xl ek-font-semibold ek-text-black"
                       >
                         :
                       </h3>
                       <div class="timer">
                         <div
-                          class="min-w-[80px] aspect-square ek-flex ek-flex-col ek-items-center ek-justify-center ek-gap-0 ek-rounded-xl ek-border ek-border-primary ek-px-1.5 ek-py-1.5"
+                          class="aspect-square ek-flex ek-min-w-16 ek-flex-col ek-items-center ek-justify-center ek-gap-0 ek-rounded-xl ek-border ek-bg-gray-200 ek-px-1.5 ek-py-1.5"
                         >
                           <h3
-                            class="countdown-element minutes font-manrope ek-text-center ek-text-2xl ek-font-semibold ek-text-secondary"
+                            class="countdown-element minutes font-manrope ek-text-center ek-text-2xl ek-font-semibold ek-text-black"
                           ></h3>
                           <p
-                            class="font-inter ek-w-full ek-text-center ek-text-sm ek-font-normal ek-capitalize ek-text-secondary"
+                            class="font-inter ek-w-full ek-text-center ek-text-sm ek-font-normal ek-capitalize ek-text-black"
                           >
                             Minutes
                           </p>
                         </div>
                       </div>
                       <h3
-                        class="font-manrope ek-text-2xl ek-font-semibold ek-text-secondary"
+                        class="font-manrope ek-text-2xl ek-font-semibold ek-text-black"
                       >
                         :
                       </h3>
                       <div class="timer">
                         <div
-                          class="min-w-[80px] aspect-square ek-flex ek-flex-col ek-items-center ek-justify-center ek-gap-0 ek-rounded-xl ek-border ek-border-primary ek-px-1.5 ek-py-1.5"
+                          class="aspect-square ek-flex ek-min-w-16 ek-flex-col ek-items-center ek-justify-center ek-gap-0 ek-rounded-xl ek-border ek-bg-gray-200 ek-px-1.5 ek-py-1.5"
                         >
                           <h3
-                            class="countdown-element seconds sec font-manrope ek-text-center ek-text-2xl ek-font-semibold ek-text-secondary"
+                            class="countdown-element seconds sec font-manrope ek-text-center ek-text-2xl ek-font-semibold ek-text-black"
                           ></h3>
                           <p
-                            class="font-inter ek-w-full ek-text-center ek-text-sm ek-font-normal ek-capitalize ek-text-secondary"
+                            class="font-inter ek-w-full ek-text-center ek-text-sm ek-font-normal ek-capitalize ek-text-black"
                           >
                             Seconds
                           </p>
@@ -1429,9 +1458,14 @@
             <ul
               class="ek-flex ek-w-full ek-justify-center ek-gap-10 ek-text-xl ek-font-semibold sm:ek-gap-5"
             >
-              <li class="ek-text-nowrap sm:ek-p-2" id="clickfeatured">
+              <li
+                class="ek-text-nowrap sm:ek-p-2"
+                id="clickfeatured"
+                class="ek-relative"
+              >
                 Featured
               </li>
+
               <li class="ek-text-nowrap sm:ek-p-2" id="clickonsale">On Sale</li>
               <li class="ek-text-nowrap sm:ek-p-2" id="clicktoprated">
                 Top Rated
@@ -1445,157 +1479,190 @@
             >
               <!-- cards  -->
               <div
-                class="lg:max-w-56 ek-min-w-48 ek-max-w-48 ek-border-x ek-border-gray-100 ek-p-5 ek-shadow-black hover:ek-shadow-2xl sm:ek-min-w-40 sm:ek-max-w-40 lg:ek-min-w-60 lg:ek-max-w-60 tiny:ek-min-w-44 tiny:ek-max-w-44"
+                class="ek-flex ek-min-w-[12rem] ek-max-w-[12rem] ek-flex-col ek-justify-between ek-rounded-lg ek-border ek-border-gray-100 ek-p-5 ek-shadow-black hover:ek-shadow-2xl sm:ek-min-w-[12rem] sm:ek-max-w-[12rem] lg:ek-min-w-[15rem] lg:ek-max-w-[15rem] tiny:ek-min-w-[11rem] tiny:ek-max-w-[11rem]"
               >
-                <p class="ek-text-[10px] ek-text-gray-700">Motor Drivers</p>
-                <h5 class="ek-line-clamp-2 ek-font-semibold">
+                <p class="ek-mb-2 ek-text-[12px] ek-text-gray-700">
+                  single boards
+                </p>
+                <h5 class="ek-mb-4 ek-line-clamp-2 ek-font-semibold">
                   12V DC Motor with Gearbox
                 </h5>
-                <img
-                  src="assets/images/products/shopping (4).webp"
-                  alt=""
-                  class="ek-min-h-36 ek-object-cover lg:ek-max-h-52 lg:ek-min-h-52 lg:ek-min-w-48 lg:ek-max-w-48"
-                />
-                <div class="ek-flex ek-justify-between">
-                  <p class="text ek-text-base ek-font-bold">₹1500.00</p>
-                  <div class="ek-rounded-full ek-bg-primary">
-                    <i class="ec ec-add-to-cart ek-p-1 ek-text-white"></i>
+                <div class="ek-mb-4 ek-flex ek-items-center ek-justify-center">
+                  <img
+                    src="assets/images/products/shopping (1).webp"
+                    alt="Product 1"
+                    class="ek-max-h-[135px] ek-min-h-[135px] ek-w-full ek-object-contain lg:ek-max-h-[200px] lg:ek-min-h-[200px] lg:ek-min-w-[200px] lg:ek-max-w-[200px]"
+                  />
+                </div>
+                <div class="ek-flex ek-items-center ek-justify-between">
+                  <p class="ek-text-xl ek-font-bold">₹1000.00</p>
+                  <div class="ek-rounded-full ek-bg-primary ek-px-3 ek-py-2">
+                    <i class="ec ec-add-to-cart ek-text-xl ek-text-white"></i>
                   </div>
                 </div>
               </div>
               <div
-                class="lg:max-w-56 ek-min-w-48 ek-max-w-48 ek-border-x ek-border-gray-100 ek-p-5 ek-shadow-black hover:ek-shadow-2xl sm:ek-min-w-40 sm:ek-max-w-40 lg:ek-min-w-60 lg:ek-max-w-60 tiny:ek-min-w-44 tiny:ek-max-w-44"
+                class="ek-flex ek-min-w-[12rem] ek-max-w-[12rem] ek-flex-col ek-justify-between ek-rounded-lg ek-border ek-border-gray-100 ek-p-5 ek-shadow-black hover:ek-shadow-2xl sm:ek-min-w-[12rem] sm:ek-max-w-[12rem] lg:ek-min-w-[15rem] lg:ek-max-w-[15rem] tiny:ek-min-w-[11rem] tiny:ek-max-w-[11rem]"
               >
-                <p class="ek-text-[10px] ek-text-gray-700">Single Boards</p>
-                <h5 class="ek-line-clamp-2 ek-font-semibold">
-                  Raspberry Pi 4gb Ram
-                </h5>
-                <img
-                  src="assets/images/products/shopping (5).webp"
-                  alt=""
-                  class="ek-min-h-36 ek-object-cover lg:ek-max-h-52 lg:ek-min-h-52 lg:ek-min-w-48 lg:ek-max-w-48"
-                />
-                <div class="ek-flex ek-justify-between">
-                  <p class="text ek-text-base ek-font-bold">₹1500.00</p>
-                  <div class="ek-rounded-full ek-bg-primary">
-                    <i class="ec ec-add-to-cart ek-p-1 ek-text-white"></i>
-                  </div>
-                </div>
-              </div>
-              <div
-                class="lg:max-w-56 ek-min-w-48 ek-max-w-48 ek-border-x ek-border-gray-100 ek-p-5 ek-shadow-black hover:ek-shadow-2xl sm:ek-min-w-40 sm:ek-max-w-40 lg:ek-min-w-60 lg:ek-max-w-60 tiny:ek-min-w-44 tiny:ek-max-w-44"
-              >
-                <p class="ek-text-[10px] ek-text-gray-700">Motor Drivers</p>
-                <h5 class="ek-line-clamp-2 ek-font-semibold">
+                <p class="ek-mb-2 ek-text-[12px] ek-text-gray-700">
+                  IoT Product 2
+                </p>
+                <h5 class="ek-mb-4 ek-line-clamp-2 ek-font-semibold">
                   12V DC Motor with Gearbox
                 </h5>
-                <img
-                  src="assets/images/products/shopping (6).webp"
-                  alt=""
-                  class="ek-min-h-36 ek-object-cover lg:ek-max-h-52 lg:ek-min-h-52 lg:ek-min-w-48 lg:ek-max-w-48"
-                />
-                <div class="ek-flex ek-justify-between">
-                  <p class="text ek-text-base ek-font-bold">₹1500.00</p>
-                  <div class="ek-rounded-full ek-bg-primary">
-                    <i class="ec ec-add-to-cart ek-p-1 ek-text-white"></i>
+                <div class="ek-mb-4 ek-flex ek-items-center ek-justify-center">
+                  <img
+                    src="assets/images/products/shopping (2).webp"
+                    alt="Product 2"
+                    class="ek-max-h-[135px] ek-min-h-[135px] ek-w-full ek-object-contain lg:ek-max-h-[200px] lg:ek-min-h-[200px] lg:ek-min-w-[200px] lg:ek-max-w-[200px]"
+                  />
+                </div>
+                <div class="ek-flex ek-items-center ek-justify-between">
+                  <p class="ek-text-xl ek-font-bold">₹2000.00</p>
+                  <div class="ek-rounded-full ek-bg-primary ek-px-3 ek-py-2">
+                    <i class="ec ec-add-to-cart ek-text-xl ek-text-white"></i>
                   </div>
                 </div>
               </div>
               <div
-                class="lg:max-w-56 ek-min-w-48 ek-max-w-48 ek-border-x ek-border-gray-100 ek-p-5 ek-shadow-black hover:ek-shadow-2xl sm:ek-min-w-40 sm:ek-max-w-40 lg:ek-min-w-60 lg:ek-max-w-60 tiny:ek-min-w-44 tiny:ek-max-w-44"
+                class="ek-flex ek-min-w-[12rem] ek-max-w-[12rem] ek-flex-col ek-justify-between ek-rounded-lg ek-border ek-border-gray-100 ek-p-5 ek-shadow-black hover:ek-shadow-2xl sm:ek-min-w-[12rem] sm:ek-max-w-[12rem] lg:ek-min-w-[15rem] lg:ek-max-w-[15rem] tiny:ek-min-w-[11rem] tiny:ek-max-w-[11rem]"
               >
-                <p class="ek-text-[10px] ek-text-gray-700">Single Boards</p>
-                <h5 class="ek-line-clamp-2 ek-font-semibold">
-                  Raspberry Pi 4gb Ram
+                <p class="ek-mb-2 ek-text-[12px] ek-text-gray-700">
+                  Development Boards
+                </p>
+                <h5 class="ek-mb-4 ek-line-clamp-2 ek-font-semibold">
+                  Raspberry Pi 4 Model B 8GB RAM, Quad-Core CPU
                 </h5>
-                <img
-                  src="assets/images/products/shopping (7).webp"
-                  alt=""
-                  class="ek-min-h-36 ek-object-cover lg:ek-max-h-52 lg:ek-min-h-52 lg:ek-min-w-48 lg:ek-max-w-48"
-                />
-                <div class="ek-flex ek-justify-between">
-                  <p class="text ek-text-base ek-font-bold">₹1500.00</p>
-                  <div class="ek-rounded-full ek-bg-primary">
-                    <i class="ec ec-add-to-cart ek-p-1 ek-text-white"></i>
+                <div class="ek-mb-4 ek-flex ek-items-center ek-justify-center">
+                  <img
+                    src="assets/images/products/shopping (3).webp"
+                    alt="Product 3"
+                    class="ek-max-h-[135px] ek-min-h-[135px] ek-w-full ek-object-contain lg:ek-max-h-[200px] lg:ek-min-h-[200px] lg:ek-min-w-[200px] lg:ek-max-w-[200px]"
+                  />
+                </div>
+                <div class="ek-flex ek-items-center ek-justify-between">
+                  <p class="ek-text-xl ek-font-bold">₹5,500.00</p>
+                  <div class="ek-rounded-full ek-bg-primary ek-px-3 ek-py-2">
+                    <i class="ec ec-add-to-cart ek-text-xl ek-text-white"></i>
                   </div>
                 </div>
               </div>
               <div
-                class="lg:max-w-56 ek-min-w-48 ek-max-w-48 ek-border-x ek-border-gray-100 ek-p-5 ek-shadow-black hover:ek-shadow-2xl sm:ek-min-w-40 sm:ek-max-w-40 lg:ek-min-w-60 lg:ek-max-w-60 tiny:ek-min-w-44 tiny:ek-max-w-44"
+                class="ek-flex ek-min-w-[12rem] ek-max-w-[12rem] ek-flex-col ek-justify-between ek-rounded-lg ek-border ek-border-gray-100 ek-p-5 ek-shadow-black hover:ek-shadow-2xl sm:ek-min-w-[10rem] sm:ek-max-w-[10rem] lg:ek-min-w-[15rem] lg:ek-max-w-[15rem] tiny:ek-min-w-[11rem] tiny:ek-max-w-[11rem]"
               >
-                <p class="ek-text-[10px] ek-text-gray-700">Motor Drivers</p>
-                <h5 class="ek-line-clamp-2 ek-font-semibold">
-                  12V DC Motor with Gearbox
+                <p class="ek-mb-2 ek-text-[12px] ek-text-gray-700">
+                  IoT Product 4
+                </p>
+                <h5 class="ek-mb-4 ek-line-clamp-2 ek-font-semibold">
+                  Product 4
                 </h5>
-                <img
-                  src="assets/images/products/shopping (1).webp"
-                  alt=""
-                  class="ek-min-h-36 ek-object-cover lg:ek-max-h-52 lg:ek-min-h-52 lg:ek-min-w-48 lg:ek-max-w-48"
-                />
-                <div class="ek-flex ek-justify-between">
-                  <p class="text ek-text-base ek-font-bold">₹1500.00</p>
-                  <div class="ek-rounded-full ek-bg-primary">
-                    <i class="ec ec-add-to-cart ek-p-1 ek-text-white"></i>
+                <div class="ek-mb-4 ek-flex ek-items-center ek-justify-center">
+                  <img
+                    src="assets/images/products/shopping (4).webp"
+                    alt="Product 4"
+                    class="ek-max-h-[135px] ek-min-h-[135px] ek-w-full ek-object-contain lg:ek-max-h-[200px] lg:ek-min-h-[200px] lg:ek-min-w-[200px] lg:ek-max-w-[200px]"
+                  />
+                </div>
+                <div class="ek-flex ek-items-center ek-justify-between">
+                  <p class="ek-text-xl ek-font-bold">₹4000.00</p>
+                  <div class="ek-rounded-full ek-bg-primary ek-px-3 ek-py-2">
+                    <i class="ec ec-add-to-cart ek-text-xl ek-text-white"></i>
                   </div>
                 </div>
               </div>
               <div
-                class="lg:max-w-56 ek-min-w-48 ek-max-w-48 ek-border-x ek-border-gray-100 ek-p-5 ek-shadow-black hover:ek-shadow-2xl sm:ek-min-w-40 sm:ek-max-w-40 lg:ek-min-w-60 lg:ek-max-w-60 tiny:ek-min-w-44 tiny:ek-max-w-44"
+                class="ek-flex ek-min-w-[12rem] ek-max-w-[12rem] ek-flex-col ek-justify-between ek-rounded-lg ek-border ek-border-gray-100 ek-p-5 ek-shadow-black hover:ek-shadow-2xl sm:ek-min-w-[10rem] sm:ek-max-w-[10rem] lg:ek-min-w-[15rem] lg:ek-max-w-[15rem] tiny:ek-min-w-[11rem] tiny:ek-max-w-[11rem]"
               >
-                <p class="ek-text-[10px] ek-text-gray-700">Single Boards</p>
-                <h5 class="ek-line-clamp-2 ek-font-semibold">
-                  Raspberry Pi 4gb Ram
+                <p class="ek-mb-2 ek-text-[12px] ek-text-gray-700">
+                  IoT Product 5
+                </p>
+                <h5 class="ek-mb-4 ek-line-clamp-2 ek-font-semibold">
+                  Product 5
                 </h5>
-                <img
-                  src="assets/images/products/shopping.webp"
-                  alt=""
-                  class="ek-min-h-36 ek-object-cover lg:ek-max-h-52 lg:ek-min-h-52 lg:ek-min-w-48 lg:ek-max-w-48"
-                />
-                <div class="ek-flex ek-justify-between">
-                  <p class="text ek-text-base ek-font-bold">₹1500.00</p>
-                  <div class="ek-rounded-full ek-bg-primary">
-                    <i class="ec ec-add-to-cart ek-p-1 ek-text-white"></i>
+                <div class="ek-mb-4 ek-flex ek-items-center ek-justify-center">
+                  <img
+                    src="assets/images/products/shopping (5).webp"
+                    alt="Product 5"
+                    class="ek-max-h-[135px] ek-min-h-[135px] ek-w-full ek-object-contain lg:ek-max-h-[200px] lg:ek-min-h-[200px] lg:ek-min-w-[200px] lg:ek-max-w-[200px]"
+                  />
+                </div>
+                <div class="ek-flex ek-items-center ek-justify-between">
+                  <p class="ek-text-xl ek-font-bold">₹5000.00</p>
+                  <div class="ek-rounded-full ek-bg-primary ek-px-3 ek-py-2">
+                    <i class="ec ec-add-to-cart ek-text-xl ek-text-white"></i>
                   </div>
                 </div>
               </div>
               <div
-                class="lg:max-w-56 ek-min-w-48 ek-max-w-48 ek-border-x ek-border-gray-100 ek-p-5 ek-shadow-black hover:ek-shadow-2xl sm:ek-min-w-40 sm:ek-max-w-40 lg:ek-min-w-60 lg:ek-max-w-60 tiny:ek-min-w-44 tiny:ek-max-w-44"
+                class="ek-flex ek-min-w-[12rem] ek-max-w-[12rem] ek-flex-col ek-justify-between ek-rounded-lg ek-border ek-border-gray-100 ek-p-5 ek-shadow-black hover:ek-shadow-2xl sm:ek-min-w-[10rem] sm:ek-max-w-[10rem] lg:ek-min-w-[15rem] lg:ek-max-w-[15rem] tiny:ek-min-w-[11rem] tiny:ek-max-w-[11rem]"
               >
-                <p class="ek-text-[10px] ek-text-gray-700">Motor Drivers</p>
-                <h5 class="ek-line-clamp-2 ek-font-semibold">
-                  12V DC Motor with Gearbox
+                <p class="ek-mb-2 ek-text-[12px] ek-text-gray-700">
+                  IoT Product 6
+                </p>
+                <h5 class="ek-mb-4 ek-line-clamp-2 ek-font-semibold">
+                  Product 6
                 </h5>
-                <img
-                  src="assets/images/products/shopping (3).webp"
-                  alt=""
-                  class="ek-min-h-36 ek-object-cover lg:ek-max-h-52 lg:ek-min-h-52 lg:ek-min-w-48 lg:ek-max-w-48"
-                />
-                <div class="ek-flex ek-justify-between">
-                  <p class="text ek-text-base ek-font-bold">₹1500.00</p>
-                  <div class="ek-rounded-full ek-bg-primary">
-                    <i class="ec ec-add-to-cart ek-p-1 ek-text-white"></i>
+                <div class="ek-mb-4 ek-flex ek-items-center ek-justify-center">
+                  <img
+                    src="assets/images/products/shopping (6).webp"
+                    alt="Product 6"
+                    class="ek-max-h-[135px] ek-min-h-[135px] ek-w-full ek-object-contain lg:ek-max-h-[200px] lg:ek-min-h-[200px] lg:ek-min-w-[200px] lg:ek-max-w-[200px]"
+                  />
+                </div>
+                <div class="ek-flex ek-items-center ek-justify-between">
+                  <p class="ek-text-xl ek-font-bold">₹6000.00</p>
+                  <div class="ek-rounded-full ek-bg-primary ek-px-3 ek-py-2">
+                    <i class="ec ec-add-to-cart ek-text-xl ek-text-white"></i>
                   </div>
                 </div>
               </div>
               <div
-                class="lg:max-w-56 ek-min-w-48 ek-max-w-48 ek-border-x ek-border-gray-100 ek-p-5 ek-shadow-black hover:ek-shadow-2xl sm:ek-min-w-40 sm:ek-max-w-40 lg:ek-min-w-60 lg:ek-max-w-60 tiny:ek-min-w-44 tiny:ek-max-w-44"
+                class="ek-flex ek-min-w-[12rem] ek-max-w-[12rem] ek-flex-col ek-justify-between ek-rounded-lg ek-border ek-border-gray-100 ek-p-5 ek-shadow-black hover:ek-shadow-2xl sm:ek-min-w-[10rem] sm:ek-max-w-[10rem] lg:ek-min-w-[15rem] lg:ek-max-w-[15rem] tiny:ek-min-w-[11rem] tiny:ek-max-w-[11rem]"
               >
-                <p class="ek-text-[10px] ek-text-gray-700">Single Boards</p>
-                <h5 class="ek-line-clamp-2 ek-font-semibold">
-                  Raspberry Pi 4gb Ram
+                <p class="ek-mb-2 ek-text-[12px] ek-text-gray-700">
+                  IoT Product 7
+                </p>
+                <h5 class="ek-mb-4 ek-line-clamp-2 ek-font-semibold">
+                  Product 7
                 </h5>
-                <img
-                  src="assets/images/products/shopping (4).webp"
-                  alt=""
-                  class="ek-min-h-36 ek-object-cover lg:ek-max-h-52 lg:ek-min-h-52 lg:ek-min-w-48 lg:ek-max-w-48"
-                />
-                <div class="ek-flex ek-justify-between">
-                  <p class="text ek-text-base ek-font-bold">₹1500.00</p>
-                  <div class="ek-rounded-full ek-bg-primary">
-                    <i class="ec ec-add-to-cart ek-p-1 ek-text-white"></i>
+                <div class="ek-mb-4 ek-flex ek-items-center ek-justify-center">
+                  <img
+                    src="assets/images/products/shopping (7).webp"
+                    alt="Product 7"
+                    class="ek-max-h-[135px] ek-min-h-[135px] ek-w-full ek-object-contain lg:ek-max-h-[200px] lg:ek-min-h-[200px] lg:ek-min-w-[200px] lg:ek-max-w-[200px]"
+                  />
+                </div>
+                <div class="ek-flex ek-items-center ek-justify-between">
+                  <p class="ek-text-xl ek-font-bold">₹7000.00</p>
+                  <div class="ek-rounded-full ek-bg-primary ek-px-3 ek-py-2">
+                    <i class="ec ec-add-to-cart ek-text-xl ek-text-white"></i>
                   </div>
                 </div>
               </div>
+              <div
+                class="ek-flex ek-min-w-[12rem] ek-max-w-[12rem] ek-flex-col ek-justify-between ek-rounded-lg ek-border ek-border-gray-100 ek-p-5 ek-shadow-black hover:ek-shadow-2xl sm:ek-min-w-[10rem] sm:ek-max-w-[10rem] lg:ek-min-w-[15rem] lg:ek-max-w-[15rem] tiny:ek-min-w-[11rem] tiny:ek-max-w-[11rem]"
+              >
+                <p class="ek-mb-2 ek-text-[12px] ek-text-gray-700">
+                  IoT Product 8
+                </p>
+                <h5 class="ek-mb-4 ek-line-clamp-2 ek-font-semibold">
+                  Product 8
+                </h5>
+                <div class="ek-mb-4 ek-flex ek-items-center ek-justify-center">
+                  <img
+                    src="assets/images/products/shopping (8).webp"
+                    alt="Product 8"
+                    class="ek-max-h-[135px] ek-min-h-[135px] ek-w-full ek-object-contain lg:ek-max-h-[200px] lg:ek-min-h-[200px] lg:ek-min-w-[200px] lg:ek-max-w-[200px]"
+                  />
+                </div>
+                <div class="ek-flex ek-items-center ek-justify-between">
+                  <p class="ek-text-xl ek-font-bold">₹8000.00</p>
+                  <div class="ek-rounded-full ek-bg-primary ek-px-3 ek-py-2">
+                    <i class="ec ec-add-to-cart ek-text-xl ek-text-white"></i>
+                  </div>
+                </div>
+              </div>
+
               <!-- cards end -->
             </div>
             <!-- Featured products end  -->
@@ -1606,154 +1673,186 @@
             >
               <!-- cards  -->
               <div
-                class="lg:max-w-56 ek-min-w-48 ek-max-w-48 ek-border-x ek-border-gray-100 ek-p-5 ek-shadow-black hover:ek-shadow-2xl sm:ek-min-w-40 sm:ek-max-w-40 lg:ek-min-w-60 lg:ek-max-w-60 tiny:ek-min-w-44 tiny:ek-max-w-44"
+                class="ek-flex ek-min-w-[12rem] ek-max-w-[12rem] ek-flex-col ek-justify-between ek-rounded-lg ek-border ek-border-gray-100 ek-p-5 ek-shadow-black hover:ek-shadow-2xl sm:ek-min-w-[12rem] sm:ek-max-w-[12rem] lg:ek-min-w-[15rem] lg:ek-max-w-[15rem] tiny:ek-min-w-[11rem] tiny:ek-max-w-[11rem]"
               >
-                <p class="ek-text-[10px] ek-text-gray-700">Motor Drivers</p>
-                <h5 class="ek-line-clamp-2 ek-font-semibold">
+                <p class="ek-mb-2 ek-text-[12px] ek-text-gray-700">
+                  single boards
+                </p>
+                <h5 class="ek-mb-4 ek-line-clamp-2 ek-font-semibold">
                   12V DC Motor with Gearbox
                 </h5>
-                <img
-                  src="assets/images/products/shopping (1).webp"
-                  alt=""
-                  class="ek-min-h-36 ek-object-cover lg:ek-max-h-52 lg:ek-min-h-52 lg:ek-min-w-48 lg:ek-max-w-48"
-                />
-                <div class="ek-flex ek-justify-between">
-                  <p class="text ek-text-base ek-font-bold">₹1500.00</p>
-                  <div class="ek-rounded-full ek-bg-primary">
-                    <i class="ec ec-add-to-cart ek-p-1 ek-text-white"></i>
+                <div class="ek-mb-4 ek-flex ek-items-center ek-justify-center">
+                  <img
+                    src="assets/images/products/shopping (1).webp"
+                    alt="Product 1"
+                    class="ek-max-h-[135px] ek-min-h-[135px] ek-w-full ek-object-contain lg:ek-max-h-[200px] lg:ek-min-h-[200px] lg:ek-min-w-[200px] lg:ek-max-w-[200px]"
+                  />
+                </div>
+                <div class="ek-flex ek-items-center ek-justify-between">
+                  <p class="ek-text-xl ek-font-bold">₹1000.00</p>
+                  <div class="ek-rounded-full ek-bg-primary ek-px-3 ek-py-2">
+                    <i class="ec ec-add-to-cart ek-text-xl ek-text-white"></i>
                   </div>
                 </div>
               </div>
               <div
-                class="lg:max-w-56 ek-min-w-48 ek-max-w-48 ek-border-x ek-border-gray-100 ek-p-5 ek-shadow-black hover:ek-shadow-2xl sm:ek-min-w-40 sm:ek-max-w-40 lg:ek-min-w-60 lg:ek-max-w-60 tiny:ek-min-w-44 tiny:ek-max-w-44"
+                class="ek-flex ek-min-w-[12rem] ek-max-w-[12rem] ek-flex-col ek-justify-between ek-rounded-lg ek-border ek-border-gray-100 ek-p-5 ek-shadow-black hover:ek-shadow-2xl sm:ek-min-w-[12rem] sm:ek-max-w-[12rem] lg:ek-min-w-[15rem] lg:ek-max-w-[15rem] tiny:ek-min-w-[11rem] tiny:ek-max-w-[11rem]"
               >
-                <p class="ek-text-[10px] ek-text-gray-700">Single Boards</p>
-                <h5 class="ek-line-clamp-2 ek-font-semibold">
-                  Raspberry Pi 4gb Ram
-                </h5>
-                <img
-                  src="assets/images/products/shopping.webp"
-                  alt=""
-                  class="ek-min-h-36 ek-object-cover lg:ek-max-h-52 lg:ek-min-h-52 lg:ek-min-w-48 lg:ek-max-w-48"
-                />
-                <div class="ek-flex ek-justify-between">
-                  <p class="text ek-text-base ek-font-bold">₹1500.00</p>
-                  <div class="ek-rounded-full ek-bg-primary">
-                    <i class="ec ec-add-to-cart ek-p-1 ek-text-white"></i>
-                  </div>
-                </div>
-              </div>
-              <div
-                class="lg:max-w-56 ek-min-w-48 ek-max-w-48 ek-border-x ek-border-gray-100 ek-p-5 ek-shadow-black hover:ek-shadow-2xl sm:ek-min-w-40 sm:ek-max-w-40 lg:ek-min-w-60 lg:ek-max-w-60 tiny:ek-min-w-44 tiny:ek-max-w-44"
-              >
-                <p class="ek-text-[10px] ek-text-gray-700">Motor Drivers</p>
-                <h5 class="ek-line-clamp-2 ek-font-semibold">
+                <p class="ek-mb-2 ek-text-[12px] ek-text-gray-700">
+                  IoT Product 2
+                </p>
+                <h5 class="ek-mb-4 ek-line-clamp-2 ek-font-semibold">
                   12V DC Motor with Gearbox
                 </h5>
-                <img
-                  src="assets/images/products/shopping (7).webp"
-                  alt=""
-                  class="ek-min-h-36 ek-object-cover lg:ek-max-h-52 lg:ek-min-h-52 lg:ek-min-w-48 lg:ek-max-w-48"
-                />
-                <div class="ek-flex ek-justify-between">
-                  <p class="text ek-text-base ek-font-bold">₹1500.00</p>
-                  <div class="ek-rounded-full ek-bg-primary">
-                    <i class="ec ec-add-to-cart ek-p-1 ek-text-white"></i>
+                <div class="ek-mb-4 ek-flex ek-items-center ek-justify-center">
+                  <img
+                    src="assets/images/products/shopping (2).webp"
+                    alt="Product 2"
+                    class="ek-max-h-[135px] ek-min-h-[135px] ek-w-full ek-object-contain lg:ek-max-h-[200px] lg:ek-min-h-[200px] lg:ek-min-w-[200px] lg:ek-max-w-[200px]"
+                  />
+                </div>
+                <div class="ek-flex ek-items-center ek-justify-between">
+                  <p class="ek-text-xl ek-font-bold">₹2000.00</p>
+                  <div class="ek-rounded-full ek-bg-primary ek-px-3 ek-py-2">
+                    <i class="ec ec-add-to-cart ek-text-xl ek-text-white"></i>
                   </div>
                 </div>
               </div>
               <div
-                class="lg:max-w-56 ek-min-w-48 ek-max-w-48 ek-border-x ek-border-gray-100 ek-p-5 ek-shadow-black hover:ek-shadow-2xl sm:ek-min-w-40 sm:ek-max-w-40 lg:ek-min-w-60 lg:ek-max-w-60 tiny:ek-min-w-44 tiny:ek-max-w-44"
+                class="ek-flex ek-min-w-[12rem] ek-max-w-[12rem] ek-flex-col ek-justify-between ek-rounded-lg ek-border ek-border-gray-100 ek-p-5 ek-shadow-black hover:ek-shadow-2xl sm:ek-min-w-[12rem] sm:ek-max-w-[12rem] lg:ek-min-w-[15rem] lg:ek-max-w-[15rem] tiny:ek-min-w-[11rem] tiny:ek-max-w-[11rem]"
               >
-                <p class="ek-text-[10px] ek-text-gray-700">Single Boards</p>
-                <h5 class="ek-line-clamp-2 ek-font-semibold">
-                  Raspberry Pi 4gb Ram
+                <p class="ek-mb-2 ek-text-[12px] ek-text-gray-700">
+                  Development Boards
+                </p>
+                <h5 class="ek-mb-4 ek-line-clamp-2 ek-font-semibold">
+                  Raspberry Pi 4 Model B 8GB RAM, Quad-Core CPU
                 </h5>
-                <img
-                  src="assets/images/products/shopping (5).webp"
-                  alt=""
-                  class="ek-min-h-36 ek-object-cover lg:ek-max-h-52 lg:ek-min-h-52 lg:ek-min-w-48 lg:ek-max-w-48"
-                />
-                <div class="ek-flex ek-justify-between">
-                  <p class="text ek-text-base ek-font-bold">₹1500.00</p>
-                  <div class="ek-rounded-full ek-bg-primary">
-                    <i class="ec ec-add-to-cart ek-p-1 ek-text-white"></i>
+                <div class="ek-mb-4 ek-flex ek-items-center ek-justify-center">
+                  <img
+                    src="assets/images/products/shopping (3).webp"
+                    alt="Product 3"
+                    class="ek-max-h-[135px] ek-min-h-[135px] ek-w-full ek-object-contain lg:ek-max-h-[200px] lg:ek-min-h-[200px] lg:ek-min-w-[200px] lg:ek-max-w-[200px]"
+                  />
+                </div>
+                <div class="ek-flex ek-items-center ek-justify-between">
+                  <p class="ek-text-xl ek-font-bold">₹5,500.00</p>
+                  <div class="ek-rounded-full ek-bg-primary ek-px-3 ek-py-2">
+                    <i class="ec ec-add-to-cart ek-text-xl ek-text-white"></i>
                   </div>
                 </div>
               </div>
               <div
-                class="lg:max-w-56 ek-min-w-48 ek-max-w-48 ek-border-x ek-border-gray-100 ek-p-5 ek-shadow-black hover:ek-shadow-2xl sm:ek-min-w-40 sm:ek-max-w-40 lg:ek-min-w-60 lg:ek-max-w-60 tiny:ek-min-w-44 tiny:ek-max-w-44"
+                class="ek-flex ek-min-w-[12rem] ek-max-w-[12rem] ek-flex-col ek-justify-between ek-rounded-lg ek-border ek-border-gray-100 ek-p-5 ek-shadow-black hover:ek-shadow-2xl sm:ek-min-w-[10rem] sm:ek-max-w-[10rem] lg:ek-min-w-[15rem] lg:ek-max-w-[15rem] tiny:ek-min-w-[11rem] tiny:ek-max-w-[11rem]"
               >
-                <p class="ek-text-[10px] ek-text-gray-700">Motor Drivers</p>
-                <h5 class="ek-line-clamp-2 ek-font-semibold">
-                  12V DC Motor with Gearbox
+                <p class="ek-mb-2 ek-text-[12px] ek-text-gray-700">
+                  IoT Product 4
+                </p>
+                <h5 class="ek-mb-4 ek-line-clamp-2 ek-font-semibold">
+                  Product 4
                 </h5>
-                <img
-                  src="assets/images/products/shopping (3).webp"
-                  alt=""
-                  class="ek-min-h-36 ek-object-cover lg:ek-max-h-52 lg:ek-min-h-52 lg:ek-min-w-48 lg:ek-max-w-48"
-                />
-                <div class="ek-flex ek-justify-between">
-                  <p class="text ek-text-base ek-font-bold">₹1500.00</p>
-                  <div class="ek-rounded-full ek-bg-primary">
-                    <i class="ec ec-add-to-cart ek-p-1 ek-text-white"></i>
+                <div class="ek-mb-4 ek-flex ek-items-center ek-justify-center">
+                  <img
+                    src="assets/images/products/shopping (4).webp"
+                    alt="Product 4"
+                    class="ek-max-h-[135px] ek-min-h-[135px] ek-w-full ek-object-contain lg:ek-max-h-[200px] lg:ek-min-h-[200px] lg:ek-min-w-[200px] lg:ek-max-w-[200px]"
+                  />
+                </div>
+                <div class="ek-flex ek-items-center ek-justify-between">
+                  <p class="ek-text-xl ek-font-bold">₹4000.00</p>
+                  <div class="ek-rounded-full ek-bg-primary ek-px-3 ek-py-2">
+                    <i class="ec ec-add-to-cart ek-text-xl ek-text-white"></i>
                   </div>
                 </div>
               </div>
               <div
-                class="lg:max-w-56 ek-min-w-48 ek-max-w-48 ek-border-x ek-border-gray-100 ek-p-5 ek-shadow-black hover:ek-shadow-2xl sm:ek-min-w-40 sm:ek-max-w-40 lg:ek-min-w-60 lg:ek-max-w-60 tiny:ek-min-w-44 tiny:ek-max-w-44"
+                class="ek-flex ek-min-w-[12rem] ek-max-w-[12rem] ek-flex-col ek-justify-between ek-rounded-lg ek-border ek-border-gray-100 ek-p-5 ek-shadow-black hover:ek-shadow-2xl sm:ek-min-w-[10rem] sm:ek-max-w-[10rem] lg:ek-min-w-[15rem] lg:ek-max-w-[15rem] tiny:ek-min-w-[11rem] tiny:ek-max-w-[11rem]"
               >
-                <p class="ek-text-[10px] ek-text-gray-700">Single Boards</p>
-                <h5 class="ek-line-clamp-2 ek-font-semibold">
-                  Raspberry Pi 4gb Ram
+                <p class="ek-mb-2 ek-text-[12px] ek-text-gray-700">
+                  IoT Product 5
+                </p>
+                <h5 class="ek-mb-4 ek-line-clamp-2 ek-font-semibold">
+                  Product 5
                 </h5>
-                <img
-                  src="assets/images/products/shopping (4).webp"
-                  alt=""
-                  class="ek-min-h-36 ek-object-cover lg:ek-max-h-52 lg:ek-min-h-52 lg:ek-min-w-48 lg:ek-max-w-48"
-                />
-                <div class="ek-flex ek-justify-between">
-                  <p class="text ek-text-base ek-font-bold">₹1500.00</p>
-                  <div class="ek-rounded-full ek-bg-primary">
-                    <i class="ec ec-add-to-cart ek-p-1 ek-text-white"></i>
+                <div class="ek-mb-4 ek-flex ek-items-center ek-justify-center">
+                  <img
+                    src="assets/images/products/shopping (5).webp"
+                    alt="Product 5"
+                    class="ek-max-h-[135px] ek-min-h-[135px] ek-w-full ek-object-contain lg:ek-max-h-[200px] lg:ek-min-h-[200px] lg:ek-min-w-[200px] lg:ek-max-w-[200px]"
+                  />
+                </div>
+                <div class="ek-flex ek-items-center ek-justify-between">
+                  <p class="ek-text-xl ek-font-bold">₹5000.00</p>
+                  <div class="ek-rounded-full ek-bg-primary ek-px-3 ek-py-2">
+                    <i class="ec ec-add-to-cart ek-text-xl ek-text-white"></i>
                   </div>
                 </div>
               </div>
               <div
-                class="lg:max-w-56 ek-min-w-48 ek-max-w-48 ek-border-x ek-border-gray-100 ek-p-5 ek-shadow-black hover:ek-shadow-2xl sm:ek-min-w-40 sm:ek-max-w-40 lg:ek-min-w-60 lg:ek-max-w-60 tiny:ek-min-w-44 tiny:ek-max-w-44"
+                class="ek-flex ek-min-w-[12rem] ek-max-w-[12rem] ek-flex-col ek-justify-between ek-rounded-lg ek-border ek-border-gray-100 ek-p-5 ek-shadow-black hover:ek-shadow-2xl sm:ek-min-w-[10rem] sm:ek-max-w-[10rem] lg:ek-min-w-[15rem] lg:ek-max-w-[15rem] tiny:ek-min-w-[11rem] tiny:ek-max-w-[11rem]"
               >
-                <p class="ek-text-[10px] ek-text-gray-700">Motor Drivers</p>
-                <h5 class="ek-line-clamp-2 ek-font-semibold">
-                  12V DC Motor with Gearbox
+                <p class="ek-mb-2 ek-text-[12px] ek-text-gray-700">
+                  IoT Product 6
+                </p>
+                <h5 class="ek-mb-4 ek-line-clamp-2 ek-font-semibold">
+                  Product 6
                 </h5>
-                <img
-                  src="assets/images/products/shopping (5).webp"
-                  alt=""
-                  class="ek-min-h-36 ek-object-cover lg:ek-max-h-52 lg:ek-min-h-52 lg:ek-min-w-48 lg:ek-max-w-48"
-                />
-                <div class="ek-flex ek-justify-between">
-                  <p class="text ek-text-base ek-font-bold">₹1500.00</p>
-                  <div class="ek-rounded-full ek-bg-primary">
-                    <i class="ec ec-add-to-cart ek-p-1 ek-text-white"></i>
+                <div class="ek-mb-4 ek-flex ek-items-center ek-justify-center">
+                  <img
+                    src="assets/images/products/shopping (6).webp"
+                    alt="Product 6"
+                    class="ek-max-h-[135px] ek-min-h-[135px] ek-w-full ek-object-contain lg:ek-max-h-[200px] lg:ek-min-h-[200px] lg:ek-min-w-[200px] lg:ek-max-w-[200px]"
+                  />
+                </div>
+                <div class="ek-flex ek-items-center ek-justify-between">
+                  <p class="ek-text-xl ek-font-bold">₹6000.00</p>
+                  <div class="ek-rounded-full ek-bg-primary ek-px-3 ek-py-2">
+                    <i class="ec ec-add-to-cart ek-text-xl ek-text-white"></i>
                   </div>
                 </div>
               </div>
               <div
-                class="lg:max-w-56 ek-min-w-48 ek-max-w-48 ek-border-x ek-border-gray-100 ek-p-5 ek-shadow-black hover:ek-shadow-2xl sm:ek-min-w-40 sm:ek-max-w-40 lg:ek-min-w-60 lg:ek-max-w-60 tiny:ek-min-w-44 tiny:ek-max-w-44"
+                class="ek-flex ek-min-w-[12rem] ek-max-w-[12rem] ek-flex-col ek-justify-between ek-rounded-lg ek-border ek-border-gray-100 ek-p-5 ek-shadow-black hover:ek-shadow-2xl sm:ek-min-w-[10rem] sm:ek-max-w-[10rem] lg:ek-min-w-[15rem] lg:ek-max-w-[15rem] tiny:ek-min-w-[11rem] tiny:ek-max-w-[11rem]"
               >
-                <p class="ek-text-[10px] ek-text-gray-700">Single Boards</p>
-                <h5 class="ek-line-clamp-2 ek-font-semibold">
-                  Raspberry Pi 4gb Ram
+                <p class="ek-mb-2 ek-text-[12px] ek-text-gray-700">
+                  IoT Product 7
+                </p>
+                <h5 class="ek-mb-4 ek-line-clamp-2 ek-font-semibold">
+                  Product 7
                 </h5>
-                <img
-                  src="assets/images/products/shopping (6).webp"
-                  alt=""
-                  class="ek-min-h-36 ek-object-cover lg:ek-max-h-52 lg:ek-min-h-52 lg:ek-min-w-48 lg:ek-max-w-48"
-                />
-                <div class="ek-flex ek-justify-between">
-                  <p class="text ek-text-base ek-font-bold">₹1500.00</p>
-                  <div class="ek-rounded-full ek-bg-primary">
-                    <i class="ec ec-add-to-cart ek-p-1 ek-text-white"></i>
+                <div class="ek-mb-4 ek-flex ek-items-center ek-justify-center">
+                  <img
+                    src="assets/images/products/shopping (7).webp"
+                    alt="Product 7"
+                    class="ek-max-h-[135px] ek-min-h-[135px] ek-w-full ek-object-contain lg:ek-max-h-[200px] lg:ek-min-h-[200px] lg:ek-min-w-[200px] lg:ek-max-w-[200px]"
+                  />
+                </div>
+                <div class="ek-flex ek-items-center ek-justify-between">
+                  <p class="ek-text-xl ek-font-bold">₹7000.00</p>
+                  <div class="ek-rounded-full ek-bg-primary ek-px-3 ek-py-2">
+                    <i class="ec ec-add-to-cart ek-text-xl ek-text-white"></i>
+                  </div>
+                </div>
+              </div>
+              <div
+                class="ek-flex ek-min-w-[12rem] ek-max-w-[12rem] ek-flex-col ek-justify-between ek-rounded-lg ek-border ek-border-gray-100 ek-p-5 ek-shadow-black hover:ek-shadow-2xl sm:ek-min-w-[10rem] sm:ek-max-w-[10rem] lg:ek-min-w-[15rem] lg:ek-max-w-[15rem] tiny:ek-min-w-[11rem] tiny:ek-max-w-[11rem]"
+              >
+                <p class="ek-mb-2 ek-text-[12px] ek-text-gray-700">
+                  IoT Product 8
+                </p>
+                <h5 class="ek-mb-4 ek-line-clamp-2 ek-font-semibold">
+                  Product 8
+                </h5>
+                <div class="ek-mb-4 ek-flex ek-items-center ek-justify-center">
+                  <img
+                    src="assets/images/products/shopping (8).webp"
+                    alt="Product 8"
+                    class="ek-max-h-[135px] ek-min-h-[135px] ek-w-full ek-object-contain lg:ek-max-h-[200px] lg:ek-min-h-[200px] lg:ek-min-w-[200px] lg:ek-max-w-[200px]"
+                  />
+                </div>
+                <div class="ek-flex ek-items-center ek-justify-between">
+                  <p class="ek-text-xl ek-font-bold">₹8000.00</p>
+                  <div class="ek-rounded-full ek-bg-primary ek-px-3 ek-py-2">
+                    <i class="ec ec-add-to-cart ek-text-xl ek-text-white"></i>
                   </div>
                 </div>
               </div>
@@ -1767,154 +1866,186 @@
             >
               <!-- cards  -->
               <div
-                class="lg:max-w-56 ek-min-w-48 ek-max-w-48 ek-border-x ek-border-gray-100 ek-p-5 ek-shadow-black hover:ek-shadow-2xl sm:ek-min-w-40 sm:ek-max-w-40 lg:ek-min-w-60 lg:ek-max-w-60 tiny:ek-min-w-44 tiny:ek-max-w-44"
+                class="ek-flex ek-min-w-[12rem] ek-max-w-[12rem] ek-flex-col ek-justify-between ek-rounded-lg ek-border ek-border-gray-100 ek-p-5 ek-shadow-black hover:ek-shadow-2xl sm:ek-min-w-[12rem] sm:ek-max-w-[12rem] lg:ek-min-w-[15rem] lg:ek-max-w-[15rem] tiny:ek-min-w-[11rem] tiny:ek-max-w-[11rem]"
               >
-                <p class="ek-text-[10px] ek-text-gray-700">Motor Drivers</p>
-                <h5 class="ek-line-clamp-2 ek-font-semibold">
+                <p class="ek-mb-2 ek-text-[12px] ek-text-gray-700">
+                  single boards
+                </p>
+                <h5 class="ek-mb-4 ek-line-clamp-2 ek-font-semibold">
                   12V DC Motor with Gearbox
                 </h5>
-                <img
-                  src="assets/images/products/shopping (3).webp"
-                  alt=""
-                  class="ek-min-h-36 ek-object-cover lg:ek-max-h-52 lg:ek-min-h-52 lg:ek-min-w-48 lg:ek-max-w-48"
-                />
-                <div class="ek-flex ek-justify-between">
-                  <p class="text ek-text-base ek-font-bold">₹1500.00</p>
-                  <div class="ek-rounded-full ek-bg-primary">
-                    <i class="ec ec-add-to-cart ek-p-1 ek-text-white"></i>
+                <div class="ek-mb-4 ek-flex ek-items-center ek-justify-center">
+                  <img
+                    src="assets/images/products/shopping (1).webp"
+                    alt="Product 1"
+                    class="ek-max-h-[135px] ek-min-h-[135px] ek-w-full ek-object-contain lg:ek-max-h-[200px] lg:ek-min-h-[200px] lg:ek-min-w-[200px] lg:ek-max-w-[200px]"
+                  />
+                </div>
+                <div class="ek-flex ek-items-center ek-justify-between">
+                  <p class="ek-text-xl ek-font-bold">₹1000.00</p>
+                  <div class="ek-rounded-full ek-bg-primary ek-px-3 ek-py-2">
+                    <i class="ec ec-add-to-cart ek-text-xl ek-text-white"></i>
                   </div>
                 </div>
               </div>
               <div
-                class="lg:max-w-56 ek-min-w-48 ek-max-w-48 ek-border-x ek-border-gray-100 ek-p-5 ek-shadow-black hover:ek-shadow-2xl sm:ek-min-w-40 sm:ek-max-w-40 lg:ek-min-w-60 lg:ek-max-w-60 tiny:ek-min-w-44 tiny:ek-max-w-44"
+                class="ek-flex ek-min-w-[12rem] ek-max-w-[12rem] ek-flex-col ek-justify-between ek-rounded-lg ek-border ek-border-gray-100 ek-p-5 ek-shadow-black hover:ek-shadow-2xl sm:ek-min-w-[12rem] sm:ek-max-w-[12rem] lg:ek-min-w-[15rem] lg:ek-max-w-[15rem] tiny:ek-min-w-[11rem] tiny:ek-max-w-[11rem]"
               >
-                <p class="ek-text-[10px] ek-text-gray-700">Single Boards</p>
-                <h5 class="ek-line-clamp-2 ek-font-semibold">
-                  Raspberry Pi 4gb Ram
-                </h5>
-                <img
-                  src="assets/images/products/shopping (4).webp"
-                  alt=""
-                  class="ek-min-h-36 ek-object-cover lg:ek-max-h-52 lg:ek-min-h-52 lg:ek-min-w-48 lg:ek-max-w-48"
-                />
-                <div class="ek-flex ek-justify-between">
-                  <p class="text ek-text-base ek-font-bold">₹1500.00</p>
-                  <div class="ek-rounded-full ek-bg-primary">
-                    <i class="ec ec-add-to-cart ek-p-1 ek-text-white"></i>
-                  </div>
-                </div>
-              </div>
-              <div
-                class="lg:max-w-56 ek-min-w-48 ek-max-w-48 ek-border-x ek-border-gray-100 ek-p-5 ek-shadow-black hover:ek-shadow-2xl sm:ek-min-w-40 sm:ek-max-w-40 lg:ek-min-w-60 lg:ek-max-w-60 tiny:ek-min-w-44 tiny:ek-max-w-44"
-              >
-                <p class="ek-text-[10px] ek-text-gray-700">Motor Drivers</p>
-                <h5 class="ek-line-clamp-2 ek-font-semibold">
+                <p class="ek-mb-2 ek-text-[12px] ek-text-gray-700">
+                  IoT Product 2
+                </p>
+                <h5 class="ek-mb-4 ek-line-clamp-2 ek-font-semibold">
                   12V DC Motor with Gearbox
                 </h5>
-                <img
-                  src="assets/images/products/shopping (5).webp"
-                  alt=""
-                  class="ek-min-h-36 ek-object-cover lg:ek-max-h-52 lg:ek-min-h-52 lg:ek-min-w-48 lg:ek-max-w-48"
-                />
-                <div class="ek-flex ek-justify-between">
-                  <p class="text ek-text-base ek-font-bold">₹1500.00</p>
-                  <div class="ek-rounded-full ek-bg-primary">
-                    <i class="ec ec-add-to-cart ek-p-1 ek-text-white"></i>
+                <div class="ek-mb-4 ek-flex ek-items-center ek-justify-center">
+                  <img
+                    src="assets/images/products/shopping (2).webp"
+                    alt="Product 2"
+                    class="ek-max-h-[135px] ek-min-h-[135px] ek-w-full ek-object-contain lg:ek-max-h-[200px] lg:ek-min-h-[200px] lg:ek-min-w-[200px] lg:ek-max-w-[200px]"
+                  />
+                </div>
+                <div class="ek-flex ek-items-center ek-justify-between">
+                  <p class="ek-text-xl ek-font-bold">₹2000.00</p>
+                  <div class="ek-rounded-full ek-bg-primary ek-px-3 ek-py-2">
+                    <i class="ec ec-add-to-cart ek-text-xl ek-text-white"></i>
                   </div>
                 </div>
               </div>
               <div
-                class="lg:max-w-56 ek-min-w-48 ek-max-w-48 ek-border-x ek-border-gray-100 ek-p-5 ek-shadow-black hover:ek-shadow-2xl sm:ek-min-w-40 sm:ek-max-w-40 lg:ek-min-w-60 lg:ek-max-w-60 tiny:ek-min-w-44 tiny:ek-max-w-44"
+                class="ek-flex ek-min-w-[12rem] ek-max-w-[12rem] ek-flex-col ek-justify-between ek-rounded-lg ek-border ek-border-gray-100 ek-p-5 ek-shadow-black hover:ek-shadow-2xl sm:ek-min-w-[12rem] sm:ek-max-w-[12rem] lg:ek-min-w-[15rem] lg:ek-max-w-[15rem] tiny:ek-min-w-[11rem] tiny:ek-max-w-[11rem]"
               >
-                <p class="ek-text-[10px] ek-text-gray-700">Single Boards</p>
-                <h5 class="ek-line-clamp-2 ek-font-semibold">
-                  Raspberry Pi 4gb Ram
+                <p class="ek-mb-2 ek-text-[12px] ek-text-gray-700">
+                  Development Boards
+                </p>
+                <h5 class="ek-mb-4 ek-line-clamp-2 ek-font-semibold">
+                  Raspberry Pi 4 Model B 8GB RAM, Quad-Core CPU
                 </h5>
-                <img
-                  src="assets/images/products/shopping (6).webp"
-                  alt=""
-                  class="ek-min-h-36 ek-object-cover lg:ek-max-h-52 lg:ek-min-h-52 lg:ek-min-w-48 lg:ek-max-w-48"
-                />
-                <div class="ek-flex ek-justify-between">
-                  <p class="text ek-text-base ek-font-bold">₹1500.00</p>
-                  <div class="ek-rounded-full ek-bg-primary">
-                    <i class="ec ec-add-to-cart ek-p-1 ek-text-white"></i>
+                <div class="ek-mb-4 ek-flex ek-items-center ek-justify-center">
+                  <img
+                    src="assets/images/products/shopping (3).webp"
+                    alt="Product 3"
+                    class="ek-max-h-[135px] ek-min-h-[135px] ek-w-full ek-object-contain lg:ek-max-h-[200px] lg:ek-min-h-[200px] lg:ek-min-w-[200px] lg:ek-max-w-[200px]"
+                  />
+                </div>
+                <div class="ek-flex ek-items-center ek-justify-between">
+                  <p class="ek-text-xl ek-font-bold">₹5,500.00</p>
+                  <div class="ek-rounded-full ek-bg-primary ek-px-3 ek-py-2">
+                    <i class="ec ec-add-to-cart ek-text-xl ek-text-white"></i>
                   </div>
                 </div>
               </div>
               <div
-                class="lg:max-w-56 ek-min-w-48 ek-max-w-48 ek-border-x ek-border-gray-100 ek-p-5 ek-shadow-black hover:ek-shadow-2xl sm:ek-min-w-40 sm:ek-max-w-40 lg:ek-min-w-60 lg:ek-max-w-60 tiny:ek-min-w-44 tiny:ek-max-w-44"
+                class="ek-flex ek-min-w-[12rem] ek-max-w-[12rem] ek-flex-col ek-justify-between ek-rounded-lg ek-border ek-border-gray-100 ek-p-5 ek-shadow-black hover:ek-shadow-2xl sm:ek-min-w-[10rem] sm:ek-max-w-[10rem] lg:ek-min-w-[15rem] lg:ek-max-w-[15rem] tiny:ek-min-w-[11rem] tiny:ek-max-w-[11rem]"
               >
-                <p class="ek-text-[10px] ek-text-gray-700">Motor Drivers</p>
-                <h5 class="ek-line-clamp-2 ek-font-semibold">
-                  12V DC Motor with Gearbox
+                <p class="ek-mb-2 ek-text-[12px] ek-text-gray-700">
+                  IoT Product 4
+                </p>
+                <h5 class="ek-mb-4 ek-line-clamp-2 ek-font-semibold">
+                  Product 4
                 </h5>
-                <img
-                  src="assets/images/products/shopping (1).webp"
-                  alt=""
-                  class="ek-min-h-36 ek-object-cover lg:ek-max-h-52 lg:ek-min-h-52 lg:ek-min-w-48 lg:ek-max-w-48"
-                />
-                <div class="ek-flex ek-justify-between">
-                  <p class="text ek-text-base ek-font-bold">₹1500.00</p>
-                  <div class="ek-rounded-full ek-bg-primary">
-                    <i class="ec ec-add-to-cart ek-p-1 ek-text-white"></i>
+                <div class="ek-mb-4 ek-flex ek-items-center ek-justify-center">
+                  <img
+                    src="assets/images/products/shopping (4).webp"
+                    alt="Product 4"
+                    class="ek-max-h-[135px] ek-min-h-[135px] ek-w-full ek-object-contain lg:ek-max-h-[200px] lg:ek-min-h-[200px] lg:ek-min-w-[200px] lg:ek-max-w-[200px]"
+                  />
+                </div>
+                <div class="ek-flex ek-items-center ek-justify-between">
+                  <p class="ek-text-xl ek-font-bold">₹4000.00</p>
+                  <div class="ek-rounded-full ek-bg-primary ek-px-3 ek-py-2">
+                    <i class="ec ec-add-to-cart ek-text-xl ek-text-white"></i>
                   </div>
                 </div>
               </div>
               <div
-                class="lg:max-w-56 ek-min-w-48 ek-max-w-48 ek-border-x ek-border-gray-100 ek-p-5 ek-shadow-black hover:ek-shadow-2xl sm:ek-min-w-40 sm:ek-max-w-40 lg:ek-min-w-60 lg:ek-max-w-60 tiny:ek-min-w-44 tiny:ek-max-w-44"
+                class="ek-flex ek-min-w-[12rem] ek-max-w-[12rem] ek-flex-col ek-justify-between ek-rounded-lg ek-border ek-border-gray-100 ek-p-5 ek-shadow-black hover:ek-shadow-2xl sm:ek-min-w-[10rem] sm:ek-max-w-[10rem] lg:ek-min-w-[15rem] lg:ek-max-w-[15rem] tiny:ek-min-w-[11rem] tiny:ek-max-w-[11rem]"
               >
-                <p class="ek-text-[10px] ek-text-gray-700">Single Boards</p>
-                <h5 class="ek-line-clamp-2 ek-font-semibold">
-                  Raspberry Pi 4gb Ram
+                <p class="ek-mb-2 ek-text-[12px] ek-text-gray-700">
+                  IoT Product 5
+                </p>
+                <h5 class="ek-mb-4 ek-line-clamp-2 ek-font-semibold">
+                  Product 5
                 </h5>
-                <img
-                  src="assets/images/products/shopping.webp"
-                  alt=""
-                  class="ek-min-h-36 ek-object-cover lg:ek-max-h-52 lg:ek-min-h-52 lg:ek-min-w-48 lg:ek-max-w-48"
-                />
-                <div class="ek-flex ek-justify-between">
-                  <p class="text ek-text-base ek-font-bold">₹1500.00</p>
-                  <div class="ek-rounded-full ek-bg-primary">
-                    <i class="ec ec-add-to-cart ek-p-1 ek-text-white"></i>
+                <div class="ek-mb-4 ek-flex ek-items-center ek-justify-center">
+                  <img
+                    src="assets/images/products/shopping (5).webp"
+                    alt="Product 5"
+                    class="ek-max-h-[135px] ek-min-h-[135px] ek-w-full ek-object-contain lg:ek-max-h-[200px] lg:ek-min-h-[200px] lg:ek-min-w-[200px] lg:ek-max-w-[200px]"
+                  />
+                </div>
+                <div class="ek-flex ek-items-center ek-justify-between">
+                  <p class="ek-text-xl ek-font-bold">₹5000.00</p>
+                  <div class="ek-rounded-full ek-bg-primary ek-px-3 ek-py-2">
+                    <i class="ec ec-add-to-cart ek-text-xl ek-text-white"></i>
                   </div>
                 </div>
               </div>
               <div
-                class="lg:max-w-56 ek-min-w-48 ek-max-w-48 ek-border-x ek-border-gray-100 ek-p-5 ek-shadow-black hover:ek-shadow-2xl sm:ek-min-w-40 sm:ek-max-w-40 lg:ek-min-w-60 lg:ek-max-w-60 tiny:ek-min-w-44 tiny:ek-max-w-44"
+                class="ek-flex ek-min-w-[12rem] ek-max-w-[12rem] ek-flex-col ek-justify-between ek-rounded-lg ek-border ek-border-gray-100 ek-p-5 ek-shadow-black hover:ek-shadow-2xl sm:ek-min-w-[10rem] sm:ek-max-w-[10rem] lg:ek-min-w-[15rem] lg:ek-max-w-[15rem] tiny:ek-min-w-[11rem] tiny:ek-max-w-[11rem]"
               >
-                <p class="ek-text-[10px] ek-text-gray-700">Motor Drivers</p>
-                <h5 class="ek-line-clamp-2 ek-font-semibold">
-                  12V DC Motor with Gearbox
+                <p class="ek-mb-2 ek-text-[12px] ek-text-gray-700">
+                  IoT Product 6
+                </p>
+                <h5 class="ek-mb-4 ek-line-clamp-2 ek-font-semibold">
+                  Product 6
                 </h5>
-                <img
-                  src="assets/images/products/shopping (7).webp"
-                  alt=""
-                  class="ek-min-h-36 ek-object-cover lg:ek-max-h-52 lg:ek-min-h-52 lg:ek-min-w-48 lg:ek-max-w-48"
-                />
-                <div class="ek-flex ek-justify-between">
-                  <p class="text ek-text-base ek-font-bold">₹1500.00</p>
-                  <div class="ek-rounded-full ek-bg-primary">
-                    <i class="ec ec-add-to-cart ek-p-1 ek-text-white"></i>
+                <div class="ek-mb-4 ek-flex ek-items-center ek-justify-center">
+                  <img
+                    src="assets/images/products/shopping (6).webp"
+                    alt="Product 6"
+                    class="ek-max-h-[135px] ek-min-h-[135px] ek-w-full ek-object-contain lg:ek-max-h-[200px] lg:ek-min-h-[200px] lg:ek-min-w-[200px] lg:ek-max-w-[200px]"
+                  />
+                </div>
+                <div class="ek-flex ek-items-center ek-justify-between">
+                  <p class="ek-text-xl ek-font-bold">₹6000.00</p>
+                  <div class="ek-rounded-full ek-bg-primary ek-px-3 ek-py-2">
+                    <i class="ec ec-add-to-cart ek-text-xl ek-text-white"></i>
                   </div>
                 </div>
               </div>
               <div
-                class="lg:max-w-56 ek-min-w-48 ek-max-w-48 ek-border-x ek-border-gray-100 ek-p-5 ek-shadow-black hover:ek-shadow-2xl sm:ek-min-w-40 sm:ek-max-w-40 lg:ek-min-w-60 lg:ek-max-w-60 tiny:ek-min-w-44 tiny:ek-max-w-44"
+                class="ek-flex ek-min-w-[12rem] ek-max-w-[12rem] ek-flex-col ek-justify-between ek-rounded-lg ek-border ek-border-gray-100 ek-p-5 ek-shadow-black hover:ek-shadow-2xl sm:ek-min-w-[10rem] sm:ek-max-w-[10rem] lg:ek-min-w-[15rem] lg:ek-max-w-[15rem] tiny:ek-min-w-[11rem] tiny:ek-max-w-[11rem]"
               >
-                <p class="ek-text-[10px] ek-text-gray-700">Single Boards</p>
-                <h5 class="ek-line-clamp-2 ek-font-semibold">
-                  Raspberry Pi 4gb Ram
+                <p class="ek-mb-2 ek-text-[12px] ek-text-gray-700">
+                  IoT Product 7
+                </p>
+                <h5 class="ek-mb-4 ek-line-clamp-2 ek-font-semibold">
+                  Product 7
                 </h5>
-                <img
-                  src="assets/images/products/shopping (5).webp"
-                  alt=""
-                  class="ek-min-h-36 ek-object-cover lg:ek-max-h-52 lg:ek-min-h-52 lg:ek-min-w-48 lg:ek-max-w-48"
-                />
-                <div class="ek-flex ek-justify-between">
-                  <p class="text ek-text-base ek-font-bold">₹1500.00</p>
-                  <div class="ek-rounded-full ek-bg-primary">
-                    <i class="ec ec-add-to-cart ek-p-1 ek-text-white"></i>
+                <div class="ek-mb-4 ek-flex ek-items-center ek-justify-center">
+                  <img
+                    src="assets/images/products/shopping (7).webp"
+                    alt="Product 7"
+                    class="ek-max-h-[135px] ek-min-h-[135px] ek-w-full ek-object-contain lg:ek-max-h-[200px] lg:ek-min-h-[200px] lg:ek-min-w-[200px] lg:ek-max-w-[200px]"
+                  />
+                </div>
+                <div class="ek-flex ek-items-center ek-justify-between">
+                  <p class="ek-text-xl ek-font-bold">₹7000.00</p>
+                  <div class="ek-rounded-full ek-bg-primary ek-px-3 ek-py-2">
+                    <i class="ec ec-add-to-cart ek-text-xl ek-text-white"></i>
+                  </div>
+                </div>
+              </div>
+              <div
+                class="ek-flex ek-min-w-[12rem] ek-max-w-[12rem] ek-flex-col ek-justify-between ek-rounded-lg ek-border ek-border-gray-100 ek-p-5 ek-shadow-black hover:ek-shadow-2xl sm:ek-min-w-[10rem] sm:ek-max-w-[10rem] lg:ek-min-w-[15rem] lg:ek-max-w-[15rem] tiny:ek-min-w-[11rem] tiny:ek-max-w-[11rem]"
+              >
+                <p class="ek-mb-2 ek-text-[12px] ek-text-gray-700">
+                  IoT Product 8
+                </p>
+                <h5 class="ek-mb-4 ek-line-clamp-2 ek-font-semibold">
+                  Product 8
+                </h5>
+                <div class="ek-mb-4 ek-flex ek-items-center ek-justify-center">
+                  <img
+                    src="assets/images/products/shopping (8).webp"
+                    alt="Product 8"
+                    class="ek-max-h-[135px] ek-min-h-[135px] ek-w-full ek-object-contain lg:ek-max-h-[200px] lg:ek-min-h-[200px] lg:ek-min-w-[200px] lg:ek-max-w-[200px]"
+                  />
+                </div>
+                <div class="ek-flex ek-items-center ek-justify-between">
+                  <p class="ek-text-xl ek-font-bold">₹8000.00</p>
+                  <div class="ek-rounded-full ek-bg-primary ek-px-3 ek-py-2">
+                    <i class="ec ec-add-to-cart ek-text-xl ek-text-white"></i>
                   </div>
                 </div>
               </div>
@@ -1931,9 +2062,6 @@
 
       <!-- footer  -->
       <footer class="box-shadow ek-bg-gray-100">
-        <!-- <div class="ek-bg-primary ek-h-5  ek-text-white">
-          
-        </div> -->
         <div
           class="ek-mx-auto ek-px-4 ek-py-8 sm:ek-px-6 md:ek-mx-10 md:ek-px-2 lg:ek-px-8"
         >
@@ -1954,16 +2082,16 @@
               <div
                 class="ek-mt-2 ek-px-5 ek-text-sm ek-text-gray-600 sm:ek-text-left"
               >
-                <span class="ek-font-bold">Contact info</span><br />
-                Door No:15-7-336/17, # 205, 2nd Floor,<br />
-                Abhiman Plaza Bunts Hostel Circle,<br />
-                Mangaluru - 575003 <br />Dakshina Kannada, Karnataka, India
-                <br />
-                Phone: +91 8892882988
-                <br />
-                Email: kakunjesoftware@gmail.com
-                <br />
-                Monday-Saturday
+                <p class="ek-min-w-40 ek-text-wrap">
+                  Door No:15-7-336/17, # 205, 2nd Floor,<br />
+                  Abhiman Plaza Bunts Hostel Circle,<br />
+                  Mangaluru - 575003 Dakshina Kannada, Karnataka, India
+                  <br />
+                  Phone: +91 8892882988
+                  <br />
+                  Email: kakunjesoftware@gmail.com
+                  <br />
+                </p>
               </div>
 
               <div class="ek-mt-2 ek-flex ek-gap-4 ek-px-5">
@@ -2096,48 +2224,11 @@
           </div>
         </div>
         <div
-          class="ek-flex ek-items-center ek-justify-center ek-bg-gray-200 ek-px-4 ek-py-2 sm:ek-justify-between"
+          class="ek-flex ek-items-center ek-justify-center ek-bg-gray-200 ek-px-4 ek-py-2"
         >
-          <p class="ek-text-gray-600">
-            © Electronickart - All rights Reserved
+          <p class="ek-text-sm ek-text-gray-600">
+            Copyright 2024 © electronickart.com - All rights Reserved
           </p>
-          <div class="ek-hidden ek-gap-1 md:ek-flex">
-            <img
-              src="assets/images/100X60/img1.jpg"
-              alt=""
-              class=""
-              width="40"
-              height="20"
-            />
-            <img
-              src="assets/images/100X60/img2.jpg"
-              alt=""
-              class=""
-              width="40"
-              height="20"
-            />
-            <img
-              src="assets/images/100X60/img3.jpg"
-              alt=""
-              class=""
-              width="40"
-              height="20"
-            />
-            <img
-              src="assets/images/100X60/img4.jpg"
-              alt=""
-              class=""
-              width="40"
-              height="20"
-            />
-            <img
-              src="assets/images/100X60/img5.jpg"
-              alt=""
-              class=""
-              width="40"
-              height="20"
-            />
-          </div>
         </div>
       </footer>
       <!-- footer end  -->

@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .slider{
+    width: 1300px;
+    max-width: 100vw;
+    height: 700px;
+    margin: auto;
+    position: relative;
+    overflow: hidden;
+}
+.slider .list{
+    position: absolute;
+    width: max-content;
+    height: 100%;
+    left: 0;
+    top: 0;
+    display: flex;
+    transition: 1s;
+}
+.slider .list img{
+    width: 1300px;
+    max-width: 100vw;
+    height: 100%;
+    object-fit: cover;
+}
+.slider .buttons{
+    position: absolute;
+    top: 45%;
+    left: 5%;
+    width: 90%;
+    display: flex;
+    justify-content: space-between;
+}
+.slider .buttons button{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: #fff5;
+    color: #fff;
+    border: none;
+    font-family: monospace;
+    font-weight: bold;
+}
+.slider .dots{
+    position: absolute;
+    bottom: 10px;
+    left: 0;
+    color: #fff;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+}
+.slider .dots li{
+    list-style: none;
+    width: 10px;
+    height: 10px;
+    background-color: #fff;
+    margin: 10px;
+    border-radius: 20px;
+    transition: 0.5s;
+}
+.slider .dots li.active{
+    width: 30px;
+}
+@media screen and (max-width: 768px){
+    .slider{
+        height: 400px;
+    }
+}
+    </style>
+
+</head>
+<body>
+    
+    <div class="slider">
+        <div class="list">
+            <div class="item">
+                <img src="assets/images/products/shopping (1).webp" alt="">
+            </div>
+            <div class="item">
+                <img src="assets/images/products/shopping (2).webp" alt="">
+            </div>
+            <div class="item">
+                <img src="assets/images/products/shopping (3).webp" alt="">
+            </div>
+            <div class="item">
+                <img src="assets/images/products/shopping (4).webp" alt="">
+            </div>
+            <div class="item">
+                <img src="assets/images/products/shopping (5).webp" alt="">
+            </div>
+        </div>
+        <div class="buttons">
+            <button id="prev"><</button>
+            <button id="next">></button>
+        </div>
+        <ul class="dots">
+            <li class="active"></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+        </ul>
+    </div>
+
+    <script >
+        let slider = document.querySelector('.slider .list');
+let items = document.querySelectorAll('.slider .list .item');
+let next = document.getElementById('next');
+let prev = document.getElementById('prev');
+let dots = document.querySelectorAll('.slider .dots li');
+
+let lengthItems = items.length;
+let active = 1; // Start at 1 to accommodate the prepended clone
+let isTransitioning = false;
+
+// Clone first and last items
+let firstClone = items[0].cloneNode(true);
+let lastClone = items[lengthItems - 1].cloneNode(true);
+
+slider.appendChild(firstClone);
+slider.insertBefore(lastClone, items[0]);
+
+items = document.querySelectorAll('.slider .list .item'); // Update items to include clones
+
+function updateSliderPosition() {
+    slider.style.left = -items[active].offsetLeft + 'px';
+}
+
+function reloadSlider() {
+    slider.style.transition = 'left 0.5s';
+    updateSliderPosition();
+
+    let lastActiveDot = document.querySelector('.slider .dots li.active');
+    if (lastActiveDot) lastActiveDot.classList.remove('active');
+    dots[(active - 1 + lengthItems) % lengthItems].classList.add('active'); // Adjust active dot
+
+    clearInterval(refreshInterval);
+    refreshInterval = setInterval(() => { next.click(); }, 3000);
+
+    setTimeout(() => {
+        if (active === 0) {
+            slider.style.transition = 'none';
+            active = lengthItems;
+            updateSliderPosition();
+        } else if (active === lengthItems + 1) {
+            slider.style.transition = 'none';
+            active = 1;
+            updateSliderPosition();
+        }
+        isTransitioning = false;
+    }, 500);
+}
+
+next.onclick = function() {
+    if (isTransitioning) return;
+    isTransitioning = true;
+    active++;
+    reloadSlider();
+};
+
+prev.onclick = function() {
+    if (isTransitioning) return;
+    isTransitioning = true;
+    active--;
+    reloadSlider();
+};
+
+dots.forEach((li, key) => {
+    li.addEventListener('click', () => {
+        if (isTransitioning) return;
+        active = key + 1; // Adjust for the cloned items
+        reloadSlider();
+    });
+});
+
+let refreshInterval = setInterval(() => { next.click(); }, 3000);
+
+window.onresize = function() {
+    updateSliderPosition();
+};
+
+// Initial positioning to account for the prepended clone
+updateSliderPosition();
+
+
+    </script>
+</body>
+</html>

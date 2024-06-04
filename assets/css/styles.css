@@ -52,15 +52,73 @@
 
 /* sidebar  */
 
-#sidebardiv{
+#sidebardiv {
   max-width: 0;
   transition: max-width 0.3s ease;
   overflow: hidden;
-
 }
 
-#sidebardiv.showsidebar{
+#sidebardiv.showsidebar {
   max-width: 320px;
   overflow: hidden;
   padding: 16px 16px;
 }
+
+/* products list */
+.show-after::after {
+  content: "";
+  height: 4px;
+  width: 10px;
+  display: block;
+  position: relative;
+  top: 12px;
+  left: 50%;
+  border-radius: 0 0 10px 10px;
+  -webkit-transform: translateX(-50%);
+  transform: translateX(-50%);
+  background-color: #3D3F82;
+  z-index: 10000;
+}
+
+
+
+/* slider  */
+
+
+.slider .list img{
+  width: 100%;
+  height: 100%;
+  
+}
+
+
+.slider .dots{
+  position: absolute;
+  bottom: 10px;
+  left: 0;
+  color: #fff;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+}
+.slider .dots li{
+  list-style: none;
+  width: 10px;
+  height: 10px;
+  background-color: #fff;
+  margin: 10px;
+  border-radius: 20px;
+  transition: 0.5s;
+}
+.slider .dots li.active{
+  width: 30px;
+}
+@media screen and (max-width: 768px){
+  .slider{
+      height: 400px;
+  }
+}
+
+/* slider end */

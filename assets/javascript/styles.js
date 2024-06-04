@@ -22,92 +22,108 @@ searchdiv.addEventListener("mouseleave", function () {
   searchdiv.style.borderColor = primary;
 });
 document.addEventListener("click", function () {
-  if (searchinput === document.activeElement ) return;
+  if (searchinput === document.activeElement) return;
   searchbtn.style.backgroundColor = primary;
   searchdiv.style.borderColor = primary;
 });
 
 searchinput.addEventListener("blur", function () {
   setTimeout(() => {
-    
     searchbtn.style.backgroundColor = primary;
     searchdiv.style.borderColor = primary;
   }, 0);
 });
 
-// select dropdown 
-document.addEventListener('DOMContentLoaded', function() {
-  const select = document.getElementById('select');
-  const selectbtn = document.getElementById('selectbtn');
-  const selectMenu = document.getElementById('selectMenu');
-  const selected = document.getElementById('selected');
+// select dropdown
+document.addEventListener("DOMContentLoaded", function () {
+  const select = document.getElementById("select");
+  const selectbtn = document.getElementById("selectbtn");
+  const selectMenu = document.getElementById("selectMenu");
+  const selected = document.getElementById("selected");
 
-  selectbtn.addEventListener('click', function() {
-    selectMenu.classList.toggle('ek-hidden');
-    
+  selectbtn.addEventListener("click", function () {
+    selectMenu.classList.toggle("ek-hidden");
   });
 
-  selectMenu.addEventListener('click', function(event) {
-      if (event.target.tagName === 'LI') {
-          const option = event.target.getAttribute('data-language');
-          selected.textContent = option;
-          selectMenu.classList.add('ek-hidden');
-          
-      }
+  selectMenu.addEventListener("click", function (event) {
+    if (event.target.tagName === "LI") {
+      const option = event.target.getAttribute("data-language");
+      selected.textContent = option;
+      selectMenu.classList.add("ek-hidden");
+    }
   });
 
-  document.addEventListener('click', function(event) {
-      if (!select.contains(event.target)) {
-        selectMenu.classList.add('ek-hidden');
-        
-      }
+  document.addEventListener("click", function (event) {
+    if (!select.contains(event.target)) {
+      selectMenu.classList.add("ek-hidden");
+    }
   });
 });
 
-
 // select dropdown end
 // category in navbar end
+// category dropdown
+
+const categorybtn = document.getElementById("categorybtn");
+const categorydropdown = document.getElementById("categorydropdown");
+
+if (categorybtn) {
+  -categorybtn.addEventListener("click", function () {
+    if (categorydropdown.classList.contains("show")) {
+      categorydropdown.classList.remove("show");
+    } else {
+      categorydropdown.classList.add("show");
+    }
+  });
+}
+
+// category dropdown- end
 
 // carousel js start
+
 document.addEventListener("DOMContentLoaded", () => {
   const carouseldiv = document.getElementById("carouseldiv");
   const slides = document.getElementsByClassName("slide");
-  const slideCount = slides.length;
-  let currentSlideIndex = 0;
 
-  // Hide all slides except the first one on initialization
-  for (let i = 1; i < slideCount; i++) {
-    slides[i].classList.remove("active");
-  }
-  slides[0].classList.add("active");
+  if (carouseldiv) {
+    const slideCount = slides.length;
+    let currentSlideIndex = 0;
 
-  function showSlide(index) {
-    slides[index].classList.add("active");
-  }
+    // Hide all slides except the first one on initialization
+    for (let i = 1; i < slideCount; i++) {
+      slides[i].classList.remove("active");
+    }
+    slides[0].classList.add("active");
 
-  function hideSlide(index) {
-    slides[index].classList.remove("active");
-  }
+    function showSlide(index) {
+      slides[index].classList.add("active");
+    }
 
-  function nextSlide() {
-    const currentSlide = currentSlideIndex;
-    currentSlideIndex = (currentSlideIndex + 1) % slideCount;
+    function hideSlide(index) {
+      slides[index].classList.remove("active");
+    }
+    carouseldiv.addEventListener("click", nextSlide);
 
-    // Show the next slide and hide the current slide
+    function nextSlide() {
+      const currentSlide = currentSlideIndex;
+      currentSlideIndex = (currentSlideIndex + 1) % slideCount;
+
+      // Show the next slide and hide the current slide
+      showSlide(currentSlideIndex);
+      setTimeout(() => {
+        hideSlide(currentSlide);
+      }, 400); // Adjust this timeout to balance the overlap
+    }
+
+    // Event listener for manual slide change
+    carouseldiv.addEventListener("click", nextSlide);
+
+    // Optionally, automatically change slides every 5 seconds
+    setInterval(nextSlide, 5000);
+
+    // Show the first slide initially
     showSlide(currentSlideIndex);
-    setTimeout(() => {
-      hideSlide(currentSlide);
-    }, 400); // Adjust this timeout to balance the overlap
   }
-
-  // Event listener for manual slide change
-  carouseldiv.addEventListener("click", nextSlide);
-
-  // Optionally, automatically change slides every 5 seconds
-  setInterval(nextSlide, 5000);
-
-  // Show the first slide initially
-  showSlide(currentSlideIndex);
 });
 
 // carousel js end
@@ -180,62 +196,81 @@ const onsale = document.getElementById("onsale");
 const toprated = document.getElementById("toprated");
 
 // Initial styling for "Featured" tab and section
-clickfeatured.style.borderColor = primary;
-clickfeatured.style.borderBottom = "2px solid";
-onsale.style.display = "none";
-toprated.style.display = "none";
 
-// Function to handle tab switching
-function switchTab(
-  activeTab,
-  tab1,
-  tab2,
-  sectionToShow,
-  sectionToHide1,
-  sectionToHide2,
-) {
-  activeTab.style.borderColor = primary;
-  activeTab.style.borderBottom = "2px solid";
-  tab1.style.borderColor = "";
-  tab1.style.borderBottom = "";
-  tab2.style.borderColor = "";
-  tab2.style.borderBottom = "";
-  sectionToShow.style.display = "flex";
-  sectionToHide1.style.display = "none";
-  sectionToHide2.style.display = "none";
+if (clickfeatured) {
+  clickfeatured.style.borderBottom = "2px solid #3D3F82";
+  clickfeatured.classList.add("show-after");
+  onsale.style.display = "none";
+  toprated.style.display = "none";
+
+  // Function to handle tab switching
+  function switchTab(
+    activeTab,
+    tab1,
+    tab2,
+    sectionToShow,
+    sectionToHide1,
+    sectionToHide2,
+  ) {
+    activeTab.style.borderBottom = "2px solid #3D3F82";
+    activeTab.classList.add("show-after");
+    tab1.classList.remove("show-after");
+    tab2.classList.remove("show-after");
+    tab1.style.borderColor = "";
+    tab1.style.borderBottom = "";
+    tab2.style.borderColor = "";
+    tab2.style.borderBottom = "";
+    sectionToShow.style.display = "flex";
+    sectionToHide1.style.display = "none";
+    sectionToHide2.style.display = "none";
+  }
+
+  // Add event listeners for tab clicks
+  clickfeatured.addEventListener("click", () =>
+    switchTab(
+      clickfeatured,
+      clickonsale,
+      clicktoprated,
+      featured,
+      onsale,
+      toprated,
+    ),
+  );
+  clickonsale.addEventListener("click", () =>
+    switchTab(
+      clickonsale,
+      clickfeatured,
+      clicktoprated,
+      onsale,
+      featured,
+      toprated,
+    ),
+  );
+  clicktoprated.addEventListener("click", () =>
+    switchTab(
+      clicktoprated,
+      clickfeatured,
+      clickonsale,
+      toprated,
+      featured,
+      onsale,
+    ),
+  );
 }
 
-// Add event listeners for tab clicks
-clickfeatured.addEventListener("click", () =>
-  switchTab(
-    clickfeatured,
-    clickonsale,
-    clicktoprated,
-    featured,
-    onsale,
-    toprated,
-  ),
-);
-clickonsale.addEventListener("click", () =>
-  switchTab(
-    clickonsale,
-    clickfeatured,
-    clicktoprated,
-    onsale,
-    featured,
-    toprated,
-  ),
-);
-clicktoprated.addEventListener("click", () =>
-  switchTab(
-    clicktoprated,
-    clickfeatured,
-    clickonsale,
-    toprated,
-    featured,
-    onsale,
-  ),
-);
+// progress bar of special offer
+
+// for example
+const available = 6;
+const totalproducts = 34;
+const percentage = (6 / 34) * 100;
+const progressbar = document.getElementById("progressbar");
+if (progressbar) {
+  document.addEventListener("DOMContentLoaded", function () {
+    progressbar.style.width = percentage + "%";
+  });
+}
+// progress bar of special offer end
 
 // products section end
 
@@ -249,22 +284,7 @@ document.querySelectorAll(".toggler").forEach((button) => {
 });
 // Footer dropdown end
 
-// category dropdown
-
-const categorybtn = document.getElementById("categorybtn");
-const categorydropdown = document.getElementById("categorydropdown");
-
-categorybtn.addEventListener("click", function () {
-  if (categorydropdown.classList.contains("show")) {
-    categorydropdown.classList.remove("show");
-  } else {
-    categorydropdown.classList.add("show");
-  }
-});
-
-
-// category dropdown- end
-// sidebar 
+// sidebar
 
 document.addEventListener("DOMContentLoaded", function () {
   // Function to toggle visibility and body scroll
@@ -275,30 +295,31 @@ document.addEventListener("DOMContentLoaded", function () {
   // Toggle sidebar visibility
   const sidebarButton = document.getElementById("sidebarbutton");
   const sidebarDiv = document.getElementById("sidebardiv");
-  const sidebarclosebutton = document.getElementById("sidebarclosebutton")
+  const sidebarclosebutton = document.getElementById("sidebarclosebutton");
   sidebarButton.addEventListener("click", function () {
     toggleVisibility(sidebarDiv, "showsidebar");
-    document.body.classList.toggle("no-scroll", sidebarDiv.classList.contains("showsidebar"));
+    document.body.classList.toggle(
+      "no-scroll",
+      sidebarDiv.classList.contains("showsidebar"),
+    );
   });
-  sidebarclosebutton.addEventListener("click",function(){
+  sidebarclosebutton.addEventListener("click", function () {
     toggleVisibility(sidebarDiv, "showsidebar");
     document.body.classList.toggle("no-scroll");
-  })
-  
+  });
 
   // Toggle main sidebar options
   document.querySelectorAll(".sidebar-option").forEach(function (option) {
     option.addEventListener("click", function () {
       const sidebar = option.querySelector(".sidebar");
-      const fas = option.querySelector(".fas")
-      fas.classList.toggle("ek-rotate-180")
+      const fas = option.querySelector(".fas");
+      fas.classList.toggle("ek-rotate-180");
       toggleVisibility(sidebar, "ek-hidden");
-      
 
       // Check if any dropdown is open
-      const anyDropdownOpen = Array.from(document.querySelectorAll(".sidebar-option .sidebar"))
-        .some(sidebar => !sidebar.classList.contains("ek-hidden"));
-      
+      const anyDropdownOpen = Array.from(
+        document.querySelectorAll(".sidebar-option .sidebar"),
+      ).some((sidebar) => !sidebar.classList.contains("ek-hidden"));
     });
   });
 
@@ -307,16 +328,87 @@ document.addEventListener("DOMContentLoaded", function () {
     option.addEventListener("click", function (event) {
       event.stopPropagation(); // Prevent event bubbling
       const sidebar3 = option.querySelector(".sidebar3");
-      const fas = option.querySelector(".fas")
-      fas.classList.toggle("ek-rotate-180")
+      const fas = option.querySelector(".fas");
+      fas.classList.toggle("ek-rotate-180");
       toggleVisibility(sidebar3, "ek-hidden");
-      
     });
   });
 });
 
-
-
-
-
 // sidebar end
+
+// preview product image slide
+
+let slider = document.querySelector(".slider .list");
+let items = document.querySelectorAll(".slider .list .item");
+
+let dots = document.querySelectorAll(".slider .dots li");
+
+let lengthItems = items.length;
+let active = 1; // Start at 1 to accommodate the prepended clone
+let isTransitioning = false;
+
+// Clone first and last items
+let firstClone = items[0].cloneNode(true);
+let lastClone = items[lengthItems - 1].cloneNode(true);
+
+slider.appendChild(firstClone);
+slider.insertBefore(lastClone, items[0]);
+
+items = document.querySelectorAll(".slider .list .item"); // Update items to include clones
+
+function updateSliderPosition() {
+  slider.style.left = -items[active].offsetLeft + "px";
+}
+
+function reloadSlider() {
+  slider.style.transition = "left 0.5s";
+  updateSliderPosition();
+
+  let lastActiveDot = document.querySelector(".slider .dots li.active");
+  if (lastActiveDot) lastActiveDot.classList.remove("active");
+  dots[(active - 1 + lengthItems) % lengthItems].classList.add("active"); // Adjust active dot
+
+  clearInterval(refreshInterval);
+  refreshInterval = setInterval(() => {
+    if (isTransitioning) return;
+    isTransitioning = true;
+    active++;
+    reloadSlider();
+  }, 3000);
+
+  setTimeout(() => {
+    if (active === 0) {
+      slider.style.transition = "none";
+      active = lengthItems;
+      updateSliderPosition();
+    } else if (active === lengthItems + 1) {
+      slider.style.transition = "none";
+      active = 1;
+      updateSliderPosition();
+    }
+    isTransitioning = false;
+  }, 500);
+}
+
+dots.forEach((li, key) => {
+  li.addEventListener("click", () => {
+    if (isTransitioning) return;
+    active = key + 1; // Adjust for the cloned items
+    reloadSlider();
+  });
+});
+
+let refreshInterval = setInterval(() => {
+  if (isTransitioning) return;
+  isTransitioning = true;
+  active++;
+  reloadSlider();
+}, 3000);
+
+window.onresize = function () {
+  updateSliderPosition();
+};
+
+// Initial positioning to account for the prepended clone
+updateSliderPosition();
