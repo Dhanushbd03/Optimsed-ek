@@ -338,7 +338,7 @@
                 </button>
                 <div
                   id="categorydropdown"
-                  class="dropdown-content scrollbar rtl show ek-absolute ek-top-full ek-z-10 ek-w-full ek-overflow-y-scroll ek-bg-white ek-shadow-lg"
+                  class="dropdown-content scrollbar show rtl ek-absolute ek-top-full ek-z-10 ek-w-full ek-overflow-y-scroll ek-bg-white ek-shadow-lg"
                 >
                   <ul class="ek-py-2">
                     <li class="ek-px-6">
@@ -737,12 +737,19 @@
     <!-- main content -->
     <main>
       <!-- slider  -->
-      <div class="slider ek-min-h-[600px]  ek-min-w-screen ek-relative ek-bg-cover sm:ek-min-h-[420px] ek-overflow-hidden"  style="background-image: url(assets/images/hero/img1.jpg)" >
-        <div class="list ek-absolute ek-w-max ek-h-full ek-top-0 ek-left-0 ek-flex ek-duration-1000">
-          <div class="item ek-flex ek-flex-col ek-items-center ek-bg-cover sm:ek-flex-row sm:ek-justify-center lg:ek-ml-40 lg:ek-gap-40">
-            <div class="ek-order-1 ek-flex ek-flex-col ek-p-5 sm:ek-p-14">
-              <h1 class="ek-text-5xl ek-font-normal">Raspberry Pi 4</h1>
-              <p class="ek-mt-2 ek-text-gray-600">
+      <section
+        class="slider ek-min-w-screen ek-relative ek-min-h-[650px]  ek-overflow-hidden ek-bg-cover sm:ek-min-h-[420px]"
+        style="background-image: url(assets/images/hero/img1.jpg)"
+      >
+        <div
+          class="list ek-absolute ek-left-0 ek-top-0 ek-flex ek-h-full ek-w-max ek-duration-1000 lg:ek-ml-10"
+        >
+          <div
+            class="item ek-flex ek-flex-col ek-items-center ek-bg-cover sm:ek-flex-row sm:ek-justify-center ek-w-screen lg:ek-gap-10 "
+          >
+            <div class="ek-order-1 ek-flex ek-flex-col ek-p-5 sm:ek-py-14 ek-max-w-[400px]">
+              <h1 class="ek-text-5xl ek-font-normal ek-line-clamp-2">Raspberry Pi 4</h1>
+              <p class="ek-mt-2 ek-text-gray-600 ek-line-clamp-2">
                 4GB RAM, 1.5GHz Quad-Core CPU
               </p>
               <p class="ek-mt-4 ek-text-sm ek-font-semibold">
@@ -769,11 +776,45 @@
               </div>
             </div>
           </div>
-          <div class="item ek-flex ek-flex-col ek-items-center ek-bg-cover sm:ek-flex-row sm:ek-justify-center lg:ek-ml-40 lg:ek-gap-40">
-            <div class="ek-order-1 ek-flex ek-flex-col ek-p-5 sm:ek-p-14">
-              <h1 class="ek-text-5xl ek-font-normal">Raspberry Pi 4</h1>
-              <p class="ek-mt-2 ek-text-gray-600">
-                4GB RAM, 1.5GHz Quad-Core CPU
+          <div
+            class="item ek-flex ek-flex-col ek-items-center ek-bg-cover sm:ek-flex-row sm:ek-justify-center ek-w-screen lg:ek-gap-10 "
+          >
+            <div class="ek-order-1 ek-flex ek-flex-col ek-p-5 sm:ek-py-14 ek-max-w-[430px]">
+              <h1 class="ek-text-5xl ek-font-normal ek-line-clamp-2">Arduino Hc-sr04 </h1>
+              <p class="ek-mt-2 ek-text-gray-600 ek-line-clamp-2">
+                Ultrasonic Distance Measurement Transducer Module Sensor Educational Electronic Hobby Kit
+              </p>
+              <p class="ek-mt-4 ek-text-sm ek-font-semibold">
+                FROM <br /><span class="ek-text-5xl ek-text-black"
+                  >₹5999.00</span
+                >
+              </p>
+              <a
+                href="product.html"
+                class="ek-mt-6 ek-max-w-32 ek-rounded-lg ek-bg-primary ek-px-4 ek-py-2 ek-text-white hover:ek-bg-secondary"
+              >
+                Start Buying
+              </a>
+            </div>
+            <div
+              class="ek-flex ek-items-center ek-justify-center sm:ek-order-2"
+            >
+              <div class="ek-flex ek-items-center ek-justify-center">
+                <img
+                  src="assets/images/ekart/rpi-4-4gb416X420.png"
+                  alt="Arduino Uno"
+                  class="ek-max-h-[300px] sm:ek-max-h-[420px]"
+                />
+              </div>
+            </div>
+          </div>
+          <div
+            class="item ek-flex ek-flex-col ek-items-center ek-bg-cover sm:ek-flex-row sm:ek-justify-center ek-w-screen lg:ek-gap-10 "
+          >
+            <div class="ek-order-1 ek-flex ek-flex-col ek-p-5 sm:ek-py-14 ek-max-w-[400px]">
+              <h1 class="ek-text-5xl ek-font-normal ek-line-clamp-2">Arduino UNO Board</h1>
+              <p class="ek-mt-2 ek-text-gray-600 ek-line-clamp-2">
+               2GB RAM, 1.5GHz Quad-Core CPU
               </p>
               <p class="ek-mt-4 ek-text-sm ek-font-semibold">
                 FROM <br /><span class="ek-text-5xl ek-text-black"
@@ -799,15 +840,17 @@
               </div>
             </div>
           </div>
-          <div class="item ek-flex ek-flex-col ek-items-center ek-bg-cover sm:ek-flex-row sm:ek-justify-center lg:ek-ml-40 lg:ek-gap-40">
-            <div class="ek-order-1 ek-flex ek-flex-col ek-p-5 sm:ek-p-14">
-              <h1 class="ek-text-5xl ek-font-normal">Raspberry Pi 4</h1>
-              <p class="ek-mt-2 ek-text-gray-600">
-                4GB RAM, 1.5GHz Quad-Core CPU
+          <div
+            class="item ek-flex ek-flex-col ek-items-center ek-bg-cover sm:ek-flex-row sm:ek-justify-center ek-w-screen lg:ek-gap-10 "
+          >
+            <div class="ek-order-1 ek-flex ek-flex-col ek-p-5 sm:ek-py-14 ek-max-w-[400px]">
+              <h1 class="ek-text-5xl ek-font-normal ek-line-clamp-2">Ultrasonic Sensor-HC-SR04</h1>
+              <p class="ek-mt-2 ek-text-gray-600 ek-line-clamp-2">
+                Ultrasonic Distance Measurement Transducer Module Sensor Educational Electronic Hobby Kit
               </p>
               <p class="ek-mt-4 ek-text-sm ek-font-semibold">
                 FROM <br /><span class="ek-text-5xl ek-text-black"
-                  >₹9000.00</span
+                  >₹599.00</span
                 >
               </p>
               <a
@@ -829,38 +872,9 @@
               </div>
             </div>
           </div>
-          <div class="item ek-flex ek-flex-col ek-items-center ek-bg-cover sm:ek-flex-row sm:ek-justify-center lg:ek-ml-40 lg:ek-gap-40">
-            <div class="ek-order-1 ek-flex ek-flex-col ek-p-5 sm:ek-p-14">
-              <h1 class="ek-text-5xl ek-font-normal">Raspberry Pi 4</h1>
-              <p class="ek-mt-2 ek-text-gray-600">
-                4GB RAM, 1.5GHz Quad-Core CPU
-              </p>
-              <p class="ek-mt-4 ek-text-sm ek-font-semibold">
-                FROM <br /><span class="ek-text-5xl ek-text-black"
-                  >₹9000.00</span
-                >
-              </p>
-              <a
-                href="product.html"
-                class="ek-mt-6 ek-max-w-32 ek-rounded-lg ek-bg-primary ek-px-4 ek-py-2 ek-text-white hover:ek-bg-secondary"
-              >
-                Start Buying
-              </a>
-            </div>
-            <div
-              class="ek-flex ek-items-center ek-justify-center sm:ek-order-2"
-            >
-              <div class="ek-flex ek-items-center ek-justify-center">
-                <img
-                  src="assets/images/ekart/rpi-4-4gb416X420.png"
-                  alt="Arduino Uno"
-                  class="ek-max-h-[300px] sm:ek-max-h-[420px]"
-                />
-              </div>
-            </div>
-          </div>
+          
         </div>
-        
+
         <ul class="dots">
           <li class="active"></li>
           <li></li>
@@ -868,7 +882,7 @@
           <li></li>
           <li></li>
         </ul>
-      </div>
+      </section>
       <!-- slider end  -->
       <!-- category  -->
       <section>

@@ -80,51 +80,75 @@ if (categorybtn) {
 // category dropdown- end
 
 // carousel js start
+let slider = document.querySelector(".slider .list");
+let items = document.querySelectorAll(".slider .list .item");
+let dots = document.querySelectorAll(".slider .dots li");
+if (slider) {
+  let lengthItems = items.length;
+  let active = 1; // Start at 1 to accommodate the prepended clone
+  let isTransitioning = false;
 
-document.addEventListener("DOMContentLoaded", () => {
-  const carouseldiv = document.getElementById("carouseldiv");
-  const slides = document.getElementsByClassName("slide");
+  // Clone first and last items
+  let firstClone = items[0].cloneNode(true);
+  let lastClone = items[lengthItems - 1].cloneNode(true);
 
-  if (carouseldiv) {
-    const slideCount = slides.length;
-    let currentSlideIndex = 0;
+  slider.appendChild(firstClone);
+  slider.insertBefore(lastClone, items[0]);
 
-    // Hide all slides except the first one on initialization
-    for (let i = 1; i < slideCount; i++) {
-      slides[i].classList.remove("active");
-    }
-    slides[0].classList.add("active");
+  items = document.querySelectorAll(".slider .list .item"); // Update items to include clones
 
-    function showSlide(index) {
-      slides[index].classList.add("active");
-    }
-
-    function hideSlide(index) {
-      slides[index].classList.remove("active");
-    }
-    carouseldiv.addEventListener("click", nextSlide);
-
-    function nextSlide() {
-      const currentSlide = currentSlideIndex;
-      currentSlideIndex = (currentSlideIndex + 1) % slideCount;
-
-      // Show the next slide and hide the current slide
-      showSlide(currentSlideIndex);
-      setTimeout(() => {
-        hideSlide(currentSlide);
-      }, 400); // Adjust this timeout to balance the overlap
-    }
-
-    // Event listener for manual slide change
-    carouseldiv.addEventListener("click", nextSlide);
-
-    // Optionally, automatically change slides every 5 seconds
-    setInterval(nextSlide, 5000);
-
-    // Show the first slide initially
-    showSlide(currentSlideIndex);
+  function updateSliderPosition() {
+    slider.style.left = -items[active].offsetLeft + "px";
   }
-});
+
+  function reloadSlider() {
+    slider.style.transition = "left 2s";
+    updateSliderPosition();
+
+    let lastActiveDot = document.querySelector(".slider .dots li.active");
+    if (lastActiveDot) lastActiveDot.classList.remove("active");
+    dots[(active - 1 + lengthItems) % lengthItems].classList.add("active"); // Adjust active dot
+
+    clearInterval(refreshInterval);
+    refreshInterval = setInterval(() => {
+      if (isTransitioning) return;
+      isTransitioning = true;
+      active++;
+      reloadSlider();
+    }, 3000);
+
+    setTimeout(() => {
+      if (active === lengthItems + 1) {
+        slider.style.transition = "none";
+        active = 1;
+        updateSliderPosition();
+      }
+      isTransitioning = false;
+    }, 2000);
+  }
+  dots.forEach((li, key) => {
+    li.addEventListener("click", () => {
+      if (isTransitioning) return;
+      active = key + 1; // Adjust for the cloned items
+      reloadSlider();
+    });
+  });
+
+  let refreshInterval = setInterval(() => {
+    if (isTransitioning) return;
+    isTransitioning = true;
+    active++;
+    reloadSlider();
+  }, 3000);
+
+  window.onresize = function () {
+    updateSliderPosition();
+  };
+
+  // Initial positioning to account for the prepended clone
+  updateSliderPosition();
+}
+
 
 // carousel js end
 
@@ -334,81 +358,15 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   });
 });
-
 // sidebar end
 
 // preview product image slide
+const previewproductimage = document.getElementById("previewproductimage");
+const optionimage = document.getElementById("optionimage");
 
-let slider = document.querySelector(".slider .list");
-let items = document.querySelectorAll(".slider .list .item");
-
-let dots = document.querySelectorAll(".slider .dots li");
-
-let lengthItems = items.length;
-let active = 1; // Start at 1 to accommodate the prepended clone
-let isTransitioning = false;
-
-// Clone first and last items
-let firstClone = items[0].cloneNode(true);
-let lastClone = items[lengthItems - 1].cloneNode(true);
-
-slider.appendChild(firstClone);
-slider.insertBefore(lastClone, items[0]);
-
-items = document.querySelectorAll(".slider .list .item"); // Update items to include clones
-
-function updateSliderPosition() {
-  slider.style.left = -items[active].offsetLeft + "px";
-}
-
-function reloadSlider() {
-  slider.style.transition = "left 0.5s";
-  updateSliderPosition();
-
-  let lastActiveDot = document.querySelector(".slider .dots li.active");
-  if (lastActiveDot) lastActiveDot.classList.remove("active");
-  dots[(active - 1 + lengthItems) % lengthItems].classList.add("active"); // Adjust active dot
-
-  clearInterval(refreshInterval);
-  refreshInterval = setInterval(() => {
-    if (isTransitioning) return;
-    isTransitioning = true;
-    active++;
-    reloadSlider();
-  }, 3000);
-
-  setTimeout(() => {
-    if (active === 0) {
-      slider.style.transition = "none";
-      active = lengthItems;
-      updateSliderPosition();
-    } else if (active === lengthItems + 1) {
-      slider.style.transition = "none";
-      active = 1;
-      updateSliderPosition();
-    }
-    isTransitioning = false;
-  }, 500);
-}
-
-dots.forEach((li, key) => {
-  li.addEventListener("click", () => {
-    if (isTransitioning) return;
-    active = key + 1; // Adjust for the cloned items
-    reloadSlider();
-  });
+optionimage.addEventListener("click", function (event) {
+  if (event.target.tagName === "IMG") {
+    const src = event.target.getAttribute("src");
+    previewproductimage.setAttribute("src", src);
+  }
 });
-
-let refreshInterval = setInterval(() => {
-  if (isTransitioning) return;
-  isTransitioning = true;
-  active++;
-  reloadSlider();
-}, 3000);
-
-window.onresize = function () {
-  updateSliderPosition();
-};
-
-// Initial positioning to account for the prepended clone
-updateSliderPosition();
