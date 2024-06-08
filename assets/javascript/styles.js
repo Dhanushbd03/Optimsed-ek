@@ -66,17 +66,69 @@ document.addEventListener("DOMContentLoaded", function () {
 
 const categorybtn = document.getElementById("categorybtn");
 const categorydropdown = document.getElementById("categorydropdown");
-
+const categoriesList = document.getElementById("categoriesList");
 if (categorybtn) {
-  -categorybtn.addEventListener("click", function () {
+  categorybtn.addEventListener("click", function () {
     if (categorydropdown.classList.contains("show")) {
       categorydropdown.classList.remove("show");
     } else {
       categorydropdown.classList.add("show");
     }
   });
-}
+  categorydropdown.classList.add("ek-overflow-y-hidden");
+  categorydropdown.addEventListener("mouseenter", function () {
+    categorydropdown.classList.add("scrollbar");
+    categorydropdown.classList.add("ek-overflow-y-scroll");
+  });
+  categorydropdown.addEventListener("mouseleave", function () {
+    categorydropdown.classList.remove("ek-overflow-y-scroll");
+  });
+  // submenu
+  const categoriesListArray = Array.from(categoriesList.children);
 
+  categoriesListArray.forEach((category) => {
+    category.addEventListener("mouseenter", function (event) {
+      const categoryListIndex = categoriesListArray.indexOf(
+        event.currentTarget,
+      );
+      const id = "submenu-" + categoryListIndex;
+      const submenu = document.getElementById(id);
+
+      if (submenu) {
+        submenu.parentElement.style.display = "block";
+        submenu.style.display = "block";
+        
+      }
+    });
+
+    category.addEventListener("mouseleave", function (event) {
+      const categoryListIndex = categoriesListArray.indexOf(
+        event.currentTarget,
+      );
+      const id = "submenu-" + categoryListIndex;
+      const submenu = document.getElementById(id);
+      let isMouseOverSubmenu = false;
+      if (submenu) {
+      submenu.addEventListener("mouseenter", function () {
+        isMouseOverSubmenu = true;
+      });
+
+      submenu.addEventListener("mouseleave", function () {
+        isMouseOverSubmenu = false;
+        submenu.style.display = "none";
+        submenu.parentElement.style.display = "none";
+      });
+      setTimeout(() => {
+        
+          if (!isMouseOverSubmenu) {
+            submenu.parentElement.style.display = "none";
+            submenu.style.display = "none";
+          }
+        
+      }, 100);
+  }});
+  });
+}
 // category dropdown- end
 
 // carousel js start
@@ -148,7 +200,6 @@ if (slider) {
   // Initial positioning to account for the prepended clone
   updateSliderPosition();
 }
-
 
 // carousel js end
 
@@ -360,13 +411,104 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 // sidebar end
 
+// Product Page
+
 // preview product image slide
 const previewproductimage = document.getElementById("previewproductimage");
 const optionimage = document.getElementById("optionimage");
+if (optionimage) {
+  optionimage.addEventListener("click", function (event) {
+    if (event.target.tagName === "IMG") {
+      const src = event.target.getAttribute("src");
+      previewproductimage.setAttribute("src", src);
+    }
+  });
+}
 
-optionimage.addEventListener("click", function (event) {
-  if (event.target.tagName === "IMG") {
-    const src = event.target.getAttribute("src");
-    previewproductimage.setAttribute("src", src);
-  }
-});
+// preview product image slide end
+
+// quantity counter
+const counter = document.getElementById("counter");
+const increaseButton = document.getElementById("increase");
+const decreaseButton = document.getElementById("decrease");
+
+if (counter) {
+  increaseButton.addEventListener("click", () => {
+    counter.textContent = parseInt(counter.textContent) + 1;
+  });
+
+  decreaseButton.addEventListener("click", () => {
+    if (parseInt(counter.textContent) <= 0) {
+      return;
+    }
+    counter.textContent = parseInt(counter.textContent) - 1;
+  });
+}
+// quantity counter end
+// Product details
+const productDetails = document.getElementById("product-details");
+const productBriefDetails = document.getElementById("product-brief-details");
+
+if (productDetails) {
+  const productsDetailsChildren = Array.from(productDetails.children);
+  const productBriefDetailsChildren = Array.from(productBriefDetails.children);
+  productDetails.querySelector("li").style.borderBottom =
+    "3px solid " + primary;
+
+  productBriefDetailsChildren[0].style.display = "flex";
+  productDetails.addEventListener("click", function (event) {
+    productDetails.querySelectorAll("li").forEach((li) => {
+      if (li == event.target) {
+        li.style.borderBottom = "3px solid " + primary;
+      } else {
+        if (event.target.tagName !== "LI") {
+          return;
+        }
+        li.style.borderBottom = "none";
+      }
+    });
+    const productsDetailsindex = productsDetailsChildren.indexOf(event.target);
+    productBriefDetailsChildren.forEach((child, index) => {
+      if (index == productsDetailsindex) {
+        child.style.display = "flex";
+      } else {
+        if (productsDetailsindex === -1) {
+          return;
+        }
+
+        child.style.display = "none";
+      }
+    });
+  });
+}
+
+// login & register
+
+const loginemaildiv = document.getElementById("login-emaildiv");
+const loginpassworddiv = document.getElementById("login-passworddiv");
+const loginClose = document.getElementById("login-close");
+const loginSection = document.getElementById("loginSection");
+const showloginButton = document.getElementById("showloginButton");
+
+function addFocusAndBlurEvents(div) {
+  const input = div.querySelector("input");
+  input.addEventListener("focus", function () {
+    div.style.borderColor = secondary;
+  });
+  input.addEventListener("blur", function () {
+    div.style.borderColor = "";
+  });
+}
+
+if (loginemaildiv && loginpassworddiv) {
+  showloginButton.addEventListener("click", function () {
+    loginSection.classList.add("showlogin");
+  });
+  loginClose.addEventListener("click", function () {
+    loginSection.classList.remove("showlogin");
+  });
+  addFocusAndBlurEvents(loginemaildiv);
+  addFocusAndBlurEvents(loginpassworddiv);
+}
+
+// login end
