@@ -56,7 +56,11 @@
   z-index: 10000;
 }
 
-
+/* advertisement */
+.carousel-inner {
+  display: flex;
+  transition: transform 0.5s ease-in-out; /* Transition for smooth sliding */
+}
 
 /* slider  */
 

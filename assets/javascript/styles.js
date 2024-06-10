@@ -97,7 +97,6 @@ if (categorybtn) {
       if (submenu) {
         submenu.parentElement.style.display = "block";
         submenu.style.display = "block";
-        
       }
     });
 
@@ -109,24 +108,23 @@ if (categorybtn) {
       const submenu = document.getElementById(id);
       let isMouseOverSubmenu = false;
       if (submenu) {
-      submenu.addEventListener("mouseenter", function () {
-        isMouseOverSubmenu = true;
-      });
+        submenu.addEventListener("mouseenter", function () {
+          isMouseOverSubmenu = true;
+        });
 
-      submenu.addEventListener("mouseleave", function () {
-        isMouseOverSubmenu = false;
-        submenu.style.display = "none";
-        submenu.parentElement.style.display = "none";
-      });
-      setTimeout(() => {
-        
+        submenu.addEventListener("mouseleave", function () {
+          isMouseOverSubmenu = false;
+          submenu.style.display = "none";
+          submenu.parentElement.style.display = "none";
+        });
+        setTimeout(() => {
           if (!isMouseOverSubmenu) {
             submenu.parentElement.style.display = "none";
             submenu.style.display = "none";
           }
-        
-      }, 100);
-  }});
+        }, 100);
+      }
+    });
   });
 }
 // category dropdown- end
@@ -512,3 +510,95 @@ if (loginemaildiv && loginpassworddiv) {
 }
 
 // login end
+
+//category in Product preview
+const productCategory = document.getElementById("productCategory");
+if (productCategory) {
+  productCategory.addEventListener("mouseenter", function () {
+    productCategory.classList.add("scrollbar");
+    productCategory.classList.add("ek-overflow-y-scroll");
+  });
+  productCategory.addEventListener("mouseleave", function () {
+    productCategory.classList.remove("ek-overflow-y-scroll");
+  });
+}
+
+//category in Product preview end
+
+// advertisement
+function initializeCarousel(carouselId) {
+  const carousel = document.getElementById(carouselId);
+  const inner = carousel.querySelector('.carousel-inner');
+  const slides = carousel.querySelectorAll('.carousel-inner > div');
+  let currentIndex = 0;
+  let isTransitioning = false;
+
+  // Clone the first slide and append it to the end
+  const firstSlideClone = slides[0].cloneNode(true);
+  inner.appendChild(firstSlideClone);
+
+  // Set the initial position for the slides
+  inner.style.transition = 'transform 0.5s ease-in-out';
+  inner.style.transform = 'translateX(0)';
+
+  function showNextSlide() {
+    if (isTransitioning) return;
+    isTransitioning = true;
+
+    // Update the index to the next slide
+    currentIndex++;
+    // Calculate the new position
+    const newTransformValue = -currentIndex * 100;
+    // Apply the transformation
+    inner.style.transform = `translateX(${newTransformValue}%)`;
+
+    // When we reach the cloned first slide, reset to the original first slide
+    if (currentIndex === slides.length) {
+      setTimeout(() => {
+        inner.style.transition = 'none';
+        inner.style.transform = 'translateX(0)';
+        currentIndex = 0;
+        // Force reflow to reset the transition
+        inner.offsetHeight;
+        inner.style.transition = 'transform 0.5s ease-in-out';
+        isTransitioning = false;
+      }, 500); // Duration of the transition
+    } else {
+      setTimeout(() => {
+        isTransitioning = false;
+      }, 500); // Duration of the transition
+    }
+  }
+
+  // Initialize the carousel
+  setInterval(showNextSlide, 3000); // Change slide every 3 seconds
+}
+
+// Initialize the carousel when the page loads
+window.onload = function() {
+  initializeCarousel('carousel1');
+  initializeCarousel('carousel2');
+
+};
+
+// advertisement end
+
+// signup and login toggle
+const loginform = document.getElementById("loginform");
+const signupform = document.getElementById("signupform");
+const showsignup = document.getElementById("showsignup")
+const showlogin = document.getElementById("showlogin")
+
+function toggle(event,form1, form2 ) {
+  event.preventDefault()
+  form1.classList.toggle("ek-flex");
+  form1.classList.toggle("ek-hidden");
+  form2.classList.toggle("ek-hidden");
+  form2.classList.toggle("ek-flex");
+  
+}
+showlogin.addEventListener("click", (event) => toggle(event,loginform,signupform))
+showsignup.addEventListener("click", (event) => toggle(event,signupform,loginform))
+
+
+// signup end
