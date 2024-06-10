@@ -331,7 +331,7 @@
         <div class="ek-hidden ek-pl-24 lg:ek-flex">
           <ul class="ek-flex ek-text-primary">
             <li
-              class="ek-px-4 ek-py-3 ek-pl-16 ek-font-bold ek-text-primary hover:ek-text-secondary"
+              class="ek-px-4 ek-py-3 ek-font-bold ek-text-primary hover:ek-text-secondary"
             >
               <a href="#">Home </a>
             </li>
@@ -685,7 +685,7 @@
         <div
           class="ek-container ek-flex ek-justify-center ek-py-2 md:ek-mx-auto"
         >
-          <div class="ek-hidden md:ek-w-1/5 lg:ek-block">
+          <div class="ek-hidden md:ek-w-1/5 xl:ek-block">
             <div
               class="ek-border-text-gray-600 ek-h-[500px] ek-w-full ek-overflow-hidden ek-rounded-lg ek-border-2 ek-py-2"
               id="productCategory"
@@ -742,7 +742,7 @@
               />
             </div>
           </div>
-          <div class="ek-w-full lg:ek-w-4/5">
+          <div class="ek-w-full xl:ek-w-4/5">
             <div
               class="ek-flex ek-flex-wrap ek-items-center ek-justify-center md:ek-ml-16 md:ek-px-0 lg:ek-px-5"
             >
@@ -897,28 +897,40 @@
               </div>
             </div>
             <div class="ek-flex ek-grow ek-flex-col sm:ek-self-start">
-              <div
-                class="scrollbar ek-overflow-x-scroll ek-p-2 md:ek-overflow-x-hidden md:ek-py-0"
-              >
-                <ul
-                  class="ek-flex ek-min-w-max ek-justify-center ek-gap-5 ek-px-4 ek-text-xl ek-font-semibold"
-                  id="product-details"
+              <div class="ek-flex ek-items-center ek-p-2 md:ek-py-0">
+                <i
+                  class="fas fa-chevron-left ek-p-2 ek-text-sm"
+                  id="scroll-left"
+                ></i>
+                <div
+                  class="section-scrollbar ek-overflow-x-scroll xl:ek-overflow-x-hidden"
+                  id="scroll-container"
                 >
-                  <li class="ek-text-nowrap sm:ek-p-2">Description</li>
-                  <li class="ek-text-nowrap sm:ek-p-2">Specification</li>
-                  <li class="ek-text-nowrap sm:ek-p-2">Warranty</li>
-                  <li class="ek-text-nowrap sm:ek-p-2">Reviews</li>
-                  <li class="ek-text-nowrap sm:ek-p-2">Attachments</li>
-                  <li class="ek-text-nowrap sm:ek-p-2">Videos</li>
-                  <li class="ek-text-nowrap sm:ek-p-2">Discussion form</li>
-                </ul>
+                  <ul
+                    class="ek-flex ek-min-w-max ek-justify-center ek-gap-5 ek-px-4 ek-text-xl ek-font-semibold"
+                    id="product-details"
+                  >
+                    <li class="ek-text-nowrap sm:ek-p-2">Description</li>
+                    <li class="ek-text-nowrap sm:ek-p-2">Specification</li>
+                    <li class="ek-text-nowrap sm:ek-p-2">Warranty</li>
+                    <li class="ek-text-nowrap sm:ek-p-2">Reviews</li>
+                    <li class="ek-text-nowrap sm:ek-p-2">Attachments</li>
+                    <li class="ek-text-nowrap sm:ek-p-2">Videos</li>
+                    <li class="ek-text-nowrap sm:ek-p-2">Discussion form</li>
+                  </ul>
+                </div>
+                <i
+                  class="fas fa-chevron-right ek-p-2 ek-text-sm"
+                  id="scroll-right"
+                ></i>
               </div>
               <hr class="ek-border-1 ek-border-gray-100" />
 
               <div
-                class="ek-px-2 md:ek-px-4 lg:ek-px-10"
+                class="ek-px-2 md:ek-px-4 xl:ek-px-10"
                 id="product-brief-details"
               >
+                <!-- Description -->
                 <div
                   class="animate__animated animate__fadeInUp ek-relative ek-my-3 ek-hidden ek-min-h-80 ek-min-w-full ek-flex-wrap ek-justify-center ek-gap-0 ek-rounded-lg ek-border-2 ek-border-gray-200 ek-p-4 ek-text-sm"
                 >
@@ -1020,7 +1032,8 @@
                     </li>
                   </ul>
                 </div>
-
+                <!-- Description end  -->
+                <!-- Specification -->
                 <div
                   class="animate__animated animate__fadeInUp ek-relative ek-my-3 ek-hidden ek-min-h-80 ek-min-w-full ek-flex-wrap ek-justify-center ek-gap-0 ek-rounded-lg ek-border-2 ek-border-gray-200 ek-p-4 ek-text-sm"
                 >
@@ -1192,16 +1205,212 @@
                     </tbody>
                   </table>
                 </div>
+                <!-- specification end -->
+                <!-- Warranty -->
+                <div
+                  class="animate__animated animate__fadeInUp ek-relative ek-my-3 ek-hidden ek-min-w-full ek-flex-wrap ek-gap-0 ek-rounded-lg ek-border-2 ek-border-gray-200 ek-p-4 ek-text-sm"
+                >
+                  <p class="ek-py-4 ek-leading-loose ek-text-gray-700">
+                    6 Months Warranty
+                  </p>
+                  <hr class="ek-border-1 ek-w-full ek-border-gray-200" />
+                  <p
+                    class="ek-py-4 ek-text-justify ek-leading-loose ek-text-gray-700"
+                  >
+                    This item is covered with a supplier warranty of 6 months
+                    from the time of delivery against manufacturing defects
+                    only. This is a quality product from the original
+                    manufacturer. Only manufacturing defects are covered under
+                    this warranty. Replacement will be done against
+                    manufacturing defects.
+                  </p>
+                  <hr class="ek-border-1 ek-w-full ek-border-gray-200" />
+                  <p
+                    class="ek-pb-4 ek-text-justify ek-leading-loose ek-text-gray-700"
+                  >
+                    If the product is subject to misuse, tampering, static
+                    discharge, accident, water or fire damage, use of chemicals
+                    & soldered or altered in any way.
+                  </p>
+                </div>
+                <!-- Warranty end -->
+                <!-- Reviews -->
+                <div
+                  class="animate__animated animate__fadeInUp ek-relative ek-my-3 ek-hidden ek-min-h-80 ek-min-w-full ek-flex-wrap ek-gap-0 ek-rounded-lg ek-border-2 ek-border-gray-200 ek-p-4 ek-text-sm"
+                >
+                  <div class="ek-flex ek-w-full">
+                    <div
+                      class="ek-flex ek-w-1/2 ek-flex-col ek-gap-5 ek-p-5 ek-text-gray-700"
+                    >
+                      <h2 class="ek-text-xl">Based on 122 reviews</h2>
 
+                      <h1 class="ek-flex ek-flex-col">
+                        <span class="ek-text-3xl ek-font-bold">4.9</span>overall
+                      </h1>
+                      <!-- 5star  -->
+                      <div class="ek-flex ek-items-center">
+                        <div class="ek-mr-7 ek-flex ek-gap-1">
+                          <i class="fa-solid fa-star ek-text-primary"></i>
+                          <i class="fa-solid fa-star ek-text-primary"></i>
+                          <i class="fa-solid fa-star ek-text-primary"></i>
+                          <i class="fa-solid fa-star ek-text-primary"></i>
+                          <i class="fa-solid fa-star ek-text-primary"></i>
+                        </div>
+                        <div
+                          class="ek-mr-3 ek-h-2 ek-w-40 ek-rounded-full ek-bg-gray-100"
+                        >
+                          <div
+                            class="ek-h-2 ek-rounded-full ek-bg-gray-300"
+                          ></div>
+                        </div>
+                        <p>111</p>
+                      </div>
+
+                      <!-- 5star end  -->
+                      <!-- 4star  -->
+                      <div class="ek-flex ek-items-center">
+                        <div class="ek-mr-7 ek-flex ek-gap-1">
+                          <i class="fa-solid fa-star ek-text-primary"></i>
+                          <i class="fa-solid fa-star ek-text-primary"></i>
+                          <i class="fa-solid fa-star ek-text-primary"></i>
+                          <i class="fa-solid fa-star ek-text-primary"></i>
+                          <i class="fa-regular fa-star ek-text-gray-200"></i>
+                        </div>
+                        <div
+                          class="ek-mr-3 ek-h-2 ek-w-40 ek-rounded-full ek-bg-gray-100"
+                        >
+                          <div
+                            class="ek-h-2 ek-rounded-full ek-bg-gray-300"
+                          ></div>
+                        </div>
+                        <p>1</p>
+                      </div>
+
+                      <!-- 4star end  -->
+                      <!-- 3star  -->
+                      <div class="ek-flex ek-items-center">
+                        <div class="ek-mr-7 ek-flex ek-gap-1">
+                          <i class="fa-solid fa-star ek-text-primary"></i>
+                          <i class="fa-solid fa-star ek-text-primary"></i>
+                          <i class="fa-solid fa-star ek-text-primary"></i>
+                          <i class="fa-regular fa-star ek-text-gray-200"></i
+                          ><i class="fa-regular fa-star ek-text-gray-200"></i>
+                        </div>
+                        <div
+                          class="ek-mr-3 ek-h-2 ek-w-40 ek-rounded-full ek-bg-gray-100"
+                        >
+                          <div
+                            class="ek-h-2 ek-rounded-full ek-bg-gray-300"
+                          ></div>
+                        </div>
+                        <p>4</p>
+                      </div>
+                      <!-- 3star end  -->
+                      <!-- 2star  -->
+                      <div class="ek-flex ek-items-center">
+                        <div class="ek-mr-7 ek-flex ek-gap-1">
+                          <i class="fa-solid fa-star ek-text-primary"></i>
+                          <i class="fa-solid fa-star ek-text-primary"></i>
+
+                          <i class="fa-regular fa-star ek-text-gray-200"></i>
+                          <i class="fa-regular fa-star ek-text-gray-200"></i
+                          ><i class="fa-regular fa-star ek-text-gray-200"></i>
+                        </div>
+                        <div
+                          class="ek-mr-3 ek-h-2 ek-w-40 ek-rounded-full ek-bg-gray-100"
+                        >
+                          <div
+                            class="ek-h-2 ek-rounded-full ek-bg-gray-300"
+                          ></div>
+                        </div>
+                        <p>5</p>
+                      </div>
+                      <!-- 2star end  -->
+                      <!-- 1star  -->
+                      <div class="ek-flex ek-items-center">
+                        <div class="ek-mr-7 ek-flex ek-gap-1">
+                          <i class="fa-solid fa-star ek-text-primary"></i>
+
+                          <i class="fa-regular fa-star ek-text-gray-200"></i>
+                          <i class="fa-regular fa-star ek-text-gray-200"></i>
+                          <i class="fa-regular fa-star ek-text-gray-200"></i
+                          ><i class="fa-regular fa-star ek-text-gray-200"></i>
+                        </div>
+                        <div
+                          class="ek-mr-3 ek-h-2 ek-w-40 ek-rounded-full ek-bg-gray-100"
+                        >
+                          <div
+                            class="ek-h-2 ek-w-5 ek-rounded-full ek-bg-gray-300"
+                          ></div>
+                        </div>
+                        <p>1</p>
+                      </div>
+                      <!-- 1star end  -->
+                    </div>
+                    <div class="ek-flex ek-w-1/2 ek-flex-col ek-gap-5 ek-p-5 ek-text-gray-700 ek-text-base">
+                      <h1 class="ek-text-xl">Add a review</h1>
+                      <form class="ek-flex ek-flex-col ek-justify-center ek-gap-10">
+                        <div class="ek-flex ek-gap-5 ek-justify-between">
+                          <label>Your Rating :</label>
+                          <div class="ek-flex ek-gap-1 ek-w-3/4">
+                            <i class="fa-regular fa-star ek-text-gray-200"></i>
+                            <i class="fa-regular fa-star ek-text-gray-200"></i>
+                            <i class="fa-regular fa-star ek-text-gray-200"></i>
+                            <i class="fa-regular fa-star ek-text-gray-200"></i>
+                            <i class="fa-regular fa-star ek-text-gray-200"></i>
+                          </div>
+                        </div>
+                      
+                        <div class="ek-flex ek-gap-5 ek-justify-between">
+                          <label for="review">Your Review :</label>
+                          <textarea
+                            name="review"
+                            id="review"
+                            class="ek-rounded-lg ek-border ek-border-gray-200 "
+                          ></textarea>
+                        </div>
+                      
+                        <div class="ek-flex ek-gap-5 ek-justify-between">
+                          <label for="name">Name* :</label>
+                          <input
+                            name="name"
+                            id="name"
+                            class="ek-rounded-lg ek-border ek-border-gray-200"
+                          />
+                        </div>
+                      
+                        <div class="ek-flex ek-gap-5 ek-justify-between">
+                          <label for="email">Email* :</label>
+                          <input
+                            name="email"
+                            id="email"
+                            class="ek-rounded-lg ek-border ek-border-gray-200"
+                            required
+                          />
+                        </div>
+                      
+                        <button type="submit" class="ek-self-end ek-rounded-lg ek-bg-blue-500 ek-text-white ek-px-4 ek-py-2">Add Review</button>
+                      </form>
+                      
+                    </div>
+                  </div>
+                </div>
+                <!-- Reviews end  -->
+                <!-- Attachments -->
                 <div
                   class="animate__animated animate__fadeInUp ek-relative ek-my-3 ek-hidden ek-min-h-80 ek-min-w-full ek-flex-wrap ek-justify-center ek-gap-0 ek-rounded-lg ek-border-2 ek-border-gray-200 ek-p-4 ek-text-sm"
                 ></div>
+                <!-- Attachments end  -->
+                <!-- Videos -->
                 <div
-                  class="animate__animated animate__fadeInUp ek-relative ek-my-3 ek-hidden ek-min-h-80 ek-min-w-full ek-flex-wrap ek-justify-center ek-gap-0 ek-bg-emerald-700 ek-text-sm"
+                  class="animate__animated animate__fadeInUp ek-relative ek-my-3 ek-hidden ek-min-h-80 ek-min-w-full ek-flex-wrap ek-justify-center ek-gap-0 ek-rounded-lg ek-border-2 ek-border-gray-200 ek-p-4 ek-text-sm"
                 ></div>
+                <!-- Videos end -->
+                <!-- Discussion form  -->
                 <div
-                  class="animate__animated animate__fadeInUp ek-relative ek-my-3 ek-hidden ek-min-h-80 ek-min-w-full ek-flex-wrap ek-justify-center ek-gap-0 ek-bg-fuchsia-950 ek-text-sm"
+                  class="animate__animated animate__fadeInUp ek-relative ek-my-3 ek-hidden ek-min-h-80 ek-min-w-full ek-flex-wrap ek-justify-center ek-gap-0 ek-rounded-lg ek-border-2 ek-border-gray-200 ek-p-4 ek-text-sm"
                 ></div>
+                <!-- Discussion form end  -->
               </div>
             </div>
           </div>
@@ -1216,7 +1425,10 @@
         <div
           class="ek-flex ek-max-h-80 ek-min-h-80 ek-items-center ek-justify-center sm:ek-mx-auto sm:ek-w-1/2"
         >
-          <div class="ek-h-full ek-w-full ek-overflow-hidden ek-relative" id="carousel1">
+          <div
+            class="ek-relative ek-h-full ek-w-full ek-overflow-hidden"
+            id="carousel1"
+          >
             <div class="carousel-inner ek-left-0 ek-top-0 ek-flex">
               <div class="ek-min-w-full">
                 <img

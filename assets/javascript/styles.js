@@ -601,4 +601,26 @@ showlogin.addEventListener("click", (event) => toggle(event,loginform,signupform
 showsignup.addEventListener("click", (event) => toggle(event,signupform,loginform))
 
 
-// signup end
+// signup and login toggle end
+// scroll for section in product.html
+document.addEventListener("DOMContentLoaded", function() {
+  const scrollContainer = document.getElementById("scroll-container");
+  const scrollLeft = document.getElementById("scroll-left");
+  const scrollRight = document.getElementById("scroll-right");
+
+  scrollLeft.addEventListener("click", function() {
+    scrollContainer.scrollBy({
+      left: -100,
+      behavior: "smooth"
+    });
+  });
+
+  scrollRight.addEventListener("click", function() {
+    scrollContainer.scrollBy({
+      left: 100,
+      behavior: "smooth"
+    });
+  });
+});
+// scroll for section in product.html end
+
