@@ -129,77 +129,7 @@ if (categorybtn) {
 }
 // category dropdown- end
 
-// carousel js start
-let slider = document.querySelector(".slider .list");
-let items = document.querySelectorAll(".slider .list .item");
-let dots = document.querySelectorAll(".slider .dots li");
-if (slider) {
-  let lengthItems = items.length;
-  let active = 1; // Start at 1 to accommodate the prepended clone
-  let isTransitioning = false;
 
-  // Clone first and last items
-  let firstClone = items[0].cloneNode(true);
-  let lastClone = items[lengthItems - 1].cloneNode(true);
-
-  slider.appendChild(firstClone);
-  slider.insertBefore(lastClone, items[0]);
-
-  items = document.querySelectorAll(".slider .list .item"); // Update items to include clones
-
-  function updateSliderPosition() {
-    slider.style.left = -items[active].offsetLeft + "px";
-  }
-
-  function reloadSlider() {
-    slider.style.transition = "left 2s";
-    updateSliderPosition();
-
-    let lastActiveDot = document.querySelector(".slider .dots li.active");
-    if (lastActiveDot) lastActiveDot.classList.remove("active");
-    dots[(active - 1 + lengthItems) % lengthItems].classList.add("active"); // Adjust active dot
-
-    clearInterval(refreshInterval);
-    refreshInterval = setInterval(() => {
-      if (isTransitioning) return;
-      isTransitioning = true;
-      active++;
-      reloadSlider();
-    }, 3000);
-
-    setTimeout(() => {
-      if (active === lengthItems + 1) {
-        slider.style.transition = "none";
-        active = 1;
-        updateSliderPosition();
-      }
-      isTransitioning = false;
-    }, 2000);
-  }
-  dots.forEach((li, key) => {
-    li.addEventListener("click", () => {
-      if (isTransitioning) return;
-      active = key + 1; // Adjust for the cloned items
-      reloadSlider();
-    });
-  });
-
-  let refreshInterval = setInterval(() => {
-    if (isTransitioning) return;
-    isTransitioning = true;
-    active++;
-    reloadSlider();
-  }, 3000);
-
-  window.onresize = function () {
-    updateSliderPosition();
-  };
-
-  // Initial positioning to account for the prepended clone
-  updateSliderPosition();
-}
-
-// carousel js end
 
 // count-down timer
 let dest = new Date("june 31, 2024 10:00:00").getTime();
@@ -258,78 +188,7 @@ let x = setInterval(function () {
 
 // count-down timer end
 
-// products section
 
-// Get elements by their IDs
-const clickfeatured = document.getElementById("clickfeatured");
-const clickonsale = document.getElementById("clickonsale");
-const clicktoprated = document.getElementById("clicktoprated");
-const featured = document.getElementById("featured");
-const onsale = document.getElementById("onsale");
-const toprated = document.getElementById("toprated");
-
-// Initial styling for "Featured" tab and section
-
-if (clickfeatured) {
-  clickfeatured.style.borderBottom = "2px solid #3D3F82";
-  clickfeatured.classList.add("show-after");
-  onsale.style.display = "none";
-  toprated.style.display = "none";
-
-  // Function to handle tab switching
-  function switchTab(
-    activeTab,
-    tab1,
-    tab2,
-    sectionToShow,
-    sectionToHide1,
-    sectionToHide2,
-  ) {
-    activeTab.style.borderBottom = "2px solid #3D3F82";
-    activeTab.classList.add("show-after");
-    tab1.classList.remove("show-after");
-    tab2.classList.remove("show-after");
-    tab1.style.borderColor = "";
-    tab1.style.borderBottom = "";
-    tab2.style.borderColor = "";
-    tab2.style.borderBottom = "";
-    sectionToShow.style.display = "flex";
-    sectionToHide1.style.display = "none";
-    sectionToHide2.style.display = "none";
-  }
-
-  // Add event listeners for tab clicks
-  clickfeatured.addEventListener("click", () =>
-    switchTab(
-      clickfeatured,
-      clickonsale,
-      clicktoprated,
-      featured,
-      onsale,
-      toprated,
-    ),
-  );
-  clickonsale.addEventListener("click", () =>
-    switchTab(
-      clickonsale,
-      clickfeatured,
-      clicktoprated,
-      onsale,
-      featured,
-      toprated,
-    ),
-  );
-  clicktoprated.addEventListener("click", () =>
-    switchTab(
-      clicktoprated,
-      clickfeatured,
-      clickonsale,
-      toprated,
-      featured,
-      onsale,
-    ),
-  );
-}
 
 // progress bar of special offer
 
@@ -525,63 +384,7 @@ if (productCategory) {
 
 //category in Product preview end
 
-// advertisement
-function initializeCarousel(carouselId) {
-  const carousel = document.getElementById(carouselId);
-  const inner = carousel.querySelector('.carousel-inner');
-  const slides = carousel.querySelectorAll('.carousel-inner > div');
-  let currentIndex = 0;
-  let isTransitioning = false;
 
-  // Clone the first slide and append it to the end
-  const firstSlideClone = slides[0].cloneNode(true);
-  inner.appendChild(firstSlideClone);
-
-  // Set the initial position for the slides
-  inner.style.transition = 'transform 0.5s ease-in-out';
-  inner.style.transform = 'translateX(0)';
-
-  function showNextSlide() {
-    if (isTransitioning) return;
-    isTransitioning = true;
-
-    // Update the index to the next slide
-    currentIndex++;
-    // Calculate the new position
-    const newTransformValue = -currentIndex * 100;
-    // Apply the transformation
-    inner.style.transform = `translateX(${newTransformValue}%)`;
-
-    // When we reach the cloned first slide, reset to the original first slide
-    if (currentIndex === slides.length) {
-      setTimeout(() => {
-        inner.style.transition = 'none';
-        inner.style.transform = 'translateX(0)';
-        currentIndex = 0;
-        // Force reflow to reset the transition
-        inner.offsetHeight;
-        inner.style.transition = 'transform 0.5s ease-in-out';
-        isTransitioning = false;
-      }, 500); // Duration of the transition
-    } else {
-      setTimeout(() => {
-        isTransitioning = false;
-      }, 500); // Duration of the transition
-    }
-  }
-
-  // Initialize the carousel
-  setInterval(showNextSlide, 3000); // Change slide every 3 seconds
-}
-
-// Initialize the carousel when the page loads
-window.onload = function() {
-  initializeCarousel('carousel1');
-  initializeCarousel('carousel2');
-
-};
-
-// advertisement end
 
 // signup and login toggle
 const loginform = document.getElementById("loginform");
@@ -624,3 +427,23 @@ document.addEventListener("DOMContentLoaded", function() {
 });
 // scroll for section in product.html end
 
+// upvote and downvote 
+document.addEventListener("DOMContentLoaded", () => {
+  document.querySelectorAll(".vote-button").forEach(button => {
+    
+      button.addEventListener("click", () => {
+          const voteContainer = button.closest(".vote-container");
+          
+          const voteCountElement = voteContainer.querySelector(".vote-count");
+          let voteCount = parseInt(voteCountElement.textContent);
+
+          if (button.classList.contains("upvote")) {
+              voteCount++;
+          } else if (button.classList.contains("downvote")) {
+              voteCount--;
+          }
+
+          voteCountElement.textContent = voteCount;
+      });
+  });
+});

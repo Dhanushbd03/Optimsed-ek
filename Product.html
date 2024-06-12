@@ -1238,9 +1238,9 @@
                 <div
                   class="animate__animated animate__fadeInUp ek-relative ek-my-3 ek-hidden ek-min-h-80 ek-min-w-full ek-flex-wrap ek-gap-0 ek-rounded-lg ek-border-2 ek-border-gray-200 ek-p-4 ek-text-sm"
                 >
-                  <div class="ek-flex ek-w-full">
+                  <div class="ek-flex ek-w-full ek-flex-col sm:ek-flex-row">
                     <div
-                      class="ek-flex ek-w-1/2 ek-flex-col ek-gap-5 ek-p-5 ek-text-gray-700"
+                      class="ek-flex ek-flex-col ek-gap-5 ek-p-5 ek-text-gray-700 sm:ek-w-1/2"
                     >
                       <h2 class="ek-text-xl">Based on 122 reviews</h2>
 
@@ -1347,12 +1347,19 @@
                       </div>
                       <!-- 1star end  -->
                     </div>
-                    <div class="ek-flex ek-w-1/2 ek-flex-col ek-gap-5 ek-p-5 ek-text-gray-700 ek-text-base">
+                    <div
+                      class="ek-flex ek-flex-col ek-gap-5 ek-py-5 ek-text-base ek-text-gray-700 lg:ek-w-1/2"
+                    >
                       <h1 class="ek-text-xl">Add a review</h1>
-                      <form class="ek-flex ek-flex-col ek-justify-center ek-gap-10">
-                        <div class="ek-flex ek-gap-5 ek-justify-between">
-                          <label>Your Rating :</label>
-                          <div class="ek-flex ek-gap-1 ek-w-3/4">
+                      <form
+                        class="ek-flex ek-flex-col ek-justify-center ek-gap-10"
+                      >
+                        <div class="ek-flex ek-items-center ek-gap-5">
+                          <label
+                            class="ek-flex ek-w-1/2 ek-justify-between ek-gap-5 ek-text-nowrap lg:ek-w-1/4"
+                            >Your Rating <span>:</span></label
+                          >
+                          <div class="ek-flex ek-w-1/2 ek-gap-1 lg:ek-w-3/4">
                             <i class="fa-regular fa-star ek-text-gray-200"></i>
                             <i class="fa-regular fa-star ek-text-gray-200"></i>
                             <i class="fa-regular fa-star ek-text-gray-200"></i>
@@ -1360,66 +1367,303 @@
                             <i class="fa-regular fa-star ek-text-gray-200"></i>
                           </div>
                         </div>
-                      
-                        <div class="ek-flex ek-gap-5 ek-justify-between">
-                          <label for="review">Your Review :</label>
+
+                        <div class="ek-flex ek-items-center ek-gap-5">
+                          <label
+                            for="review"
+                            class="ek-flex ek-w-1/2 ek-justify-between ek-gap-5 ek-text-nowrap lg:ek-w-1/4"
+                            >Your Review <span>:</span></label
+                          >
                           <textarea
                             name="review"
                             id="review"
-                            class="ek-rounded-lg ek-border ek-border-gray-200 "
+                            class="ek-w-1/2 ek-rounded-lg ek-border ek-border-gray-200 ek-p-2 ek-text-sm focus:ek-outline-1 focus:ek-outline-primary"
                           ></textarea>
                         </div>
-                      
-                        <div class="ek-flex ek-gap-5 ek-justify-between">
-                          <label for="name">Name* :</label>
+
+                        <div class="ek-flex ek-items-center ek-gap-5">
+                          <label
+                            for="name"
+                            class="ek-flex ek-w-1/2 ek-justify-between ek-gap-5 ek-text-nowrap lg:ek-w-1/4"
+                            >Name* <span>:</span></label
+                          >
                           <input
                             name="name"
                             id="name"
-                            class="ek-rounded-lg ek-border ek-border-gray-200"
+                            class="ek-w-1/2 ek-rounded-lg ek-border ek-border-gray-200 ek-p-2 ek-text-sm focus:ek-outline-1 focus:ek-outline-primary"
                           />
                         </div>
-                      
-                        <div class="ek-flex ek-gap-5 ek-justify-between">
-                          <label for="email">Email* :</label>
+
+                        <div class="ek-flex ek-items-center ek-gap-5">
+                          <label
+                            for="email"
+                            class="ek-flex ek-w-1/2 ek-justify-between ek-gap-5 ek-text-nowrap lg:ek-w-1/4"
+                            >Email*<span>:</span></label
+                          >
                           <input
                             name="email"
                             id="email"
-                            class="ek-rounded-lg ek-border ek-border-gray-200"
+                            class="ek-w-1/2 ek-rounded-lg ek-border ek-border-gray-200 ek-p-2 ek-text-sm focus:ek-outline-1 focus:ek-outline-primary"
                             required
                           />
                         </div>
-                      
-                        <button type="submit" class="ek-self-end ek-rounded-lg ek-bg-blue-500 ek-text-white ek-px-4 ek-py-2">Add Review</button>
+
+                        <button
+                          type="submit"
+                          class="ek-self-start ek-rounded-lg ek-bg-primary ek-px-4 ek-py-2 ek-text-white hover:ek-bg-secondary"
+                        >
+                          Add Review
+                        </button>
                       </form>
-                      
+                    </div>
+                  </div>
+                  <div
+                    class="ek-flex ek-w-full ek-flex-col ek-gap-5 ek-text-gray-700"
+                  >
+                    <div class="ek-flex ek-flex-col ek-gap-5">
+                      <div class="ek-mr-7 ek-flex ek-gap-1">
+                        <i class="fa-solid fa-star ek-text-primary"></i>
+                        <i class="fa-solid fa-star ek-text-primary"></i>
+                        <i class="fa-solid fa-star ek-text-primary"></i>
+                        <i class="fa-solid fa-star ek-text-primary"></i>
+                        <i class="fa-solid fa-star ek-text-primary"></i>
+                      </div>
+                      <p>
+                        Original, good quality, fast and secure delivery. First
+                        I was about purchasing from electronickart.com, but
+                        after some research, I finally went for it and my
+                        decision was ?. You can buy from them without any
+                        problem.
+                      </p>
+                      <p class="ek-font-semibold">
+                        anuperumpally -
+                        <span class="ek-font-normal">June 21, 2024</span>
+                      </p>
+                    </div>
+                    <hr />
+                    <div class="ek-flex ek-flex-col ek-gap-5">
+                      <div class="ek-mr-7 ek-flex ek-gap-1">
+                        <i class="fa-solid fa-star ek-text-primary"></i>
+                        <i class="fa-solid fa-star ek-text-primary"></i>
+                        <i class="fa-solid fa-star ek-text-primary"></i>
+                        <i class="fa-solid fa-star ek-text-primary"></i>
+                        <i class="fa-solid fa-star ek-text-primary"></i>
+                      </div>
+                      <p>
+                        Original, good quality, fast and secure delivery. First
+                        I was about purchasing from electronickart.com, but
+                        after some research, I finally went for it and my
+                        decision was ?. You can buy from them without any
+                        problem.
+                      </p>
+                      <p class="ek-font-semibold">
+                        anuperumpally -
+                        <span class="ek-font-normal">June 21, 2024</span>
+                      </p>
                     </div>
                   </div>
                 </div>
                 <!-- Reviews end  -->
                 <!-- Attachments -->
                 <div
-                  class="animate__animated animate__fadeInUp ek-relative ek-my-3 ek-hidden ek-min-h-80 ek-min-w-full ek-flex-wrap ek-justify-center ek-gap-0 ek-rounded-lg ek-border-2 ek-border-gray-200 ek-p-4 ek-text-sm"
-                ></div>
+                  class="animate__animated animate__fadeInUp ek-relative ek-my-3 ek-hidden ek-min-w-full ek-flex-wrap ek-justify-center ek-gap-5 ek-rounded-lg ek-border-2 ek-border-gray-200 ek-px-4 ek-py-8 ek-text-sm"
+                >
+                  <div class="ek-flex ek-w-full ek-justify-between">
+                    <h3 class="">DATASHEET OF USB TYPE-C POWER SUPPLY</h3>
+                    <button class="ek-rounded-lg ek-bg-gray-200 ek-p-2">
+                      <a
+                        href="assets/pdf/Raspberry-Pi-4-Adapter.pdf"
+                        target="_blank"
+                        ><i class="fa-solid fa-download ek-px-1"></i>Download</a
+                      >
+                    </button>
+                  </div>
+                  <hr class="ek-border-1 ek-w-full ek-border-gray-200" />
+                  <div class="ek-flex ek-w-full ek-justify-between">
+                    <h3 class="">DATASHEET OF RASPBERRY PI4 MODEL B</h3>
+                    <button class="ek-rounded-lg ek-bg-gray-200 ek-p-2">
+                      <a
+                        href="assets/pdf/Raspberry-Pi-4-Adapter.pdf"
+                        target="_blank"
+                        ><i class="fa-solid fa-download ek-px-1"></i>Download</a
+                      >
+                    </button>
+                  </div>
+                </div>
                 <!-- Attachments end  -->
                 <!-- Videos -->
                 <div
-                  class="animate__animated animate__fadeInUp ek-relative ek-my-3 ek-hidden ek-min-h-80 ek-min-w-full ek-flex-wrap ek-justify-center ek-gap-0 ek-rounded-lg ek-border-2 ek-border-gray-200 ek-p-4 ek-text-sm"
-                ></div>
+                  class="animate__animated animate__fadeInUp ek-relative ek-my-3 ek-hidden ek-min-h-80 ek-min-w-full ek-flex-col ek-justify-center ek-gap-0 ek-rounded-lg ek-border-2 ek-border-gray-200 ek-p-4 ek-text-sm lg:ek-flex-row"
+                >
+                  <div
+                    class="ek-flex ek-h-96 ek-flex-col ek-gap-5 ek-py-1 ek-text-gray-700 lg:ek-h-full lg:ek-w-1/2 lg:ek-py-5 lg:ek-pl-5"
+                  >
+                    <iframe
+                      class="ek-h-full"
+                      src="https://www.youtube.com/embed/TEuVU6id_mI?si=nYpRo91uICb8SKNZ"
+                      title="YouTube video player"
+                      frameborder="0"
+                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                      referrerpolicy="strict-origin-when-cross-origin"
+                      allowfullscreen
+                    ></iframe>
+                  </div>
+                  <div
+                    class="ek-flex ek-h-96 ek-flex-col ek-gap-5 ek-py-1 ek-text-gray-700 lg:ek-h-full lg:ek-w-1/2 lg:ek-py-5 lg:ek-pr-5"
+                  >
+                    <iframe
+                      class="ek-h-full"
+                      src="https://www.youtube.com/embed/YpNv_7YGScE?si=oHEWO5Gdt83B0fRl"
+                      title="YouTube video player"
+                      frameborder="0"
+                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                      referrerpolicy="strict-origin-when-cross-origin"
+                      allowfullscreen
+                    ></iframe>
+                  </div>
+                </div>
                 <!-- Videos end -->
                 <!-- Discussion form  -->
                 <div
                   class="animate__animated animate__fadeInUp ek-relative ek-my-3 ek-hidden ek-min-h-80 ek-min-w-full ek-flex-wrap ek-justify-center ek-gap-0 ek-rounded-lg ek-border-2 ek-border-gray-200 ek-p-4 ek-text-sm"
-                ></div>
+                >
+                  <section
+                    class="ek-mx-auto ek-w-full ek-rounded-lg ek-bg-white ek-p-6 ek-shadow-md"
+                  >
+                    <h1 class="ek-mb-4 ek-text-2xl ek-font-bold">
+                      Questions and answers of the customers
+                    </h1>
+
+                    <!-- Input form for asking a question -->
+                    <form class="ek-mb-6">
+                      <div class="ek-mb-4">
+                        <label
+                          class="ek-mb-2 ek-block ek-font-bold ek-text-gray-700"
+                          for="question"
+                          >Ask a Question</label
+                        >
+                        <input
+                          class="ek-w-full ek-rounded ek-border ek-px-3 ek-py-2 focus:ek-outline-primary"
+                          id="question"
+                          type="text"
+                          placeholder="Type your question here..."
+                        />
+                      </div>
+                      <div class="ek-mb-4">
+                        <label
+                          class="ek-mb-2 ek-block ek-font-bold ek-text-gray-700"
+                          for="username"
+                          >Your Name</label
+                        >
+                        <input
+                          class="ek-w-full ek-rounded ek-border ek-px-3 ek-py-2 focus:ek-outline-primary"
+                          id="username"
+                          type="text"
+                          placeholder="Enter your name..."
+                        />
+                      </div>
+                      <button
+                        class="ek-rounded ek-bg-primary ek-px-3 ek-py-2 ek-text-white hover:ek-bg-secondary"
+                        type="submit"
+                      >
+                        Submit Question
+                      </button>
+                    </form>
+
+                    <!-- First question and answer -->
+                    <div class="ek-mb-6">
+                      <div
+                        class="vote-container ek-mb-2 ek-flex ek-flex-col ek-items-start md:ek-flex-row"
+                      >
+                        <div
+                          class="ek-mb-2 ek-flex-shrink-0 ek-text-center ek-text-sm ek-font-medium ek-text-gray-600 md:ek-mb-0 md:ek-mr-4"
+                        >
+                          <button class="upvote vote-button ek-text-gray-500">
+                            ▲
+                          </button>
+                          <div class="vote-count">0</div>
+                          <button class="downvote vote-button ek-text-gray-500">
+                            ▼
+                          </button>
+                        </div>
+                        <div class="ek-flex-grow">
+                          <div class="ek-flex ek-font-medium">
+                            <div
+                              class="ek-mx-1 ek-h-fit ek-rounded-lg ek-bg-gray-100 ek-px-1 ek-font-semibold"
+                            >
+                              Q
+                            </div>
+                            Can you print in transparent ABS ? (FDM)
+                          </div>
+                          <div class="ek-m-2 ek-text-[12px] ek-text-gray-500">
+                            Asked by hrithik.singla254 on January 9, 2024 7:43
+                            pm
+                          </div>
+                        </div>
+                        <button
+                          class="ek-ml-auto ek-mt-2 ek-rounded ek-bg-gray-200 ek-px-3 ek-py-1 ek-text-gray-800 md:ek-mt-0"
+                        >
+                          answer now
+                        </button>
+                      </div>
+                      <div class="ek-mt-2 ek-pl-8 ek-text-gray-700">
+                        <div class="ek-flex">
+                          <div
+                            class="ek-mx-1 ek-h-fit ek-rounded-lg ek-bg-gray-100 ek-px-1 ek-font-semibold"
+                          >
+                            A
+                          </div>
+                          Please contact our customer support
+                        </div>
+                      </div>
+                      <!-- Input form for replying -->
+                      <form class="ek-mt-2 ek-pl-8">
+                        <div class="ek-mb-4">
+                          <label
+                            class="ek-mb-2 ek-block ek-font-bold ek-text-gray-700"
+                            for="reply1"
+                            >Your Reply</label
+                          >
+                          <input
+                            class="ek-w-full ek-rounded-lg ek-border ek-px-3 ek-py-2 focus:ek-outline-primary"
+                            id="reply1"
+                            type="text"
+                            placeholder="Type your reply here..."
+                          />
+                        </div>
+                        <button
+                          class="ek-rounded ek-bg-primary ek-px-3 ek-py-2 ek-text-white hover:ek-bg-secondary"
+                          type="submit"
+                        >
+                          Submit Reply
+                        </button>
+                      </form>
+                    </div>
+                  </section>
+                </div>
                 <!-- Discussion form end  -->
               </div>
             </div>
+            <div class="ek-flex ek-grow ek-flex-col sm:ek-self-start">
+              <h1
+                class="ek-mx-10 ek-w-fit ek-border-b-2 ek-border-b-primary ek-py-2 ek-text-xl"
+              >
+                Related Products
+              </h1>
+              <div
+                id="related-products"
+                class="animate__animated animate__fadeInUp ek-relative ek-my-3 ek-flex ek-flex-wrap ek-justify-center ek-gap-0 ek-text-sm sm:ek-mx-10 2xl:ek-justify-start"
+              ></div>
+            </div>
+
+            <!-- Related products  -->
           </div>
         </div>
       </section>
       <!-- product preview end -->
       <!-- advertise  -->
       <section
-        class="ek-mx-5 ek-mb-5 ek-flex ek-flex-col sm:ek-mx-20 md:ek-flex-row"
+        class="ek-mx-5 ek-mb-5 ek-flex ek-flex-col ek-gap-2 sm:ek-mx-20 md:ek-flex-row"
       >
         <!-- First Slider -->
         <div
@@ -1427,93 +1671,18 @@
         >
           <div
             class="ek-relative ek-h-full ek-w-full ek-overflow-hidden"
-            id="carousel1"
-          >
-            <div class="carousel-inner ek-left-0 ek-top-0 ek-flex">
-              <div class="ek-min-w-full">
-                <img
-                  src="https://fakeimg.pl/200x100/?retina=1&text=😒😒😒😒&font=noto"
-                  class="ek-max-h-80 ek-min-h-80 ek-w-full ek-object-center"
-                  alt="Image 1"
-                  width=""
-                  height=""
-                />
-              </div>
-              <div class="ek-min-w-full">
-                <img
-                  src="https://fakeimg.pl/200x100/?retina=1&text=🤍🤍🤍🤍&font=noto"
-                  class="ek-max-h-80 ek-min-h-80 ek-w-full ek-object-center"
-                  alt="Image 1"
-                  width=""
-                  height=""
-                />
-              </div>
-              <div class="ek-min-w-full">
-                <img
-                  src="https://fakeimg.pl/200x100/?retina=1&text=✅✅✅✅&font=noto"
-                  class="ek-max-h-80 ek-min-h-80 ek-w-full ek-object-center"
-                  alt="Image 1"
-                  width=""
-                  height=""
-                />
-              </div>
-              <div class="ek-min-w-full">
-                <img
-                  src="https://fakeimg.pl/200x100/?retina=1&text=✔️✔️✔️✔️&font=noto"
-                  class="ek-max-h-80 ek-min-h-80 ek-w-full ek-object-center"
-                  alt="Image 1"
-                  width=""
-                  height=""
-                />
-              </div>
-            </div>
-          </div>
+            id="advertisement1"
+          ></div>
         </div>
 
         <!-- Second Slider -->
         <div
           class="ek-flex ek-max-h-80 ek-min-h-80 ek-items-center ek-justify-center sm:ek-mx-auto sm:ek-w-1/2"
         >
-          <div class="ek-h-full ek-w-full ek-overflow-hidden" id="carousel2">
-            <div class="carousel-inner ek-left-0 ek-top-0 ek-flex ek-w-full">
-              <div class="ek-min-w-full">
-                <img
-                  src="https://fakeimg.pl/200x100/?retina=1&text=😍😍😍&font=noto"
-                  class="ek-max-h-80 ek-min-h-80 ek-w-full ek-object-center"
-                  alt="Image 1"
-                  width=""
-                  height=""
-                />
-              </div>
-              <div class="ek-min-w-full">
-                <img
-                  src="https://fakeimg.pl/200x100/?retina=1&text=🏆🏆🏆&font=noto"
-                  class="ek-max-h-80 ek-min-h-80 ek-w-full ek-object-center"
-                  alt="Image 1"
-                  width=""
-                  height=""
-                />
-              </div>
-              <div class="ek-min-w-full">
-                <img
-                  src="https://fakeimg.pl/200x100/?retina=1&text=🔻🔻🔻🔻&font=noto"
-                  class="ek-max-h-80 ek-min-h-80 ek-w-full ek-object-center"
-                  alt="Image 1"
-                  width=""
-                  height=""
-                />
-              </div>
-              <div class="ek-min-w-full">
-                <img
-                  src="https://fakeimg.pl/200x100/?retina=1&text=👌👌👌&font=noto"
-                  class="ek-max-h-80 ek-min-h-80 ek-w-full ek-object-center"
-                  alt="Image 1"
-                  width=""
-                  height=""
-                />
-              </div>
-            </div>
-          </div>
+          <div
+            class="ek-relative ek-h-full ek-w-full ek-overflow-hidden"
+            id="advertisement2"
+          ></div>
         </div>
       </section>
 
@@ -1817,5 +1986,6 @@
   </body>
   <!-- Javascript Styles -->
   <script src="assets/javascript/styles.js"></script>
+  <script src="assets/javascript/product.js"></script>
   <!-- Javascript styles end  -->
 </html>
