@@ -72,6 +72,12 @@ if (clickfeatured) {
   );
 }
 const featuredData = [
+  {
+    title: "SD Card Module",
+    productName: "MicroSD Storage",
+    price: "350.75",
+    image: "assets/images/products/shopping (4).webp",
+},
     {
         title: "Raspberry Pi 4",
         productName: "4GB RAM",
@@ -122,6 +128,12 @@ const featuredData = [
     },
 ];
 const onsaleData = [
+  {
+    title: "SD Card Module",
+    productName: "MicroSD Storage",
+    price: "350.75",
+    image: "assets/images/products/shopping (4).webp",
+},
     {
         title: "OLED Display Module",
         productName: "0.96 Inch Screen",
@@ -220,6 +232,12 @@ const topratedData = [
         price: "600.00",
         image: "assets/images/products/shopping (6).webp",
     },
+    {
+      title: "SD Card Module",
+      productName: "MicroSD Storage",
+      price: "350.75",
+      image: "assets/images/products/shopping (4).webp",
+  },
     
 ];
 
@@ -229,29 +247,31 @@ function renderProducts(data, container) {
     
     data.forEach((item) => {
         container.innerHTML += `
-        <div
-                class="ek-flex ek-min-w-[12rem] ek-max-w-[12rem] ek-flex-col ek-justify-between ek-rounded-lg ek-border ek-border-gray-100 ek-p-5 ek-shadow-black hover:ek-shadow-2xl sm:ek-min-w-[12rem] sm:ek-max-w-[12rem] xl:ek-min-w-[15rem] xl:ek-max-w-[15rem] tiny:ek-min-w-[11rem] tiny:ek-max-w-[11rem]"
-              >
-                <p class="ek-mb-2 ek-text-[12px] ek-text-gray-700">
-                  ${item.title}
-                </p>
-                <h5 class="ek-mb-4 ek-line-clamp-2 ek-font-semibold">
-                    ${item.productName}
-                </h5>
-                <div class="ek-mb-4 ek-flex ek-items-center ek-justify-center">
-                  <img
-                    src="${item.image}"
-                    alt="Product 1"
-                    class="ek-max-h-[135px] ek-min-h-[135px] ek-w-full ek-object-contain xl:ek-max-h-[200px] xl:ek-min-h-[200px] xl:ek-min-w-[200px] xl:ek-max-w-[200px]"
-                  />
-                </div>
-                <div class="ek-flex ek-items-center ek-justify-between">
-                  <p class="ek-text-xl ek-font-bold">₹ ${item.price}</p>
-                  <div class="ek-rounded-full ek-bg-primary ek-px-3 ek-py-2">
-                    <i class="ec ec-add-to-cart ek-text-xl ek-text-white"></i>
+        <a href="product.html">
+          <div
+                  class="ek-flex ek-min-w-[12rem] ek-max-w-[12rem] ek-flex-col ek-justify-between ek-rounded-lg ek-border ek-border-gray-100 ek-p-5 ek-shadow-black hover:ek-shadow-2xl sm:ek-min-w-[12rem] sm:ek-max-w-[12rem] xl:ek-min-w-[15rem] xl:ek-max-w-[15rem] tiny:ek-min-w-[11rem] tiny:ek-max-w-[11rem]"
+                >
+                  <p class="ek-mb-2 ek-text-[12px] ek-text-gray-700">
+                    ${item.title}
+                  </p>
+                  <h5 class="ek-mb-4 ek-line-clamp-2 ek-font-semibold">
+                      ${item.productName}
+                  </h5>
+                  <div class="ek-mb-4 ek-flex ek-items-center ek-justify-center">
+                    <img
+                      src="${item.image}"
+                      alt="Product 1"
+                      class="ek-max-h-[135px] ek-min-h-[135px] ek-w-full ek-object-contain xl:ek-max-h-[200px] xl:ek-min-h-[200px] xl:ek-min-w-[200px] xl:ek-max-w-[200px]"
+                    />
+                  </div>
+                  <div class="ek-flex ek-items-center ek-justify-between">
+                    <p class="ek-text-xl ek-font-bold">₹ ${item.price}</p>
+                    <div class="ek-rounded-full ek-bg-primary ek-px-3 ek-py-2">
+                      <i class="ec ec-add-to-cart ek-text-xl ek-text-white"></i>
+                    </div>
                   </div>
                 </div>
-              </div>`;
+        </a>`;
 });
 
 }

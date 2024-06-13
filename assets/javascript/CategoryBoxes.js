@@ -4,7 +4,7 @@ const categoryData = [
     imgSrc: "assets/images/category/Development-boards-1.webp",
     imgAlt: "Sensor Image",
     title: "Electronic Components",
-    link: "productsList.html",
+    link: "subCategory.html",
   },
   {
     imgSrc: "assets/images/category/Lithium-Ion-Battery-2.webp",

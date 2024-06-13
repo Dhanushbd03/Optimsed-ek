@@ -34,6 +34,8 @@ searchinput.addEventListener("blur", function () {
   }, 0);
 });
 
+
+
 // select dropdown
 document.addEventListener("DOMContentLoaded", function () {
   const select = document.getElementById("select");
@@ -62,6 +64,19 @@ document.addEventListener("DOMContentLoaded", function () {
 
 // select dropdown end
 // category in navbar end
+//floating Search 
+
+const floatingSearchButton = document.getElementById("floatingSearchButton")
+const floatingSearch  = document.getElementById("floatingSearch")
+
+if (floatingSearchButton){
+floatingSearchButton.addEventListener("click",function(){
+  floatingSearch.classList.toggle("ek-hidden")
+  floatingSearchButton.classList.toggle("ek-hidden")
+})
+}
+
+
 // category dropdown
 
 const categorybtn = document.getElementById("categorybtn");
@@ -187,9 +202,6 @@ let x = setInterval(function () {
 }, 1000);
 
 // count-down timer end
-
-
-
 // progress bar of special offer
 
 // for example
@@ -216,57 +228,7 @@ document.querySelectorAll(".toggler").forEach((button) => {
 });
 // Footer dropdown end
 
-// sidebar
 
-document.addEventListener("DOMContentLoaded", function () {
-  // Function to toggle visibility and body scroll
-  function toggleVisibility(element, className) {
-    element.classList.toggle(className);
-  }
-
-  // Toggle sidebar visibility
-  const sidebarButton = document.getElementById("sidebarbutton");
-  const sidebarDiv = document.getElementById("sidebardiv");
-  const sidebarclosebutton = document.getElementById("sidebarclosebutton");
-  sidebarButton.addEventListener("click", function () {
-    toggleVisibility(sidebarDiv, "showsidebar");
-    document.body.classList.toggle(
-      "no-scroll",
-      sidebarDiv.classList.contains("showsidebar"),
-    );
-  });
-  sidebarclosebutton.addEventListener("click", function () {
-    toggleVisibility(sidebarDiv, "showsidebar");
-    document.body.classList.toggle("no-scroll");
-  });
-
-  // Toggle main sidebar options
-  document.querySelectorAll(".sidebar-option").forEach(function (option) {
-    option.addEventListener("click", function () {
-      const sidebar = option.querySelector(".sidebar");
-      const fas = option.querySelector(".fas");
-      fas.classList.toggle("ek-rotate-180");
-      toggleVisibility(sidebar, "ek-hidden");
-
-      // Check if any dropdown is open
-      const anyDropdownOpen = Array.from(
-        document.querySelectorAll(".sidebar-option .sidebar"),
-      ).some((sidebar) => !sidebar.classList.contains("ek-hidden"));
-    });
-  });
-
-  // Toggle second-level sidebar options
-  document.querySelectorAll(".sidebar2").forEach(function (option) {
-    option.addEventListener("click", function (event) {
-      event.stopPropagation(); // Prevent event bubbling
-      const sidebar3 = option.querySelector(".sidebar3");
-      const fas = option.querySelector(".fas");
-      fas.classList.toggle("ek-rotate-180");
-      toggleVisibility(sidebar3, "ek-hidden");
-    });
-  });
-});
-// sidebar end
 
 // Product Page
 
@@ -346,7 +308,7 @@ const loginpassworddiv = document.getElementById("login-passworddiv");
 const loginClose = document.getElementById("login-close");
 const loginSection = document.getElementById("loginSection");
 const showloginButton = document.getElementById("showloginButton");
-
+const registerSignupMobile = document.getElementById("register-signup")
 function addFocusAndBlurEvents(div) {
   const input = div.querySelector("input");
   input.addEventListener("focus", function () {
@@ -358,14 +320,23 @@ function addFocusAndBlurEvents(div) {
 }
 
 if (loginemaildiv && loginpassworddiv) {
-  showloginButton.addEventListener("click", function () {
+function DisplayLogin(div)
+  {  div.addEventListener("click", function () {
     loginSection.classList.add("showlogin");
   });
+}
   loginClose.addEventListener("click", function () {
     loginSection.classList.remove("showlogin");
   });
   addFocusAndBlurEvents(loginemaildiv);
   addFocusAndBlurEvents(loginpassworddiv);
+  if(showloginButton)
+  {DisplayLogin(showloginButton);}
+  if(registerSignupMobile){
+    DisplayLogin(registerSignupMobile);
+  }
+  
+
 }
 
 // login end
@@ -392,6 +363,7 @@ const signupform = document.getElementById("signupform");
 const showsignup = document.getElementById("showsignup")
 const showlogin = document.getElementById("showlogin")
 
+
 function toggle(event,form1, form2 ) {
   event.preventDefault()
   form1.classList.toggle("ek-flex");
@@ -410,21 +382,21 @@ document.addEventListener("DOMContentLoaded", function() {
   const scrollContainer = document.getElementById("scroll-container");
   const scrollLeft = document.getElementById("scroll-left");
   const scrollRight = document.getElementById("scroll-right");
-
+if(scrollContainer){
   scrollLeft.addEventListener("click", function() {
     scrollContainer.scrollBy({
       left: -100,
       behavior: "smooth"
     });
   });
-
   scrollRight.addEventListener("click", function() {
     scrollContainer.scrollBy({
       left: 100,
       behavior: "smooth"
     });
   });
-});
+}});
+
 // scroll for section in product.html end
 
 // upvote and downvote 

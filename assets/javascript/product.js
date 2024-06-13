@@ -26,11 +26,10 @@ const relatedProductsData = [
   },
 ];
 
-if (relatedProducts) {
-  relatedProducts.innerHTML = "";
+relatedProducts.innerHTML = "";
 
-  relatedProductsData.forEach((product) => {
-    const productHTML = `
+relatedProductsData.forEach((product) => {
+  const productHTML = `
       <div class="ek-flex ek-min-w-[12rem] ek-max-w-[12rem] ek-flex-col ek-justify-between ek-rounded-lg ek-border ek-border-gray-100 ek-p-5 ek-shadow-black hover:ek-shadow-2xl sm:ek-min-w-[10rem] sm:ek-max-w-[10rem] lg:ek-min-w-[11rem] lg:ek-max-w-[11rem] xl:ek-min-w-[14rem] xl:ek-max-w-[14rem] 2xl:ek-min-w-[14rem] 2xl:ek-max-w-[14rem] tiny:ek-min-w-[11rem] tiny:ek-max-w-[11rem]">
         <p class="ek-mb-2 ek-text-[12px] ek-text-gray-700">${product.title}</p>
         <h5 class="ek-mb-4 ek-line-clamp-2 ek-font-semibold">${product.productName}</h5>
@@ -45,64 +44,78 @@ if (relatedProducts) {
         </div>
       </div>`;
 
-    relatedProducts.innerHTML += productHTML;
-  });
-}
+  relatedProducts.innerHTML += productHTML;
+});
 
 const advertisement1 = document.getElementById("advertisement1");
 const advertisement2 = document.getElementById("advertisement2");
 
 const advertisement1data = [
-    { image: "https://picsum.photos/seed/0/200/300" },
-    { image: "https://picsum.photos/seed/9/200/300" },
-    { image: "https://picsum.photos/seed/2/200/300" },
-    { image: "https://picsum.photos/seed/3/200/300" }
+  { image: "assets/images/ekart/Raspberry-Pi-Zero-W-3-1.jpg" },
+  {
+    image:
+      "assets/images/ekart/Uno-R3-CH340G-ATmega328p-Development-Board-Compatible-with-Arduino2-1-1.jpg",
+  },
+  {
+    image:
+      "assets/images/ekart/Uno-R3-CH340G-ATmega328p-Development-Board-Compatible-with-Arduino2-1-1.jpg",
+  },{
+    image:
+      "assets/images/ekart/Uno-R3-CH340G-ATmega328p-Development-Board-Compatible-with-Arduino2-1-1.jpg",
+  },
 ];
 
 const advertisement2data = [
-    { image: "https://picsum.photos/seed/4/200/300" },
-    { image: "https://picsum.photos/seed/5/200/300" },
-    { image: "https://picsum.photos/seed/6/200/300" },
-    { image: "https://picsum.photos/seed/7/200/300" }
+  { image: "assets/images/ekart/Raspberry-Pi-Zero-W-3-1.jpg" },
+  {
+    image:
+      "assets/images/ekart/Uno-R3-CH340G-ATmega328p-Development-Board-Compatible-with-Arduino2-1-1.jpg",
+  },{
+    image:
+      "assets/images/ekart/Uno-R3-CH340G-ATmega328p-Development-Board-Compatible-with-Arduino2-1-1.jpg",
+  },{
+    image:
+      "assets/images/ekart/Uno-R3-CH340G-ATmega328p-Development-Board-Compatible-with-Arduino2-1-1.jpg",
+  },
 ];
 
 function createAdvertisementHTML(advertisementData) {
-    return advertisementData.map(ad => `
-        <div class="ek-absolute ek-w-full fade">
+  return advertisementData
+    .map(
+      (ad) => `
+        <div class="ek-absolute ek-w-full fade ek-top-0 ek-left-0" >
             <img
               src="${ad.image}"
               class="ek-max-h-80 ek-min-h-80 ek-w-full ek-object-cover"
               alt="Advertisement Image"
             />
         </div>
-    `).join('');
+    `,
+    )
+    .join("");
 }
 
-if (advertisement1) {
-    advertisement1.innerHTML = createAdvertisementHTML(advertisement1data);
-}
+advertisement1.innerHTML = createAdvertisementHTML(advertisement1data);
 
-if (advertisement2) {
-    advertisement2.innerHTML = createAdvertisementHTML(advertisement2data);
-}
+advertisement2.innerHTML = createAdvertisementHTML(advertisement2data);
 
 function showCarousel(divId) {
-    const carouselDiv = document.querySelector(`#${divId}`);
-    const carouselItems = Array.from(carouselDiv.children);
-    const totalItems = carouselItems.length;
-    let currentIndex = 0;
+  const carouselDiv = document.querySelector(`#${divId}`);
+  const carouselItems = Array.from(carouselDiv.children);
+  const totalItems = carouselItems.length;
+  let currentIndex = 0;
 
-    function showNextImage() {
-        carouselItems[currentIndex].classList.remove('show');
-        currentIndex = (currentIndex + 1) % totalItems;
-        carouselItems[currentIndex].classList.add('show');
-    }
+  function showNextImage() {
+    carouselItems[currentIndex].classList.remove("show");
+    currentIndex = (currentIndex + 1) % totalItems;
+    carouselItems[currentIndex].classList.add("show");
+  }
 
-    // Initially show the first image
-    carouselItems[currentIndex].classList.add('show');
+  // Initially show the first image
+  carouselItems[currentIndex].classList.add("show");
 
-    // Change image every 3 seconds
-    setInterval(showNextImage, 5000);
+  // Change image every 3 seconds
+  setInterval(showNextImage, 5000);
 }
 
 showCarousel("advertisement1");

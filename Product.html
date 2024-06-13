@@ -66,7 +66,7 @@
         <div class="ek-flex ek-items-center ek-gap-1">
           <span
             ><a href="#accounts" class="ek-flex ek-items-center"
-              ><i class="ec ec-transport mr-1 ek-text-xl"></i>&nbsp;Track your
+              ><i class="mr-1 ec ec-transport ek-text-xl"></i>&nbsp;Track your
               order</a
             > </span
           >|
@@ -88,7 +88,7 @@
       <!-- navbar -->
       <nav class="ek-shadow-md">
         <div
-          class="ek-flex ek-items-center ek-justify-between ek-gap-0 ek-bg-white ek-px-4 lg:ek-px-10 lg:ek-py-4"
+          class="ek-flex ek-items-center ek-justify-between lg:ek-gap-5 ek-bg-white ek-px-4 lg:ek-px-10 lg:ek-py-4"
         >
           <!-- right side navbar  -->
           <div class="ek-flex ek-items-center ek-p-2">
@@ -303,9 +303,29 @@
             <div class="ek-relative lg:ek-hidden">
               <i
                 class="ec ec-search ek-p-2 ek-text-2xl ek-text-primary hover:ek-text-secondary"
+                id="floatingSearchButton"
               ></i>
             </div>
-            <div class="ek-relative lg:ek-hidden">
+            <div
+              class="ek-absolute ek-left-0 ek-top-16 ek-z-[9999] ek-h-7 ek-w-full md:ek-top-20 ek-hidden lg:ek-hidden"
+              id="floatingSearch"
+            >
+            <form class="ek-flex ek-w-full ek-border-collapse ek-justify-center ek-px-5">
+              <input
+                type="text"
+                class="ek-w-full ek-rounded-l-lg ek-border ek-border-primary ek-p-2 ek-outline-none focus:ek-border-secondary"
+                placeholder="Search..."
+                
+              />
+              <button
+                class="ek-rounded-r-lg ek-border ek-border-primary ek-bg-primary ek-text-white ek-px-3 hover:ek-border-secondary hover:ek-bg-secondary"
+              >
+                <i class="ec ec-search ek-text-2xl"></i>
+              </button>
+            </form>
+            </div>
+
+            <div class="ek-relative lg:ek-hidden" id="register-signup">
               <i
                 class="ec ec-user ek-p-2 ek-text-2xl ek-text-primary hover:ek-text-secondary"
               ></i>
@@ -328,238 +348,14 @@
           <!-- left side icons end -->
         </div>
         <!-- category navbar  -->
-        <div class="ek-hidden ek-pl-24 lg:ek-flex">
+        <div class="ek-hidden ek-pl-28 lg:ek-flex">
           <ul class="ek-flex ek-text-primary">
             <li
               class="ek-px-4 ek-py-3 ek-font-bold ek-text-primary hover:ek-text-secondary"
             >
               <a href="#">Home </a>
             </li>
-            <li class="ek-relative ek-inline-flex ek-hidden ek-h-full">
-              <button
-                id="categorybtn"
-                type="button"
-                class="ek-shadow-xs ek-inline-flex ek-h-full ek-min-w-[250px] ek-cursor-pointer ek-items-center ek-justify-center ek-gap-2 ek-rounded-t-lg ek-bg-primary ek-px-10 ek-py-3 ek-pr-16 ek-text-center ek-text-sm ek-font-bold ek-text-white ek-transition-all ek-duration-500 hover:ek-bg-secondary"
-              >
-                <span class="fa fa-list-ul ek-text-white"></span>
-                All Categories
-              </button>
-              <!-- submenu -->
-              <div
-                class="ek-absolute ek-left-full ek-top-14 ek-z-20 ek-hidden ek-min-w-[240px] ek-border-t-2 ek-border-primary ek-bg-white ek-text-gray-900 ek-shadow-md hover:ek-border-secondary"
-              >
-                <ul class="ek-hidden ek-p-4" id="submenu-0">
-                  <li
-                    class="ek-p-2 ek-px-4 hover:ek-bg-gray-100 hover:ek-font-medium"
-                  >
-                    Passive
-                  </li>
-                  <li
-                    class="ek-p-2 ek-px-4 hover:ek-bg-gray-100 hover:ek-font-medium"
-                  >
-                    active
-                  </li>
-                </ul>
 
-                <ul class="ek-hidden ek-p-4" id="submenu-3">
-                  <li
-                    class="ek-p-2 ek-px-4 hover:ek-bg-gray-100 hover:ek-font-medium"
-                  >
-                    Wireless
-                  </li>
-                  <li
-                    class="ek-p-2 ek-px-4 hover:ek-bg-gray-100 hover:ek-font-medium"
-                  >
-                    Wired
-                  </li>
-                </ul>
-              </div>
-              <!-- submenu end -->
-              <div
-                id="categorydropdown"
-                class="dropdown-content scrollbar show rtl ek-absolute ek-top-full ek-z-10 ek-overflow-y-hidden ek-bg-white ek-shadow-lg"
-              >
-                <ul class="ltr ek-py-2" id="categoriesList">
-                  <li class="ek-relative ek-px-6">
-                    <div
-                      class="ek-flex ek-items-center ek-justify-between ek-border-b ek-border-b-gray-100 ek-py-1 ek-text-gray-900 hover:ek-bg-gray-100 hover:ek-font-medium"
-                    >
-                      <span>Electronic Components</span>
-                      <i class="ec ec-arrow-right"></i>
-                    </div>
-                  </li>
-
-                  <li class="ek-px-6">
-                    <a
-                      class="ek-block ek-border-b ek-border-b-gray-100 ek-py-1 ek-text-gray-900 hover:ek-bg-gray-100 hover:ek-font-medium"
-                      href=""
-                    >
-                      Semiconductor IC
-                    </a>
-                  </li>
-                  <li class="ek-px-6">
-                    <a
-                      class="ek-block ek-border-b ek-border-b-gray-100 ek-py-1 ek-text-gray-900 hover:ek-bg-gray-100 hover:ek-font-medium"
-                      href=""
-                    >
-                      Sensors
-                    </a>
-                  </li>
-                  <li class="ek-px-6">
-                    <a
-                      class="ek-flex ek-items-center ek-justify-between ek-border-b ek-border-b-gray-100 ek-py-1 ek-text-gray-900 hover:ek-bg-gray-100 hover:ek-font-medium"
-                      href=""
-                    >
-                      Communication modules<i class="ec ec-arrow-right"></i>
-                    </a>
-                  </li>
-                  <li class="ek-px-6">
-                    <a
-                      class="ek-block ek-border-b ek-border-b-gray-100 ek-py-1 ek-text-gray-900 hover:ek-bg-gray-100 hover:ek-font-medium"
-                      href=""
-                    >
-                      Development Boards
-                    </a>
-                  </li>
-                  <li class="ek-px-6">
-                    <a
-                      class="ek-block ek-border-b ek-border-b-gray-100 ek-py-1 ek-text-gray-900 hover:ek-bg-gray-100 hover:ek-font-medium"
-                      href=""
-                    >
-                      Motor,drivers & Actuators
-                    </a>
-                  </li>
-                  <li class="ek-px-6">
-                    <a
-                      class="ek-block ek-border-b ek-border-b-gray-100 ek-py-1 ek-text-gray-900 hover:ek-bg-gray-100 hover:ek-font-medium"
-                      href=""
-                    >
-                      3D printers and parts
-                    </a>
-                  </li>
-                  <li class="ek-px-6">
-                    <a
-                      class="ek-block ek-border-b ek-border-b-gray-100 ek-py-1 ek-text-gray-900 hover:ek-bg-gray-100 hover:ek-font-medium"
-                      href=""
-                    >
-                      Drones and accessories
-                    </a>
-                  </li>
-                  <li class="ek-px-6">
-                    <a
-                      class="ek-block ek-border-b ek-border-b-gray-100 ek-py-1 ek-text-gray-900 hover:ek-bg-gray-100 hover:ek-font-medium"
-                      href=""
-                    >
-                      Displays
-                    </a>
-                  </li>
-                  <li class="ek-px-6">
-                    <a
-                      class="ek-block ek-border-b ek-border-b-gray-100 ek-py-1 ek-text-gray-900 hover:ek-bg-gray-100 hover:ek-font-medium"
-                      href=""
-                    >
-                      Speakers
-                    </a>
-                  </li>
-                  <li class="ek-px-6">
-                    <a
-                      class="ek-block ek-border-b ek-border-b-gray-100 ek-py-1 ek-text-gray-900 hover:ek-bg-gray-100 hover:ek-font-medium"
-                      href=""
-                    >
-                      Tiny Computers
-                    </a>
-                  </li>
-                  <li class="ek-px-6">
-                    <a
-                      class="ek-block ek-border-b ek-border-b-gray-100 ek-py-1 ek-text-gray-900 hover:ek-bg-gray-100 hover:ek-font-medium"
-                      href=""
-                    >
-                      DIY learning and Robo kits
-                    </a>
-                  </li>
-                  <li class="ek-px-6">
-                    <a
-                      class="ek-block ek-border-b ek-border-b-gray-100 ek-py-1 ek-text-gray-900 hover:ek-bg-gray-100 hover:ek-font-medium"
-                      href=""
-                    >
-                      Cameras
-                    </a>
-                  </li>
-                  <li class="ek-px-6">
-                    <a
-                      class="ek-block ek-border-b ek-border-b-gray-100 ek-py-1 ek-text-gray-900 hover:ek-bg-gray-100 hover:ek-font-medium"
-                      href=""
-                    >
-                      Electric vehicle parts
-                    </a>
-                  </li>
-                  <li class="ek-px-6">
-                    <a
-                      class="ek-block ek-border-b ek-border-b-gray-100 ek-py-1 ek-text-gray-900 hover:ek-bg-gray-100 hover:ek-font-medium"
-                      href=""
-                    >
-                      Wires,Connectors and cables
-                    </a>
-                  </li>
-                  <li class="ek-px-6">
-                    <a
-                      class="ek-block ek-border-b ek-border-b-gray-100 ek-py-1 ek-text-gray-900 hover:ek-bg-gray-100 hover:ek-font-medium"
-                      href=""
-                    >
-                      Batteries and Chargers
-                    </a>
-                  </li>
-                  <li class="ek-px-6">
-                    <a
-                      class="ek-block ek-border-b ek-border-b-gray-100 ek-py-1 ek-text-gray-900 hover:ek-bg-gray-100 hover:ek-font-medium"
-                      href=""
-                    >
-                      Solar panels and Accessories
-                    </a>
-                  </li>
-                  <li class="ek-px-6">
-                    <a
-                      class="ek-block ek-border-b ek-border-b-gray-100 ek-py-1 ek-text-gray-900 hover:ek-bg-gray-100 hover:ek-font-medium"
-                      href=""
-                    >
-                      Power Supply
-                    </a>
-                  </li>
-                  <li class="ek-px-6">
-                    <a
-                      class="ek-block ek-border-b ek-border-b-gray-100 ek-py-1 ek-text-gray-900 hover:ek-bg-gray-100 hover:ek-font-medium"
-                      href=""
-                    >
-                      Electronic tools
-                    </a>
-                  </li>
-                  <li class="ek-px-6">
-                    <a
-                      class="ek-block ek-border-b ek-border-b-gray-100 ek-py-1 ek-text-gray-900 hover:ek-bg-gray-100 hover:ek-font-medium"
-                      href=""
-                    >
-                      Robotics
-                    </a>
-                  </li>
-                  <li class="ek-px-6">
-                    <a
-                      class="ek-block ek-border-b ek-border-b-gray-100 ek-py-1 ek-text-gray-900 hover:ek-bg-gray-100 hover:ek-font-medium"
-                      href=""
-                    >
-                      Electronic Modules
-                    </a>
-                  </li>
-                  <li class="ek-px-6">
-                    <a
-                      class="ek-block ek-border-b ek-border-b-gray-100 ek-py-1 ek-text-gray-900 hover:ek-bg-gray-100 hover:ek-font-medium"
-                      href=""
-                    >
-                      Computer and accessories
-                    </a>
-                  </li>
-                </ul>
-              </div>
-            </li>
             <li
               class="ek-px-4 ek-py-3 ek-font-bold ek-text-primary hover:ek-text-secondary"
             >
@@ -585,9 +381,9 @@
     <!-- sidebar  -->
     <aside
       id="sidebardiv"
-      class="ek-fixed ek-top-0 ek-z-[9999] ek-min-h-screen ek-w-80 ek-bg-white"
+      class="ek-fixed ek-top-0 ek-z-[999] ek-w-80 ek-bg-white"
     >
-      <nav>
+      <nav class="">
         <div
           class="ek-mb-5 ek-flex ek-items-center ek-justify-between"
           id="sidebarclosebutton"
@@ -599,47 +395,11 @@
             <i class="fas fa-chevron-left ek-text-xs ek-text-white"></i>
           </div>
         </div>
-        <ul class="ek-space-y-2">
-          <li class="sidebar-option">
-            <div
-              class="ek-flex ek-items-center ek-justify-between ek-p-2 hover:ek-bg-primary hover:ek-text-white"
-            >
-              <div class="ek-flex ek-items-center">
-                <span>Shop by Brands </span>
-              </div>
-              <i class="fas fa-chevron-down ek-rotate-180 ek-text-xs"></i>
-            </div>
-            <ul class="sidebar ek-ml-4 ek-hidden">
-              <li class="sidebar2">
-                <div
-                  class="ek-flex ek-items-center ek-p-2 hover:ek-bg-primary hover:ek-text-white"
-                >
-                  <i
-                    class="fas fa-chevron-down ek-mr-2 ek-rotate-180 ek-text-xs"
-                  ></i>
-                  Appointment Management
-                </div>
-                <ul class="sidebar3 ek-ml-4 ek-hidden">
-                  <li>
-                    <a
-                      href="#"
-                      class="ek-flex ek-items-center ek-p-2 hover:ek-bg-primary hover:ek-text-white"
-                    >
-                      3333333333333333333333
-                    </a>
-                  </li>
-                  <li>
-                    <a
-                      href="#"
-                      class="ek-flex ek-items-center ek-p-2 hover:ek-bg-primary hover:ek-text-white"
-                    >
-                      333333333333333333333
-                    </a>
-                  </li>
-                </ul>
-              </li>
-            </ul>
-          </li>
+        <ul
+          class="hide-scrollbar ek-h-screen ek-space-y-2 ek-overflow-y-scroll"
+          id="sidebar"
+        >
+          <!-- Your list items here -->
         </ul>
       </nav>
     </aside>
@@ -647,6 +407,7 @@
     <main>
       <!-- product preview -->
       <section class="lg:ek-px-24">
+        <!-- navigation -->
         <nav
           class="scrollbar ek-overflow-x-scroll ek-text-ellipsis ek-px-4 ek-py-4 lg:ek-pb-0"
         >
@@ -682,8 +443,9 @@
             >
           </div>
         </nav>
+        <!-- navigation end -->
         <div
-          class="ek-container ek-flex ek-justify-center ek-py-2 md:ek-mx-auto"
+          class=" ek-flex ek-justify-center ek-py-2 sm:ek-mx-auto"
         >
           <div class="ek-hidden md:ek-w-1/5 xl:ek-block">
             <div
@@ -757,7 +519,7 @@
                   id="previewproductimage"
                 />
                 <div
-                  class="ek-absolute ek-bottom-0 ek-left-0 ek-flex ek-gap-2 ek-px-4 lg:ek-mx-auto"
+                  class="ek-absolute ek-bottom-0 ek-left-0 ek-flex ek-gap-2 ek-px-4 sm:ek-px-10 md:ek-px-4 lg:ek-mx-auto"
                   id="optionimage"
                 >
                   <img
@@ -782,7 +544,7 @@
                   />
                 </div>
               </div>
-              <div class="ek-my-3 ek-w-full ek-px-4 md:ek-w-1/2">
+              <div class="ek-my-3 ek-w-full ek-px-4 sm:ek-px-10 md:ek-px-4 md:ek-w-1/2">
                 <p class="ek-text-sm">Official Raspberry Pi Kits</p>
                 <h1 class="ek-text-3xl ek-font-semibold">
                   Raspberry Pi 4 Model B 4GB Starter Kit
@@ -932,7 +694,7 @@
               >
                 <!-- Description -->
                 <div
-                  class="animate__animated animate__fadeInUp ek-relative ek-my-3 ek-hidden ek-min-h-80 ek-min-w-full ek-flex-wrap ek-justify-center ek-gap-0 ek-rounded-lg ek-border-2 ek-border-gray-200 ek-p-4 ek-text-sm"
+                  class="animate__animated animate__fadeIn ek-relative ek-my-3 ek-hidden ek-min-h-80 ek-min-w-full ek-flex-wrap ek-justify-center ek-gap-0 ek-rounded-lg ek-border-2 ek-border-gray-200 ek-p-4 ek-text-sm"
                 >
                   <p
                     class="ek-py-4 ek-text-justify ek-italic ek-leading-loose ek-text-yellow-500"
@@ -952,7 +714,7 @@
                   <p
                     class="ek-py-4 ek-text-justify ek-leading-loose ek-text-gray-700"
                   >
-                    An exclusive combo from Robu.in that includes the necessary
+                    An exclusive combo from electronickart.com that includes the necessary
                     products of Raspberry Pi 4 in the Pi family. It is the best
                     kit for a beginner looking to work on the Raspberry Pi 4
                     Model B family. Raspberry Pi 4 Model B is the latest product
@@ -1035,7 +797,7 @@
                 <!-- Description end  -->
                 <!-- Specification -->
                 <div
-                  class="animate__animated animate__fadeInUp ek-relative ek-my-3 ek-hidden ek-min-h-80 ek-min-w-full ek-flex-wrap ek-justify-center ek-gap-0 ek-rounded-lg ek-border-2 ek-border-gray-200 ek-p-4 ek-text-sm"
+                  class="animate__animated animate__fadeIn ek-relative ek-my-3 ek-hidden ek-min-h-80 ek-min-w-full ek-flex-wrap ek-justify-center ek-gap-0 ek-rounded-lg ek-border-2 ek-border-gray-200 ek-p-4 ek-text-sm"
                 >
                   <table
                     class="ek-w-full ek-table-fixed ek-border-collapse ek-border ek-border-gray-200"
@@ -1208,7 +970,7 @@
                 <!-- specification end -->
                 <!-- Warranty -->
                 <div
-                  class="animate__animated animate__fadeInUp ek-relative ek-my-3 ek-hidden ek-min-w-full ek-flex-wrap ek-gap-0 ek-rounded-lg ek-border-2 ek-border-gray-200 ek-p-4 ek-text-sm"
+                  class="animate__animated animate__fadeIn ek-relative ek-my-3 ek-hidden ek-min-w-full ek-flex-wrap ek-gap-0 ek-rounded-lg ek-border-2 ek-border-gray-200 ek-p-4 ek-text-sm"
                 >
                   <p class="ek-py-4 ek-leading-loose ek-text-gray-700">
                     6 Months Warranty
@@ -1236,7 +998,7 @@
                 <!-- Warranty end -->
                 <!-- Reviews -->
                 <div
-                  class="animate__animated animate__fadeInUp ek-relative ek-my-3 ek-hidden ek-min-h-80 ek-min-w-full ek-flex-wrap ek-gap-0 ek-rounded-lg ek-border-2 ek-border-gray-200 ek-p-4 ek-text-sm"
+                  class="animate__animated animate__fadeIn ek-relative ek-my-3 ek-hidden ek-min-h-80 ek-min-w-full ek-flex-wrap ek-gap-0 ek-rounded-lg ek-border-2 ek-border-gray-200 ek-p-4 ek-text-sm"
                 >
                   <div class="ek-flex ek-w-full ek-flex-col sm:ek-flex-row">
                     <div
@@ -1466,7 +1228,7 @@
                 <!-- Reviews end  -->
                 <!-- Attachments -->
                 <div
-                  class="animate__animated animate__fadeInUp ek-relative ek-my-3 ek-hidden ek-min-w-full ek-flex-wrap ek-justify-center ek-gap-5 ek-rounded-lg ek-border-2 ek-border-gray-200 ek-px-4 ek-py-8 ek-text-sm"
+                  class="animate__animated animate__fadeIn ek-relative ek-my-3 ek-hidden ek-min-w-full ek-flex-wrap ek-justify-center ek-gap-5 ek-rounded-lg ek-border-2 ek-border-gray-200 ek-px-4 ek-py-8 ek-text-sm"
                 >
                   <div class="ek-flex ek-w-full ek-justify-between">
                     <h3 class="">DATASHEET OF USB TYPE-C POWER SUPPLY</h3>
@@ -1493,12 +1255,12 @@
                 <!-- Attachments end  -->
                 <!-- Videos -->
                 <div
-                  class="animate__animated animate__fadeInUp ek-relative ek-my-3 ek-hidden ek-min-h-80 ek-min-w-full ek-flex-col ek-justify-center ek-gap-0 ek-rounded-lg ek-border-2 ek-border-gray-200 ek-p-4 ek-text-sm lg:ek-flex-row"
+                  class="animate__animated animate__fadeIn ek-relative ek-my-3 ek-hidden ek-min-h-80 ek-min-w-full ek-flex-col ek-justify-center ek-gap-0 ek-rounded-lg ek-border-2 ek-border-gray-200 ek-p-4 ek-text-sm lg:ek-flex-row"
                 >
                   <div
                     class="ek-flex ek-h-96 ek-flex-col ek-gap-5 ek-py-1 ek-text-gray-700 lg:ek-h-full lg:ek-w-1/2 lg:ek-py-5 lg:ek-pl-5"
                   >
-                    <iframe
+                   <iframe
                       class="ek-h-full"
                       src="https://www.youtube.com/embed/TEuVU6id_mI?si=nYpRo91uICb8SKNZ"
                       title="YouTube video player"
@@ -1525,7 +1287,7 @@
                 <!-- Videos end -->
                 <!-- Discussion form  -->
                 <div
-                  class="animate__animated animate__fadeInUp ek-relative ek-my-3 ek-hidden ek-min-h-80 ek-min-w-full ek-flex-wrap ek-justify-center ek-gap-0 ek-rounded-lg ek-border-2 ek-border-gray-200 ek-p-4 ek-text-sm"
+                  class="animate__animated animate__fadeIn ek-relative ek-my-3 ek-hidden ek-min-h-80 ek-min-w-full ek-flex-wrap ek-justify-center ek-gap-0 ek-rounded-lg ek-border-2 ek-border-gray-200 ek-p-4 ek-text-sm"
                 >
                   <section
                     class="ek-mx-auto ek-w-full ek-rounded-lg ek-bg-white ek-p-6 ek-shadow-md"
@@ -1652,7 +1414,7 @@
               </h1>
               <div
                 id="related-products"
-                class="animate__animated animate__fadeInUp ek-relative ek-my-3 ek-flex ek-flex-wrap ek-justify-center ek-gap-0 ek-text-sm sm:ek-mx-10 2xl:ek-justify-start"
+                class="animate__animated animate__fadeIn ek-relative ek-my-3 ek-flex ek-flex-wrap ek-justify-center ek-gap-0 ek-text-sm sm:ek-mx-10 2xl:ek-justify-start"
               ></div>
             </div>
 
@@ -1667,20 +1429,20 @@
       >
         <!-- First Slider -->
         <div
-          class="ek-flex ek-max-h-80 ek-min-h-80 ek-items-center ek-justify-center sm:ek-mx-auto sm:ek-w-1/2"
+          class="ek-flex ek-w-full ek-items-center ek-justify-center sm:ek-mx-auto sm:ek-w-1/2"
         >
           <div
-            class="ek-relative ek-h-full ek-w-full ek-overflow-hidden"
+            class="ek-relative ek-w-full ek-overflow-hidden ek-h-[320px]"
             id="advertisement1"
           ></div>
         </div>
 
         <!-- Second Slider -->
         <div
-          class="ek-flex ek-max-h-80 ek-min-h-80 ek-items-center ek-justify-center sm:ek-mx-auto sm:ek-w-1/2"
+          class="ek-flex ek-w-full ek-items-center ek-justify-center sm:ek-mx-auto sm:ek-w-1/2"
         >
           <div
-            class="ek-relative ek-h-full ek-w-full ek-overflow-hidden"
+            class="ek-relative ek-w-full ek-overflow-hidden ek-h-[320px]"
             id="advertisement2"
           ></div>
         </div>
@@ -1987,5 +1749,6 @@
   <!-- Javascript Styles -->
   <script src="assets/javascript/styles.js"></script>
   <script src="assets/javascript/product.js"></script>
+  <script src="assets/javascript/sidebar.js"></script>
   <!-- Javascript styles end  -->
 </html>
