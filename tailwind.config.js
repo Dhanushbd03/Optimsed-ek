@@ -1,7 +1,7 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   prefix: "ek-",
-  content: [".//*.{html,js}", "./assets/javascript/*.js"],
+  content: [".//*.{html,js}", "./assets/javascript/*.{php,js}","./template//*.{html,php}"],
   theme: {
     extend: {
       screens: {
